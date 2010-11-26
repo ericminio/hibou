@@ -8,8 +8,7 @@ Feature: Produce a single child file
       """
     When I consult "George"'s file
 
-    Then I see "George" as the first name
-    And I see "Orwell" as the last name
+    Then I see that his name is "George Orwell"s
     And I see the following notes:
       |text|
       |Frequently puts forks in electric plugs|

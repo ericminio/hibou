@@ -12,12 +12,12 @@ module NavigationHelpers
       '/'
     when /child registration page/
       new_child_path
+    when /children page/
+      children_path
     when /child booking page/
       new_booking_path
     when /bookings/
       bookings_path
-    when /children page/
-      children_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
