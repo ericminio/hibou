@@ -1,0 +1,8 @@
+%h1 Bookings#index
+%div
+  -@bookings.each do |booking|
+    %p
+      %span
+        =booking.child.first_name
+      %span
+        =booking.date

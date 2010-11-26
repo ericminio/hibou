@@ -1,4 +1,5 @@
 Hibou::Application.routes.draw do
+  resources :bookings
   resources :children
 
   # The priority is based upon order of creation:
