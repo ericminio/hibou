@@ -1,4 +1,6 @@
 Hibou::Application.routes.draw do
+  resources :children
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

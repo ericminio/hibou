@@ -64,6 +64,11 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.24)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.4.2)
     json (1.4.6)
     json_pure (1.4.6)
@@ -127,6 +132,7 @@ DEPENDENCIES
   cucumber-rails
   formtastic
   haml
+  haml-rails
   rails (= 3.0.3)
   rspec-rails (>= 2.1.0)
   selenium-webdriver
