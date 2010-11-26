@@ -3,16 +3,16 @@ require 'spec_helper'
 describe "children/show.html.haml" do
   before(:each) do
     @child = assign(:child, stub_model(Child,
-      :first_name => "First Name",
-      :last_name => "Last Name"
+                                       :first_name => "George",
+                                       :last_name  => "Orwell",
+                                       :notes      => "Allergic to peanuts"
     ))
   end
 
-  it "renders attributes in <p>" do
+  it "renders child file details" do
     render
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-    rendered.should match(/First Name/)
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-    rendered.should match(/Last Name/)
+    rendered.should contain("George")
+    rendered.should contain("Orwell")
+    rendered.should contain("Allergic to peanuts")
   end
 end

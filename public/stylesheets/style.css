@@ -1,0 +1,101 @@
+/* CSS Document */
+body, input, textarea {font-size: 20px;}
+div {border-width: 1px; height: 40px;}
+
+#child-healthcheck {
+background: #fff url(../images/recto.png) no-repeat;
+height: 635px;
+margin: 0;
+padding: 0;
+position: relative;
+width: 852px;
+}
+
+div#child-name {
+left: 155px;
+position:absolute;
+top: 75px;
+width: 565px;
+}
+
+div#child-age {
+left: 155px;
+position:absolute;
+top: 185px;
+width: 565px;
+}
+
+div#child-snack-yes {
+left: 455px;
+position:absolute;
+top: 253px;
+width: 25px;
+}
+div#child-snack-no {
+left: 585px;
+position:absolute;
+top: 253px;
+width: 25px;
+}
+
+div#child-drink-yes {
+left: 455px;
+position:absolute;
+top: 303px;
+width: 25px;
+}
+div#child-drink-no {
+left: 585px;
+position:absolute;
+top: 303px;
+width: 25px;
+}
+
+div#child-nap-yes {
+left: 455px;
+position:absolute;
+top: 353px;
+width: 25px;
+}
+div#child-nap-no {
+left: 585px;
+position:absolute;
+top: 353px;
+width: 25px;
+}
+
+div#child-allergies-yes {
+left: 455px;
+position:absolute;
+top: 430px;
+width: 25px;
+}
+div#child-allergies-no {
+left: 585px;
+position:absolute;
+top: 430px;
+width: 25px;
+}
+
+div#child-allergies-notes {
+left: 155px;
+position:absolute;
+top: 485px;
+width: 535px;
+}
+
+div#child-general-notes {
+left: 155px;
+height: 70px;
+position:absolute;
+top: 570px;
+width: 535px;
+}
+
+#child-healthcheck-form p {
+margin: 20px 10px;
+}
+
+#child-healthcheck-form label {
+margin-right: 25px;
+}

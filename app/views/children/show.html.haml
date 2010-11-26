@@ -1,11 +1,19 @@
 %p#notice= notice
 
-%p
-  %b First name:
-  = @child.first_name
-%p
-  %b Last name:
-  = @child.last_name
+#child-healthcheck
+  #child-name= "#{@child.first_name} #{@child.last_name}"
+
+  #child-age 2007-10-05
+  #child-snack-yes X
+  #child-snack-no X
+  #child-drink-yes X
+  #child-drink-no X
+  #child-nap-yes X
+  #child-nap-no X
+  #child-allergies-yes X
+  #child-allergies-no X
+  #child-allergies-notes allergies aux arachides, soleil et produits laitiers
+  #child-general-notes= @child.notes
 
 = link_to 'Edit', edit_child_path(@child)
 \|
