@@ -1,4 +1,8 @@
 Feature: Produce a single child file
+  In order to
+  As a somehtin
+  I want the world
+
   Scenario: Produce a basic child file
     Given that "George" is registered with the following information:
       |first name|last name|
