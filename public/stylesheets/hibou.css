@@ -1,0 +1,9 @@
+#header {
+  height: 150px; }
+
+a#home-link {
+  background: white url(../images/logo.png) no-repeat;
+  display: inline-block;
+  height: 134px;
+  text-indent: -9999px;
+  width: 395px; }
