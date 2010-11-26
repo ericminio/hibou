@@ -1,5 +1,6 @@
 GEM
   remote: http://rubygems.org/
+  remote: http://gems.github.com/
   specs:
     abstract (1.0.0)
     actionmailer (3.0.3)
@@ -72,6 +73,9 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     i18n (0.4.2)
+    jquery-rails (0.2.5)
+      rails (~> 3.0)
+      thor (~> 0.14.4)
     json (1.4.6)
     json_pure (1.4.6)
     launchy (0.3.7)
@@ -144,6 +148,7 @@ DEPENDENCIES
   formtastic
   haml
   haml-rails
+  jquery-rails
   launchy
   rails (= 3.0.3)
   rspec-rails (>= 2.1.0)

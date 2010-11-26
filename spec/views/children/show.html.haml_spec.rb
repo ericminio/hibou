@@ -11,8 +11,7 @@ describe "children/show.html.haml" do
 
   it "renders child file details" do
     render
-    rendered.should contain("George")
-    rendered.should contain("Orwell")
+    rendered.should contain("George Orwell")
     rendered.should contain("Allergic to peanuts")
   end
 end

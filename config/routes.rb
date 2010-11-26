@@ -1,4 +1,6 @@
 Hibou::Application.routes.draw do
+  root :to => "home#index"
+  resources :bookings
   resources :children
 
   # The priority is based upon order of creation:

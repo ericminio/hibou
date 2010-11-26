@@ -1,0 +1,5 @@
+%h1 Bookings#new
+=form_for @booking do |booking|
+  =select("booking", "child_id", Child.all.collect {|child| [ child.first_name, child.id ]})
+  =booking.text_field :date
+  =booking.submit 'Save'

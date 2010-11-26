@@ -18,16 +18,11 @@ When /^I consult "([^"]*)"'s file$/ do |child_first_name|
   visit child_path(child)
 end
 
-Then /^I see "([^"]*)" as the first name$/ do |first_name|
-  page.should have_content(first_name)
-end
-
-When /^I see "([^\"]*)" as the last name$/ do |last_name|
-  page.should have_content(last_name)
-end
-
 When /^I see the following notes:$/ do |notes|
   notes.hashes.each do |note|
     page.should have_content(note['text'])
   end
+end
+Then /^I see that his name is "([^\"]*)"s$/ do |name|
+  page.should have_content(name)
 end
