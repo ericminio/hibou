@@ -10,6 +10,13 @@
 <body>
 <div id="header">
     <a href="<%= root_path  %>" id="home-link">Home</a>
+
+    <% if user_signed_in?%>
+        <br />
+        <%= link_to 'Edit your account', edit_user_registration_path  %>
+        &nbsp;|&nbsp;
+        <%= link_to 'Logout', destroy_user_session_path  %>
+    <% end %>
 </div>
 <div id="content">
     <%= yield %>
