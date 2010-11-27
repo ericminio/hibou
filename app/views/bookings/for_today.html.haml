@@ -1,5 +1,8 @@
-%h1 Bookings#index
+%h1
+  ="Schedule for #{Time.now.strftime('%Y-%m-%d')}"
 %div{:id=>"am_schedule"}
+  %h2
+    Morning Schedule
   -@am_bookings.each do |booking|
     %p
       %span
@@ -8,6 +11,8 @@
         =booking.date
 
 %div{:id=>"pm_schedule"}
+  %h2
+    Afternoon Schedule
   -@pm_bookings.each do |booking|
     %p
       %span
