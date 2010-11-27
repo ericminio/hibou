@@ -1,12 +1,17 @@
-Given /^a child registered with first name "([^"]*)" and last name "([^"]*)" and the following notes:$/ do |first_name, last_name, notes|
+Given /^a child registered with:$/ do |information|
   # todo navigate via home page
   visit path_to('child registration page')
 
-  with_scope('#new_child') do
-    fill_in 'child_first_name', :with => first_name
-    fill_in 'child_last_name', :with => last_name
-    fill_in 'child_notes', :with => notes
-    click_button 'Save'
+  information.hashes.each do |child|
+    with_scope('#new_child') do
+      fill_in 'child_first_name', :with => child['first name']
+      fill_in 'child_last_name', :with => child['last name']
+      select child['birth year'], :from => 'child_birth_date_1i'
+      select child['birth month'], :from => 'child_birth_date_2i'
+      select child['birth day'], :from => 'child_birth_date_3i'
+      fill_in 'child_notes', :with => child['notes']
+      click_button 'Save'
+    end
   end
 end
 
@@ -23,6 +28,9 @@ When /^I see the following notes:$/ do |notes|
     page.should have_content(note['text'])
   end
 end
-Then /^I see that his name is "([^\"]*)"s$/ do |name|
+Then /^I see that his name is "([^\"]*)"$/ do |name|
   page.should have_content(name)
+end
+When /^I see that his birth date is "([^\"]*)"$/ do |birth_date|
+  page.should have_content(birth_date)
 end
