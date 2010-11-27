@@ -1,6 +1,6 @@
 /* CSS Document */
 #child-healthcheck {
-background: #fff url(../images/recto.png) no-repeat;
+/** background: #fff url(../images/recto.png) no-repeat; */
 height: 635px;
 margin: 0;
 padding: 0;
@@ -107,11 +107,5 @@ div#child-general-notes {
 }
 
 #child-healthcheck-form label {
-<<<<<<< HEAD
     margin-right: 25px;
 }
-=======
-margin-right: 25px;
-}
-
->>>>>>> bbc646a21008794efe5a8668e43afa811a2f080e

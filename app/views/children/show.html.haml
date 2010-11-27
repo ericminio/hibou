@@ -1,6 +1,7 @@
 %p#notice= notice
 
 #child-healthcheck
+  = image_tag 'recto.png', :alt => ""
   #child-name= "#{@child.first_name} #{@child.last_name}"
 
   #child-age= "#{@child.birth_date.to_s :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
@@ -15,6 +16,7 @@
   #child-allergies-notes= @child.allergies
   #child-general-notes= @child.notes
 
-= link_to 'Edit', edit_child_path(@child)
-\|
-= link_to 'Back', children_path
+#navigation
+  = link_to 'Edit', edit_child_path(@child)
+  \|
+  = link_to 'Back', children_path
