@@ -3,6 +3,6 @@
   -@bookings.each do |booking|
     %p
       %span
-        =booking.child.first_name
+        ="#{booking.child.first_name} #{booking.child.last_name}"
       %span
         =booking.date

@@ -1,0 +1,16 @@
+%h1 Bookings#index
+%div{:id=>"am_schedule"}
+  -@am_bookings.each do |booking|
+    %p
+      %span
+        ="#{booking.child.first_name} #{booking.child.last_name}"
+      %span
+        =booking.date
+
+%div{:id=>"pm_schedule"}
+  -@pm_bookings.each do |booking|
+    %p
+      %span
+        ="#{booking.child.first_name} #{booking.child.last_name}"
+      %span
+        =booking.date
