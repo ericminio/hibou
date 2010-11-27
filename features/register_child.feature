@@ -11,10 +11,10 @@ Feature: Register a child for a day
     Given George Orwell is already registered at the kindergarden
     And Bill Davis is already registered at the kindergarden
     And Roger Rabbit is already registered at the kindergarden
-    And the secretary registered George Orwell on today for the morning
-    And the secretary registered George Orwell on today for the afternoon
-    And the secretary registered Bill Davis on today for the afternoon
-    And the secretary registered Roger Rabbit on tomorrow for the afternoon
+    And the secretary booked George Orwell for today in the morning
+    And the secretary booked George Orwell for today in the afternoon
+    And the secretary booked Bill Davis for today in the afternoon
+    And the secretary booked Roger Rabbit for tomorrow in the afternoon
 
     When I view today's schedule
 

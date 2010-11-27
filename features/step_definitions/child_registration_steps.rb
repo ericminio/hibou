@@ -2,7 +2,7 @@ Given /^([^"]*) ([^"]*) is already registered at the kindergarden$/ do |first_na
   Child.create :first_name => first_name, :last_name => last_name, :birth_date => Time.now
 end
 
-Given /^the secretary registered ([^"]*) ([^"]*) on today for the ([^"]*)$/ do |first_name, last_name, period|
+Given /^the secretary booked ([^"]*) ([^"]*) for today in the ([^"]*)$/ do |first_name, last_name, period|
   visit path_to('child booking page')
   select first_name, :from => 'booking[child_id]'
   today = Time.now
@@ -17,7 +17,7 @@ Given /^the secretary registered ([^"]*) ([^"]*) on today for the ([^"]*)$/ do |
   click_button 'Save'
 end
 
-Given /^the secretary registered ([^"]*) ([^"]*) on tomorrow for the ([^"]*)$/ do |first_name, last_name, period|
+Given /^the secretary booked ([^"]*) ([^"]*) for tomorrow in the ([^"]*)$/ do |first_name, last_name, period|
   visit path_to('child booking page')
   select first_name, :from => 'booking[child_id]'
   tomorrow = Time.now + (60 * 60 * 24)
