@@ -1,5 +1,7 @@
 Hibou::Application.routes.draw do
   root :to => "home#index"
+  devise_for :users
+
   resources :bookings
   resources :children
   match "/todays_schedule/" => 'bookings#for_today', :as => :todays_schedule

@@ -29,6 +29,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'formtastic'
 gem 'validation_reflection'
+gem 'devise'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

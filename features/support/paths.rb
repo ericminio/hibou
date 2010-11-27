@@ -8,34 +8,39 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /the home\s?page/
-      '/'
-    when /child registration page/
-      new_child_path
-    when /children page/
-      children_path
-    when /child booking page/
-      new_booking_path
-    when /bookings/
-      bookings_path
-    when /todays schedule/
-      todays_schedule_path
+      when /the home\s?page/
+        '/'
+      when /child registration page/
+        new_child_path
+      when /children page/
+        children_path
+      when /child booking page/
+        new_booking_path
+      when /bookings/
+        bookings_path
+      when /todays schedule/
+        todays_schedule_path
+      when 'the registration page'
+        new_user_registration_path
+      when 'the login page'
+        new_user_session_path
 
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
 
-    else
-      begin
-        page_name =~ /the (.*) page/
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
-      rescue Object => e
-        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
-          "Now, go and add a mapping in #{__FILE__}"
-      end
+      # Add more mappings here.
+      # Here is an example that pulls values out of the Regexp:
+      #
+      #   when /^(.*)'s profile page$/i
+      #     user_profile_path(User.find_by_login($1))
+
+      else
+        begin
+          page_name =~ /the (.*) page/
+          path_components = $1.split(/\s+/)
+          self.send(path_components.push('path').join('_').to_sym)
+        rescue Object => e
+          raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+                    "Now, go and add a mapping in #{__FILE__}"
+        end
     end
   end
 end
