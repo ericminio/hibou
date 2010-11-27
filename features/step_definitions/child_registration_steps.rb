@@ -1,11 +1,14 @@
 Given /^([^"]*) ([^"]*) is already registered at the kindergarden$/ do |first_name, last_name|
-  Child.create :first_name => first_name, :last_name => last_name
+  Child.create :first_name => first_name, :last_name => last_name, :birth_date => Time.now
 end
 
 Given /^the secretary registered ([^"]*) ([^"]*) on today for the ([^"]*)$/ do |first_name, last_name, period|
   visit path_to('child booking page')
   select first_name, :from => 'booking[child_id]'
-  fill_in 'booking_date', :with => Time.now.strftime("%Y-%m-%d")
+  today = Time.now
+  select today.strftime("%Y"), :from => 'booking_date_1i'
+  select today.strftime("%B"), :from => 'booking_date_2i'
+  select today.strftime("%d"), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
@@ -18,7 +21,9 @@ Given /^the secretary registered ([^"]*) ([^"]*) on tomorrow for the ([^"]*)$/ d
   visit path_to('child booking page')
   select first_name, :from => 'booking[child_id]'
   tomorrow = Time.now + (60 * 60 * 24)
-  fill_in 'booking_date', :with => tomorrow.strftime("%Y-%m-%d")
+  select tomorrow.strftime("%Y"), :from => 'booking_date_1i'
+  select tomorrow.strftime("%B"), :from => 'booking_date_2i'
+  select tomorrow.strftime("%d"), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
@@ -27,10 +32,12 @@ Given /^the secretary registered ([^"]*) ([^"]*) on tomorrow for the ([^"]*)$/ d
   click_button 'Save'
 end
 
-When /^the secretary registered George on December (\d+)st for the ([^"]*)$/ do |arg1, period|
+When /^the secretary registered George on ([^"]*) ([^"]*) ([^"]*) for the ([^"]*)$/ do |day, month, year, period|
   visit path_to('child booking page')
   select "George", :from => 'booking[child_id]'
-  fill_in 'booking_date', :with =>"2010-12-01"
+  select year, :from => 'booking_date_1i'
+  select month, :from => 'booking_date_2i'
+  select day, :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else

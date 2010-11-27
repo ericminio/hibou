@@ -1,0 +1,32 @@
+%table{:border => '1px'}
+  %tr
+    %th
+      Nb
+    %th
+      Age
+    %th
+      Name
+    %th
+      Rate
+    %th
+      Mode of payment
+    %th
+      Received
+    %th
+      Lunch
+  -bookings.each_with_index do |booking, index|
+    %tr
+      %td
+        ="#{index + 1}"
+      %td
+        ="#{distance_of_time_in_words(booking.child.birth_date, Date.today)}"
+      %td
+        ="#{booking.child.first_name} #{booking.child.last_name}"
+      %td
+        1000
+      %td
+        Visa
+      %td
+        50
+      %td
+        Yes or no

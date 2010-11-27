@@ -1,19 +1,4 @@
 %h1 Bookings#new
-=form_for @booking do |booking|
-  %p
-    =select("booking", "child_id", Child.all.collect {|child| [ child.first_name, child.id ]})
+= render 'form'
 
-  %p
-    =booking.label :date, "#{:date} (YYYY-MM-DD)"
-    =booking.text_field :date
-
-  %p
-    =label :booking, :period
-
-    =label_tag 'booking_period_am', 'AM'
-    =radio_button("booking", "period", "AM")
-
-    =label_tag 'booking_period_pm', 'PM'
-    =radio_button("booking", "period", "PM")
-  %p
-    =booking.submit 'Save'
+= link_to 'Back', bookings_path
