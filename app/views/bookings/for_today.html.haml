@@ -1,21 +1,11 @@
 %h1
   ="Schedule for #{Time.now.strftime('%Y-%m-%d')}"
+
 %div{:id=>"am_schedule"}
   %h2
     Morning Schedule
-  -@am_bookings.each do |booking|
-    %p
-      %span
-        ="#{booking.child.first_name} #{booking.child.last_name}"
-      %span
-        =booking.date
-
+  =render :partial => "schedule_table", :locals => { :bookings => @am_bookings }
 %div{:id=>"pm_schedule"}
   %h2
     Afternoon Schedule
-  -@pm_bookings.each do |booking|
-    %p
-      %span
-        ="#{booking.child.first_name} #{booking.child.last_name}"
-      %span
-        =booking.date
+  =render :partial => "schedule_table", :locals => { :bookings => @pm_bookings }

@@ -1,7 +1,4 @@
 /* CSS Document */
-body, input, textarea {font-size: 20px;}
-div {border-width: 1px; height: 40px;}
-
 #child-healthcheck {
 background: #fff url(../images/recto.png) no-repeat;
 height: 635px;
@@ -9,6 +6,7 @@ margin: 0;
 padding: 0;
 position: relative;
 width: 852px;
+font-size: 20px;
 }
 
 div#child-name {
@@ -99,3 +97,4 @@ margin: 20px 10px;
 #child-healthcheck-form label {
 margin-right: 25px;
 }
+
