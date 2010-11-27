@@ -32,67 +32,67 @@ div#child-age {
 }
 
 div#child-snack-yes {
-    left: 455px;
+    left: 452px;
     position: absolute;
-    top: 253px;
-    width: 25px;
-    padding: 5px 3px;
+    top: 250px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-snack-no {
-    left: 585px;
+    left: 580px;
     position: absolute;
-    top: 253px;
-    width: 25px;
-    padding: 5px 1px;
+    top: 250px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-drink-yes {
-    left: 455px;
+    left: 452px;
     position: absolute;
-    top: 303px;
-    width: 25px;
-    padding: 5px 3px;
+    top: 298px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-drink-no {
-    left: 585px;
+    left: 580px;
     position: absolute;
-    top: 303px;
-    width: 25px;
-    padding: 5px 1px;
+    top: 298px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-nap-yes {
-    left: 455px;
+    left: 453px;
     position: absolute;
-    top: 353px;
-    width: 25px;
-    padding: 5px 3px;
+    top: 349px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-nap-no {
-    left: 585px;
+    left: 581px;
     position: absolute;
-    top: 353px;
-    width: 25px;
-    padding: 5px 1px;
+    top: 349px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-allergies-yes {
-    left: 455px;
+    left: 452px;
     position: absolute;
-    top: 430px;
-    width: 25px;
-    padding: 5px 1px;
+    top: 426px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-allergies-no {
-    left: 585px;
+    left: 580px;
     position: absolute;
-    top: 430px;
-    width: 25px;
-    padding: 5px 1px;
+    top: 426px;
+    width: 27px;
+    padding: 10px 6px;
 }
 
 div#child-allergies-notes {
