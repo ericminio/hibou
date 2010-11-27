@@ -4,7 +4,7 @@
   = image_tag 'recto.png', :alt => ""
   #child-name= "#{@child.first_name} #{@child.last_name}"
 
-  #child-age= "#{@child.birth_date.to_s :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
+  #child-age=h "#{I18n.l @child.birth_date, :format => :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
   #child-bottle-yes= @child.bottle? ? 'X' : ''
   #child-bottle-no= @child.bottle? ? '' : 'X'
   #child-snack-yes= @child.snack? ? 'X' : ''
@@ -18,6 +18,6 @@
   #child-private-notes= @child.private_notes
 
 #navigation
-  = link_to 'Edit', edit_child_path(@child)
+  = link_to 'Éditer', edit_child_path(@child)
   \|
-  = link_to 'Back', children_path
+  = link_to 'Retour à la liste', children_path

@@ -17,9 +17,9 @@
     <div id="account_links">
         <% if user_signed_in?%>
         <br />
-            <%= link_to 'Edit your account', edit_user_registration_path  %>
+            <%= link_to 'Éditer votre compte', edit_user_registration_path  %>
             &nbsp;|&nbsp;
-            <%= link_to 'Logout', destroy_user_session_path  %>
+            <%= link_to 'Déconnexion', destroy_user_session_path  %>
         <% end %>
     </div>
 </div>
@@ -46,7 +46,11 @@
     <div id='page_content'>
         <%= yield %>
     </div>
+<div>
+Gracieuset&eacute; de <a href="http://wwww.pyxis-tech.com" > Pyxis Technologies </a> | Produit par <a href="http://www.codapalooza.com/teams/pyxis-sosoft/" > &Eacute;quipe Sosoft </a>
 </div>
+</div>
+
 
 </body>
 </html>
