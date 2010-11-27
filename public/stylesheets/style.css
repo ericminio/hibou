@@ -94,12 +94,20 @@ div#child-allergies-notes {
     width: 535px;
 }
 
-div#child-general-notes {
+div#child-public-notes {
     left: 155px;
     height: 70px;
     position: absolute;
     top: 570px;
     width: 535px;
+}
+
+div#child-private-notes {
+    left: 990px;
+    height: 560px;
+    position: absolute;
+    top: 50px;
+    width: 510px;
 }
 
 #child-healthcheck-form p {

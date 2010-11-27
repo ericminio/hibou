@@ -14,7 +14,8 @@
   #child-allergies-yes= @child.allergic? ? 'X' : ''
   #child-allergies-no= @child.allergic? ? '' : 'X'
   #child-allergies-notes= @child.allergies
-  #child-general-notes= @child.notes
+  #child-public-notes= @child.public_notes
+  #child-private-notes= @child.private_notes
 
 #navigation
   = link_to 'Edit', edit_child_path(@child)

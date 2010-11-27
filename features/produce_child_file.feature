@@ -2,8 +2,8 @@ Feature: Produce a single child file
 
   Background:
     Given a child registered with:
-    |first name|last name|birth year|birth month|birth day|snack|bottle|nap|allergies|notes|
-    |George|Orwell|2007|March|23|no|yes|yes|peanuts|Frequently puts forks in electric plugs|
+    |first name|last name|birth year|birth month|birth day|snack|bottle|nap|allergies|public notes|private notes|
+    |George|Orwell|2007|March|23|no|yes|yes|peanuts|Frequently puts forks in electric plugs|Father can't approach|
 
   Scenario: Produce a basic child file
     When I consult "George"'s file
@@ -14,8 +14,8 @@ Feature: Produce a single child file
     And I see that he needs a nap
     And I see that he is allergic to "peanuts"
     And I see the following notes:
-      |text|
-      |Frequently puts forks in electric plugs|
+      |public|private|
+      |Frequently puts forks in electric plugs|Father can't approach|
 
 
 

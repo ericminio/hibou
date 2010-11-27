@@ -23,7 +23,8 @@ describe "children/new.html.haml" do
         form.should have_selector("input", :type => 'checkbox', :name => 'child[bottle]')
         form.should have_selector("input", :type => 'checkbox', :name => 'child[nap]')
         form.should have_selector("textarea", :name =>'child[allergies]')
-        form.should have_selector("textarea", :name =>'child[notes]')
+        form.should have_selector("textarea", :name =>'child[public_notes]')
+        form.should have_selector("textarea", :name =>'child[private_notes]')
         form.should have_selector("input", :type => "submit")
       end
     end

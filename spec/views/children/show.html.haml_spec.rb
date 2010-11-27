@@ -10,7 +10,8 @@ describe "children/show.html.haml" do
                                        :snack => false,
                                        :nap => true,
                                        :allergies => "eggs",
-                                       :notes      => "Hides behind fridges"
+                                       :public_notes => "Hides behind fridges",
+                                       :private_notes => "Father cannot approach"
     ))
   end
 
@@ -45,5 +46,6 @@ describe "children/show.html.haml" do
     end
     rendered.should contain("eggs")
     rendered.should contain("Hides behind fridges")
+    rendered.should contain("Father cannot approach")
   end
 end
