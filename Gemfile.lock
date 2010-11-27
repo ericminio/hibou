@@ -131,6 +131,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    validation_reflection (1.0.0)
     webrat (0.7.2)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
@@ -155,4 +156,5 @@ DEPENDENCIES
   selenium-webdriver
   spork
   sqlite3-ruby
+  validation_reflection
   webrat
