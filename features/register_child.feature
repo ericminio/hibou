@@ -1,6 +1,6 @@
 Feature: Register a child for a day
 
-  Scenario: George registered for a day
+  Scenario: George booked for a day
     Given George Orwell is already registered at the kindergarden
     And the secretary registered George on 1 December 2010 for the morning
     And the secretary registered George on 1 December 2010 for the afternoon
@@ -22,3 +22,11 @@ Feature: Register a child for a day
     And George Orwell is on the PM schedule
     And Bill Davis is on the PM schedule
     And Roger Rabbit is not on either schedule
+
+  Scenario: George booked for a day with payment method
+    Given George Orwell is already registered at the kindergarden
+
+    And the secretary booked George for today AM with payment method Cash
+
+    When I view today's schedule
+    Then I see that George Orwell booking will be paid with Cash

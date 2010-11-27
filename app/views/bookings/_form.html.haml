@@ -4,6 +4,7 @@
     =form.input :child,  :as => :select,:collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => "Select a child"
     =form.input :date
     =form.input :period, :as => :radio, :collection => ['AM','PM']
+    =form.input :payment_method, :as => :select,:collection => @payment_methods
 
   =form.buttons do
     =form.commit_button 'Save'

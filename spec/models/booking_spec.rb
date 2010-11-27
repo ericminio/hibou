@@ -7,7 +7,7 @@ describe Booking do
 
     before(:each) do
       @child                    = Child.create(:first_name => 'Calvin', :last_name => 'Hobbes', :birth_date => Date.today)
-      @booking_valid_attributes = {:child => @child, :period => 'AM', :date => Date.today}
+      @booking_valid_attributes = {:child => @child, :period => 'AM', :date => Date.today, :payment_method => 'Cash'}
     end
 
     def booking_with(attributes={})
@@ -23,20 +23,13 @@ describe Booking do
     it "is considered invalid without a child" do
       booking_with(:child => nil).should_not be_valid
     end
-  end
-
-  describe "structure" do
-    it "should require the period to be either AM or PM" do
-      roger   = Child.new :first_name=> 'Roger', :last_name=> 'Moquin'
-      booking = Booking.create :child => roger, :date => "2010-11-27", :period => 'unknown'
-      booking.save.should be_false
+    it "is considered invalid with an unknown period" do
+      booking_with(:period => 'unknown').should_not be_valid
+    end
+    it "is considered invalid without a payment method" do
+      booking_with(:payment_method => '').should_not be_valid
     end
 
-    it "should allow AM as the period" do
-      roger   = Child.new :first_name=> 'Roger', :last_name=> 'Moquin'
-      booking = Booking.create :child => roger, :date => "2010-11-27", :period => 'AM'
-      booking.save.should be_true
-    end
   end
 
   describe "find_am_bookings" do
@@ -47,9 +40,9 @@ describe Booking do
       children = [roger, elvis, casper]
       children.each { |child| child.save }
 
-      am_booking                 = Booking.new :child => roger, :date => "2010-11-27", :period => 'AM'
-      pm_booking                 = Booking.new :child => elvis, :date => "2010-11-27", :period => 'PM'
-      am_booking_for_another_day = Booking.new :child => roger, :date => "2010-11-28", :period => 'AM'
+      am_booking                 = Booking.new :child => roger, :date => "2010-11-27", :period => 'AM', :payment_method => 'Cash'
+      pm_booking                 = Booking.new :child => elvis, :date => "2010-11-27", :period => 'PM', :payment_method => 'Cash'
+      am_booking_for_another_day = Booking.new :child => roger, :date => "2010-11-28", :period => 'AM', :payment_method => 'Cash'
 
       bookings_array             = [am_booking_for_another_day, am_booking, pm_booking]
       bookings_array.each { |booking| booking.save }
@@ -68,9 +61,9 @@ describe Booking do
       children = [roger, elvis, casper]
       children.each { |child| child.save }
 
-      am_booking                 = Booking.new :child => roger, :date => "2010-11-27", :period => 'AM'
-      pm_booking                 = Booking.new :child => elvis, :date => "2010-11-27", :period => 'PM'
-      am_booking_for_another_day = Booking.new :child => roger, :date => "2010-11-28", :period => 'AM'
+      am_booking                 = Booking.new :child => roger, :date => "2010-11-27", :period => 'AM', :payment_method => 'Cash'
+      pm_booking                 = Booking.new :child => elvis, :date => "2010-11-27", :period => 'PM', :payment_method => 'Cash'
+      am_booking_for_another_day = Booking.new :child => roger, :date => "2010-11-28", :period => 'AM', :payment_method => 'Cash'
 
       bookings_array             = [am_booking_for_another_day, am_booking, pm_booking]
       bookings_array.each { |booking| booking.save }
