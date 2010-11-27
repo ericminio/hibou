@@ -4,12 +4,12 @@
   #child-name= "#{@child.first_name} #{@child.last_name}"
 
   #child-age= "#{@child.birth_date.to_s :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
-  #child-snack-yes X
-  #child-snack-no X
-  #child-drink-yes X
-  #child-drink-no X
-  #child-nap-yes X
-  #child-nap-no X
+  #child-bottle-yes= @child.bottle? ? 'X' : ''
+  #child-bottle-no= @child.bottle? ? '' : 'X'
+  #child-snack-yes= @child.snack? ? 'X' : ''
+  #child-snack-no= @child.snack? ? '' : 'X'
+  #child-nap-yes= @child.nap? ? 'X' : ''
+  #child-nap-no= @child.nap? ? '' : 'X'
   #child-allergies-yes= @child.allergic? ? 'X' : ''
   #child-allergies-no= @child.allergic? ? '' : 'X'
   #child-allergies-notes= @child.allergies

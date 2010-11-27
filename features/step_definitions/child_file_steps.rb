@@ -9,6 +9,9 @@ Given /^a child registered with:$/ do |information|
       select child['birth year'], :from => 'child_birth_date_1i'
       select child['birth month'], :from => 'child_birth_date_2i'
       select child['birth day'], :from => 'child_birth_date_3i'
+      check "Bottle" if child['bottle'] == "yes"
+      check "Snack" if child['snack'] == "yes"
+      check "Nap" if child['nap'] == "yes"
       fill_in 'child_allergies', :with => child['allergies']
       fill_in 'child_notes', :with => child['notes']
       click_button 'Save'
@@ -29,12 +32,33 @@ When /^I see the following notes:$/ do |notes|
     page.should have_content(note['text'])
   end
 end
+
 Then /^I see that his name is "([^\"]*)"$/ do |name|
   page.should have_content(name)
 end
+
 When /^I see that his birth date is "([^\"]*)"$/ do |birth_date|
   page.should have_content(birth_date)
 end
-When /^I see that his allergies are "([^\"]*)"$/ do |allergies|
-  page.should have_content(allergies)
+
+When /^I see that he is allergic to "([^\"]*)"$/ do |allergies|
+    page.should have_content(allergies)
+end
+
+When /^I see that he expects a bottle$/ do
+  with_scope('#child-bottle-yes') do
+    page.should have_content('X')
+  end
+end
+
+When /^I see that he does not expect a snack$/ do
+  with_scope('#child-snack-no') do
+    page.should have_content('X')
+  end
+end
+
+When /^I see that he needs a nap$/ do
+  with_scope('#child-nap-yes') do
+    page.should have_content('X')
+  end
 end

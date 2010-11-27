@@ -39,7 +39,7 @@ div#child-snack-no {
     padding: 10px 6px;
 }
 
-div#child-drink-yes {
+div#child-bottle-yes {
     left: 452px;
     position: absolute;
     top: 298px;
@@ -47,7 +47,7 @@ div#child-drink-yes {
     padding: 10px 6px;
 }
 
-div#child-drink-no {
+div#child-bottle-no {
     left: 580px;
     position: absolute;
     top: 298px;
