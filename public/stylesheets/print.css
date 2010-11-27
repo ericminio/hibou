@@ -1,2 +1,7 @@
-#header, #notice, #navigation {
+#header, #notice, #navigation, div.menu  {
   display: none; }
+
+body{
+  width:100%;
+}
+
