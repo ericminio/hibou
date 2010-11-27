@@ -10,16 +10,42 @@
 <body>
 <div id="header">
     <a href="<%= root_path  %>" id="home-link">Home</a>
-
-    <% if user_signed_in?%>
+    <div id="header_text">
+        <h1 id="">CPN St-Eustache</h1>
+        <h3 id="">Syst&egrave;me de gestion de Halte-garderie communautaire</h3>
+    </div>
+    <div id="account_links">
+        <% if user_signed_in?%>
         <br />
-        <%= link_to 'Edit your account', edit_user_registration_path  %>
-        &nbsp;|&nbsp;
-        <%= link_to 'Logout', destroy_user_session_path  %>
-    <% end %>
+            <%= link_to 'Edit your account', edit_user_registration_path  %>
+            &nbsp;|&nbsp;
+            <%= link_to 'Logout', destroy_user_session_path  %>
+        <% end %>
+    </div>
 </div>
 <div id="content">
-    <%= yield %>
+    <div class="menu">
+        <ul>
+          <li class='button'>
+            <%=link_to 'Today\'s Schedule', todays_schedule_path%>
+          </li>
+          <li class='button'>
+            <%=link_to 'Bookings', bookings_path%>
+          </li>
+          <li class='button'>
+            <%=link_to 'New Booking', new_booking_path%>
+          </li>
+          <li class='button'>
+            <%=link_to 'Children', children_path%>
+          </li>
+          <li class='button'>
+            <%=link_to 'New Child', new_child_path %>
+          </li>
+        </ul>
+    </div>
+    <div id='page_content'>
+        <%= yield %>
+    </div>
 </div>
 
 </body>
