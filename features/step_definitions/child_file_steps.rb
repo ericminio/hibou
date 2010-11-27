@@ -13,7 +13,8 @@ Given /^a child registered with:$/ do |information|
       check "Snack" if child['snack'] == "yes"
       check "Nap" if child['nap'] == "yes"
       fill_in 'child_allergies', :with => child['allergies']
-      fill_in 'child_notes', :with => child['notes']
+      fill_in 'child_public_notes', :with => child['public notes']
+      fill_in 'child_private_notes', :with => child['private notes']
       click_button 'Save'
     end
   end
@@ -29,7 +30,8 @@ end
 
 When /^I see the following notes:$/ do |notes|
   notes.hashes.each do |note|
-    page.should have_content(note['text'])
+    page.should have_content(note['public'])
+    page.should have_content(note['private'])
   end
 end
 

@@ -9,7 +9,8 @@
     = form.input :bottle, :as => 'boolean'
     = form.input :nap, :as => 'boolean'
     = form.input :allergies
-    = form.input :notes, :as => :text
+    = form.input :public_notes, :as => :text
+    = form.input :private_notes, :as => :text
 
   = form.buttons do
     = form.commit_button 'Save'
