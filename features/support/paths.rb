@@ -20,9 +20,9 @@ module NavigationHelpers
         bookings_path
       when /todays schedule/
         todays_schedule_path
-      when 'the registration page'
+      when /the registration page/
         new_user_registration_path
-      when 'the login page'
+      when /the login page/
         new_user_session_path
 
 

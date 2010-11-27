@@ -6,3 +6,16 @@ When /^I register as "([^"]*)" with password "([^"]*)"$/ do |email, password|
     click_button 'Sign up'
   end
 end
+
+Given /^I am registered as "([^"]*)" with password "([^"]*)"$/ do |email, password|
+  user = User.new( :email => email,
+                   :password => password,
+                   :password_confirmation => password).save!
+end
+
+
+Then /^I see a warning telling me the page is inaccessible$/ do
+  page.should have_content('The page you were looking for doesn\'t exist.')
+end
+
+user = User.new( :email => 'xto@pyxis-tech.com',:password => 'password',:password_confirmation => 'password').save!
