@@ -64,3 +64,6 @@ When /^I see that he needs a nap$/ do
     page.should have_content('X')
   end
 end
+Then /^I see that George Orwell booking will be paid with Cash$/ do
+  page.should have_content('Cash')
+end
