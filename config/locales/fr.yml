@@ -171,6 +171,25 @@ fr:
       even: "doit être pair"
 
   activerecord:
+    models:
+      booking: Réservation
+    attributes:
+      booking:
+        child: Enfant
+        period: Période
+        payment_method: Mode de paiement
+      child:
+        first_name: Prénom
+        last_name: Nom
+        public_notes: Notes publiques
+        birth_date: Date de naissance
+        allergies: Allergies
+        bottle: Boire
+        snack: Collation
+        nap: Sieste
+        private_notes: Notes Privées
+      user:
+        login: "Handle"
     errors:
       messages:
         taken: "n'est pas disponible"

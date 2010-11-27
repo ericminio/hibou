@@ -3,9 +3,9 @@
 
 %div{:id=>"am_schedule"}
   %h2
-    Morning Schedule
+    Horaire AM
   =render :partial => "schedule_table", :locals => { :bookings => @am_bookings }
 %div{:id=>"pm_schedule"}
   %h2
-    Afternoon Schedule
+    Horaire PM
   =render :partial => "schedule_table", :locals => { :bookings => @pm_bookings }
