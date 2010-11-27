@@ -9,6 +9,7 @@ Given /^a child registered with:$/ do |information|
       select child['birth year'], :from => 'child_birth_date_1i'
       select child['birth month'], :from => 'child_birth_date_2i'
       select child['birth day'], :from => 'child_birth_date_3i'
+      fill_in 'child_allergies', :with => child['allergies']
       fill_in 'child_notes', :with => child['notes']
       click_button 'Save'
     end
@@ -33,4 +34,7 @@ Then /^I see that his name is "([^\"]*)"$/ do |name|
 end
 When /^I see that his birth date is "([^\"]*)"$/ do |birth_date|
   page.should have_content(birth_date)
+end
+When /^I see that his allergies are "([^\"]*)"$/ do |allergies|
+  page.should have_content(allergies)
 end
