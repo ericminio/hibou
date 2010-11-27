@@ -3,7 +3,7 @@
 #child-healthcheck
   #child-name= "#{@child.first_name} #{@child.last_name}"
 
-  #child-age 2007-10-05
+  #child-age= "#{@child.birth_date.to_s :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
   #child-snack-yes X
   #child-snack-no X
   #child-drink-yes X

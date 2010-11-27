@@ -16,6 +16,9 @@ describe "children/new.html.haml" do
                                     :action => children_path) do |form|
         form.should have_selector("input", :type =>'text', :name => 'child[first_name]')
         form.should have_selector("input", :type =>'text', :name => 'child[last_name]')
+        form.should have_selector("select", :name => 'child[birth_date(1i)]')
+        form.should have_selector("select", :name => 'child[birth_date(2i)]')
+        form.should have_selector("select", :name => 'child[birth_date(3i)]')
         form.should have_selector("textarea", :name =>'child[notes]')
         form.should have_selector("input", :type => "submit")
       end
