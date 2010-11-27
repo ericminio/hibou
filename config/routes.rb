@@ -2,6 +2,7 @@ Hibou::Application.routes.draw do
   root :to => "home#index"
   resources :bookings
   resources :children
+  match "/todays_schedule/" => 'bookings#for_today', :as => :todays_schedule
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
