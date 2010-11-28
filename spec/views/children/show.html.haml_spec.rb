@@ -18,8 +18,10 @@ describe "children/show.html.haml" do
   it "renders child file details" do
     render
     rendered.should contain("George Orwell")
-    rendered.should contain("23 March 2007")
-    rendered.should contain("3 years")
+
+    rendered.should contain(I18n.l @child.birth_date, :format => :medium)
+    rendered.should contain(distance_of_time_in_words(@child.birth_date, Date.today))
+
     rendered.should have_selector('#child-snack-no') do |scope|
       scope.should contain('X')
     end

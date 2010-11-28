@@ -6,6 +6,61 @@
 #  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
 
 fr:
+
+#######  #Application text
+  back: Retour
+  save: Sauvegarder
+  show: Visualiser
+  delete: Supprimer
+  are_you_sure: Êtes-vous certain?
+  edit: Éditer
+  back_to_list: Retour à la liste
+
+  ###Header
+  CPN_St_Eustache: CPN St-Eustache
+  kindergarten_management_system: Système de gestion de Halte-garderie communautaire
+  edit_account: Éditer votre compte
+  logout: Déconnexion
+
+
+  ####Menu
+  menu_todays_schedule: Horaire du jour
+  menu_bookings: Réservations
+  menu_add_booking: Ajout Réservation
+  menu_children: Enfants
+  menu_add_a_child: Ajouter un enfant
+
+  ####Footer
+  brought_to_you_by: Gracieuseté de
+  produced_by: Produit par
+  team_sosoft: Équipe Sosoft
+#### Bookings
+  add_booking: Ajouter une réservation
+
+  #booking#index
+  booking_list: Liste des réservations
+
+  #booking#for_today
+  schedule_for: Horaire du
+  am_schedule: Horaire AM
+  pm_schedule: Horaire PM
+  nb: Nb
+  age: Âge
+  name: Nom
+  rate: Tarif
+  mode_of_payment: Mode de paiement
+  amount_received: $ Reçu
+  lunch: Dîner
+
+  #booking#new
+  select_a_child: Choisissez un enfant
+
+####Children
+  add_child: Ajouter un enfant
+
+  #children#edit
+  edit_child: Editer un enfant
+
   date:
     formats:
       default: "%d/%m/%Y"

@@ -1,19 +1,19 @@
 %table{:border => '1px'}
   %tr
     %th
-      Nb
+      =t :nb
     %th
-      &Acirc;ge
+      =t :age
     %th
-      Nom
+      =t :name
     %th
-      Tarif
+      =t :rate
     %th
-      Mode de paiement
+      =t :mode_of_payment
     %th
-      Re&ccedil;u
+      =t :amount_received
     %th
-      D&icirc;ner
+      =t :lunch
   -bookings.each_with_index do |booking, index|
     %tr
       %td

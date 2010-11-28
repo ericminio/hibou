@@ -1,7 +1,8 @@
-%h1 Editer un enfant
+%h1
+  =t :edit_child
 
 = render 'form'
 
-= link_to 'Show', @child
+= link_to t(:show), @child
 \|
-= link_to 'Back', children_path
+= link_to t(:back), children_path

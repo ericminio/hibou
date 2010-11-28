@@ -18,6 +18,6 @@
   #child-private-notes= @child.private_notes
 
 #navigation
-  = link_to 'Éditer', edit_child_path(@child)
+  = link_to t(:edit), edit_child_path(@child)
   \|
-  = link_to 'Retour à la liste', children_path
+  = link_to t(:back_to_list), children_path

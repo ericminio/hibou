@@ -5,3 +5,5 @@ tmp/**/*
 .redcar/*
 .idea
 db/schema.rb
+public/stylesheets/.sass-cache/
+

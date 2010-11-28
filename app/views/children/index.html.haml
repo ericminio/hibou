@@ -2,8 +2,10 @@
 
 %table
   %tr
-    %th Pr&eacute;nom
-    %th Nom
+    %th
+      =Child.human_attribute_name(:first_name)
+    %th
+      =Child.human_attribute_name(:last_name)
     %th
     %th
     %th
@@ -12,10 +14,10 @@
     %tr
       %td= child.first_name
       %td= child.last_name
-      %td= link_to 'Voir', child
-      %td= link_to 'Éditer', edit_child_path(child)
-      %td= link_to 'Supprimer', child, :confirm => 'Êtes-vous sûr?', :method => :delete
+      %td= link_to t(:show), child
+      %td= link_to t(:edit), edit_child_path(child)
+      %td= link_to t(:delete), child, :confirm => t(:are_you_sure), :method => :delete
 
 %br
 
-= link_to 'Ajouter un enfant', new_child_path
+= link_to t(:add_child), new_child_path
