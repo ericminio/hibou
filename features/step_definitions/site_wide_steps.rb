@@ -7,5 +7,5 @@ Given /^I am signed out$/ do
 end
 
 Then /^I see the home page$/ do
-  page.should have_content("Today's Schedule")
+  page.should have_content(I18n.t :menu_todays_schedule)
 end
