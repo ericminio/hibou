@@ -7,15 +7,15 @@ Given /^a child registered with:$/ do |information|
       fill_in 'child_first_name', :with => child['first name']
       fill_in 'child_last_name', :with => child['last name']
       select child['birth year'], :from => 'child_birth_date_1i'
-      select child['birth month'], :from => 'child_birth_date_2i'
+      select I18n.l(Date.parse(child['birth month']), :format => "%B"), :from => 'child_birth_date_2i'
       select child['birth day'], :from => 'child_birth_date_3i'
-      check "Bottle" if child['bottle'] == "yes"
-      check "Snack" if child['snack'] == "yes"
-      check "Nap" if child['nap'] == "yes"
+      check Child.human_attribute_name(:bottle) if child['bottle'] == "yes"
+      check Child.human_attribute_name(:snack) if child['snack'] == "yes"
+      check Child.human_attribute_name(:nap) if child['nap'] == "yes"
       fill_in 'child_allergies', :with => child['allergies']
       fill_in 'child_public_notes', :with => child['public notes']
       fill_in 'child_private_notes', :with => child['private notes']
-      click_button 'Save'
+      click_button I18n.t(:save)
     end
   end
 end
@@ -40,7 +40,7 @@ Then /^I see that his name is "([^\"]*)"$/ do |name|
 end
 
 When /^I see that his birth date is "([^\"]*)"$/ do |birth_date|
-  page.should have_content(birth_date)
+  page.should have_content(I18n.l(Date.parse(birth_date), :format => :medium))
 end
 
 When /^I see that he is allergic to "([^\"]*)"$/ do |allergies|

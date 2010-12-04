@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %title Hibou
+    = stylesheet_link_tag 'scaffold', 'formtastic', 'forms', 'style', 'hibou', :media => :all
+    = stylesheet_link_tag 'print', :media => :print
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    #header
+      %a#home-link{:href => root_path} Home
+      #header_text
+        %h1{:id => ""}
+          =t :CPN_St_Eustache
+        %h3{:id => ""}
+          =t :kindergarten_management_system
+      #account_links
+        - if user_signed_in?
+          %br/
+          = link_to t(:edit_account), edit_user_registration_path
+          \ | 
+          \#{link_to t(:logout), destroy_user_session_path}
+    #content
+      .menu
+        %ul
+          %li.button
+            = link_to t(:menu_todays_schedule), todays_schedule_path
+          %li.button
+            = link_to t(:menu_bookings), bookings_path
+          %li.button
+            = link_to t(:menu_add_booking), new_booking_path
+          %li.button
+            = link_to t(:menu_children), children_path
+          %li.button
+            = link_to t(:menu_add_a_child), new_child_path
+      #page_content
+        = yield
+      #footer
+        =t :brought_to_you_by
+        %a{:href => "http://wwww.pyxis-tech.com"} Pyxis Technologies
+        |
+        =t :produced_by
+        %a{:href => "http://www.codapalooza.com/teams/pyxis-sosoft/"}
+        =t :team_sosoft

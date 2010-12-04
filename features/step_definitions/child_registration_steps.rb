@@ -7,14 +7,14 @@ Given /^the secretary booked ([^"]*) ([^"]*) for today in the ([^"]*)$/ do |firs
   select first_name, :from => 'booking[child_id]'
   today = Time.now
   select today.strftime("%Y"), :from => 'booking_date_1i'
-  select today.strftime("%B"), :from => 'booking_date_2i'
+  select I18n.l(today, :format => "%B"), :from => 'booking_date_2i'
   select String(Integer(today.strftime("%d"))), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
     choose 'booking_period_am'
   end
-  click_button 'Save'
+  click_button I18n.t(:save)
 end
 
 When /^the secretary booked George for today AM with payment method Cash$/ do
@@ -22,11 +22,11 @@ When /^the secretary booked George for today AM with payment method Cash$/ do
   select 'George', :from => 'booking[child_id]'
   today = Time.now
   select today.strftime("%Y"), :from => 'booking_date_1i'
-  select today.strftime("%B"), :from => 'booking_date_2i'
+  select I18n.l(today, :format => "%B"), :from => 'booking_date_2i'
   select String(Integer(today.strftime("%d"))), :from => 'booking_date_3i'
   choose 'booking_period_am'
   select 'Cash', :from => 'booking[payment_method]'
-  click_button 'Save'
+  click_button I18n.t(:save)
 end
 
 Given /^the secretary booked ([^"]*) ([^"]*) for tomorrow in the ([^"]*)$/ do |first_name, last_name, period|
@@ -34,28 +34,28 @@ Given /^the secretary booked ([^"]*) ([^"]*) for tomorrow in the ([^"]*)$/ do |f
   select first_name, :from => 'booking[child_id]'
   tomorrow = Time.now + (60 * 60 * 24)
   select tomorrow.strftime("%Y"), :from => 'booking_date_1i'
-  select tomorrow.strftime("%B"), :from => 'booking_date_2i'
+  select I18n.l(tomorrow, :format => "%B"), :from => 'booking_date_2i'
   select String(Integer(tomorrow.strftime("%d"))), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
     choose 'booking_period_am'
   end
-  click_button 'Save'
+  click_button I18n.t(:save)
 end
 
 When /^the secretary registered George on ([^"]*) ([^"]*) ([^"]*) for the ([^"]*)$/ do |day, month, year, period|
   visit path_to('child booking page')
   select "George", :from => 'booking[child_id]'
   select year, :from => 'booking_date_1i'
-  select month, :from => 'booking_date_2i'
+  select I18n.l(Date.parse(month), :format => "%B"), :from => 'booking_date_2i'
   select day, :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
     choose 'booking_period_am'
   end
-  click_button 'Save'
+  click_button I18n.t(:save)
 end
 
 When /I view all bookings/ do

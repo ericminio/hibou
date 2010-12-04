@@ -1,0 +1,256 @@
+# French translations for Ruby on Rails
+# by Christian Lescuyer (christian@flyingcoders.com)
+# contributors:
+#  - Sebastien Grosjean - ZenCocoon.com
+#  - Bruno Michel - http://github.com/nono
+#  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
+
+fr:
+
+#######  #Application text
+  back: Retour
+  save: Sauvegarder
+  show: Visualiser
+  delete: Supprimer
+  are_you_sure: Êtes-vous certain?
+  edit: Éditer
+  back_to_list: Retour à la liste
+
+  ###Header
+  CPN_St_Eustache: CPN St-Eustache
+  kindergarten_management_system: Système de gestion de Halte-garderie communautaire
+  edit_account: Éditer votre compte
+  logout: Déconnexion
+
+
+  ####Menu
+  menu_todays_schedule: Horaire du jour
+  menu_bookings: Réservations
+  menu_add_booking: Ajout Réservation
+  menu_children: Enfants
+  menu_add_a_child: Ajouter un enfant
+
+  ####Footer
+  brought_to_you_by: Gracieuseté de
+  produced_by: Produit par
+  team_sosoft: Équipe Sosoft
+#### Bookings
+  add_booking: Ajouter une réservation
+
+  #booking#index
+  booking_list: Liste des réservations
+
+  #booking#for_today
+  schedule_for: Horaire du
+  am_schedule: Horaire AM
+  pm_schedule: Horaire PM
+  nb: Nb
+  age: Âge
+  name: Nom
+  rate: Tarif
+  mode_of_payment: Mode de paiement
+  amount_received: $ Reçu
+  lunch: Dîner
+
+  #booking#new
+  select_a_child: Choisissez un enfant
+
+####Children
+  add_child: Ajouter un enfant
+
+  #children#edit
+  edit_child: Editer un enfant
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      medium: "%d %B %Y"
+      long: "%e %B %Y"
+    day_names: [lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche]
+    abbr_day_names: [lun, mar, mer, jeu, ven, sam, dim]
+    month_names: [~, janvier, fevrier, mars, avril, mai, juin, juillet, aout, septembre, octobre, novembre, decembre]
+    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%d %B %Y %H:%M:%S"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y %H:%M"
+    am: 'am'
+    pm: 'pm'
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        zero:  "moins d'une seconde"
+        one:   "moins d'une seconde"
+        other: "moins de %{count} secondes"
+      x_seconds:
+        one:   "1 seconde"
+        other: "%{count} secondes"
+      less_than_x_minutes:
+        zero:  "moins d'une minute"
+        one:   "moins d'une minute"
+        other: "moins de %{count} minutes"
+      x_minutes:
+        one:   "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one:   "environ une heure"
+        other: "environ %{count} heures"
+      x_days:
+        one:   "1 jour"
+        other: "%{count} jours"
+      about_x_months:
+        one:   "environ un mois"
+        other: "environ %{count} mois"
+      x_months:
+        one:   "1 mois"
+        other: "%{count} mois"
+      about_x_years:
+        one:   "environ un an"
+        other: "environ %{count} ans"
+      over_x_years:
+        one:   "plus d'un an"
+        other: "plus de %{count} ans"
+      almost_x_years:
+        one:   "presqu'un an"
+        other: "presque %{count} ans"
+    prompts:
+      year:   "Année"
+      month:  "Mois"
+      day:    "Jour"
+      hour:   "Heure"
+      minute: "Minute"
+      second: "Seconde"
+
+  number:
+    format:
+      separator: ","
+      delimiter: " "
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+    currency:
+      format:
+        format: "%n %u"
+        unit: "€"
+        separator: ","
+        delimiter: " "
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Octet"
+            other: "Octets"
+          kb: "ko"
+          mb: "Mo"
+          gb: "Go"
+          tb: "To"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "Millier"
+          million: "Million"
+          billion: "Milliard"
+          trillion: "Mille milliard"
+          quadrillion: "Million de milliard"
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " et "
+      last_word_connector: " et "
+    select:
+      prompt: "Veuillez sélectionner"
+
+  helpers:
+    select:
+      prompt: "Veuillez sélectionner"
+    submit:
+      create: "Créer un %{model}"
+      update: "Modifier ce %{model}"
+      submit: "Enregistrer ce %{model}"
+
+  errors:
+    template: &errors_template
+      header:
+        one:   "Impossible d'enregistrer ce %{model} : 1 erreur"
+        other: "Impossible d'enregistrer ce %{model} : %{count} erreurs"
+      body: "Veuillez vérifier les champs suivants : "
+
+  attributes:
+    created_at: "Créé le"
+    updated_at: "Modifié le"
+
+  errors:
+    format: "Le %{attribute} %{message}"
+    messages: &errors_messages
+      inclusion: "n'est pas inclus(e) dans la liste"
+      exclusion: "n'est pas disponible"
+      invalid: "n'est pas valide"
+      confirmation: "ne concorde pas avec la confirmation"
+      accepted: "doit être accepté(e)"
+      empty: "doit être rempli(e)"
+      blank: "doit être rempli(e)"
+      too_long: "est trop long (pas plus de %{count} caractères)"
+      too_short: "est trop court (au moins %{count} caractères)"
+      wrong_length: "ne fait pas la bonne longueur (doit comporter %{count} caractères)"
+      not_a_number: "n'est pas un nombre"
+      not_an_integer: "doit être un nombre entier"
+      greater_than: "doit être supérieur à %{count}"
+      greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
+      equal_to: "doit être égal à %{count}"
+      less_than: "doit être inférieur à %{count}"
+      less_than_or_equal_to: "doit être inférieur ou égal à %{count}"
+      odd: "doit être impair"
+      even: "doit être pair"
+
+  activerecord:
+    models:
+      booking: Réservation
+    attributes:
+      booking:
+        child: Enfant
+        period: Période
+        payment_method: Mode de paiement
+      child:
+        first_name: Prénom
+        last_name: Nom
+        public_notes: Notes publiques
+        birth_date: Date de naissance
+        allergies: Allergies
+        bottle: Boire
+        snack: Collation
+        nap: Sieste
+        private_notes: Notes Privées
+      user:
+        login: "Handle"
+    errors:
+      messages:
+        taken: "n'est pas disponible"
+        record_invalid: "La validation a échoué : %{errors}"
+        <<: *errors_messages
+      template:
+        <<: *errors_template
+      full_messages:
+        format: "%{attribute} %{message}"

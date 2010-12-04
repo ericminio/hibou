@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 describe ChildrenController do
+  before :each do
+    @user = User.create(:email => "elvis@memphis.te",
+           :password => "hunhun",
+           :password_confirmation => "hunhun")
+    sign_in @user
+  end
 
   def mock_child(stubs={})
     (@mock_child ||= mock_model(Child).as_null_object).tap do |child|

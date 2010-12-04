@@ -1,11 +1,11 @@
 %h1
-  ="Schedule for #{Time.now.strftime('%Y-%m-%d')}"
+  = "#{t :schedule_for} #{I18n.l Date.today, :format => :medium}}"
 
 %div{:id=>"am_schedule"}
   %h2
-    Morning Schedule
+    =t :am_schedule
   =render :partial => "schedule_table", :locals => { :bookings => @am_bookings }
 %div{:id=>"pm_schedule"}
   %h2
-    Afternoon Schedule
+    =t :pm_schedule
   =render :partial => "schedule_table", :locals => { :bookings => @pm_bookings }

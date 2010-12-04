@@ -1,9 +1,11 @@
-%h1 Listing children
+%h1 Liste des enfants
 
 %table
   %tr
-    %th First name
-    %th Last name
+    %th
+      =Child.human_attribute_name(:first_name)
+    %th
+      =Child.human_attribute_name(:last_name)
     %th
     %th
     %th
@@ -12,10 +14,10 @@
     %tr
       %td= child.first_name
       %td= child.last_name
-      %td= link_to 'Show', child
-      %td= link_to 'Edit', edit_child_path(child)
-      %td= link_to 'Destroy', child, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to t(:show), child
+      %td= link_to t(:edit), edit_child_path(child)
+      %td= link_to t(:delete), child, :confirm => t(:are_you_sure), :method => :delete
 
 %br
 
-= link_to 'New Child', new_child_path
+= link_to t(:add_child), new_child_path
