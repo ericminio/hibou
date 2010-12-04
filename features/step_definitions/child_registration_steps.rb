@@ -8,7 +8,7 @@ Given /^the secretary booked ([^"]*) ([^"]*) for today in the ([^"]*)$/ do |firs
   today = Time.now
   select today.strftime("%Y"), :from => 'booking_date_1i'
   select today.strftime("%B"), :from => 'booking_date_2i'
-  select today.strftime("%d"), :from => 'booking_date_3i'
+  select String(Integer(today.strftime("%d"))), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
@@ -23,7 +23,7 @@ When /^the secretary booked George for today AM with payment method Cash$/ do
   today = Time.now
   select today.strftime("%Y"), :from => 'booking_date_1i'
   select today.strftime("%B"), :from => 'booking_date_2i'
-  select today.strftime("%d"), :from => 'booking_date_3i'
+  select String(Integer(today.strftime("%d"))), :from => 'booking_date_3i'
   choose 'booking_period_am'
   select 'Cash', :from => 'booking[payment_method]'
   click_button 'Save'
@@ -35,7 +35,7 @@ Given /^the secretary booked ([^"]*) ([^"]*) for tomorrow in the ([^"]*)$/ do |f
   tomorrow = Time.now + (60 * 60 * 24)
   select tomorrow.strftime("%Y"), :from => 'booking_date_1i'
   select tomorrow.strftime("%B"), :from => 'booking_date_2i'
-  select tomorrow.strftime("%d"), :from => 'booking_date_3i'
+  select String(Integer(tomorrow.strftime("%d"))), :from => 'booking_date_3i'
   if period == 'afternoon'
     choose 'booking_period_pm'
   else
