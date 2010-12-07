@@ -1,0 +1,21 @@
+%h1 Listing families
+
+%table
+  %tr
+    %th Name
+    %th Sin
+    %th
+    %th
+    %th
+
+  - @families.each do |family|
+    %tr
+      %td= family.name
+      %td= family.sin
+      %td= link_to 'Show', family
+      %td= link_to 'Edit', edit_family_path(family)
+      %td= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Family', new_family_path

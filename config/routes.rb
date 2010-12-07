@@ -1,4 +1,6 @@
 Hibou::Application.routes.draw do
+  resources :families
+
   root :to => "home#index"
   devise_for :users
 

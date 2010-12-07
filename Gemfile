@@ -35,7 +35,7 @@ gem 'devise'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem "rspec-rails", ">= 2.1.0"
+  gem "rspec-rails"
   gem "webrat"
   gem 'cucumber-rails'
   gem 'capybara'
@@ -43,4 +43,6 @@ group :development, :test do
   gem 'spork'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'rcov'
+  gem 'rspec-rails-matchers'
 end
