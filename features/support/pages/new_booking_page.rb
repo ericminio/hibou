@@ -2,7 +2,7 @@ When /^(?:|I) book ([^"]*) for ([^"]*) ([^"]*)/ do |child, date, period|
   select child, :from => 'booking_child_id'
   select_booking_date(Date.parse(date))
   choose period == 'am' ? 'booking_period_am' : 'booking_period_pm'
-  click_button I18n.t(:save)
+  click_button 'booking_submit'
 end
 
 def select_booking_date(date)

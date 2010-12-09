@@ -10,8 +10,7 @@ When /^(?:|I) register a child with:$/ do |information|
     fill_in 'child_allergies', :with => child['allergies']
     fill_in 'child_public_notes', :with => child['public notes']
     fill_in 'child_private_notes', :with => child['private notes']
-    # todo use id selector instead of link text
-    click_button I18n.t(:save)
+    click_button 'child_submit'
   end
 end
 

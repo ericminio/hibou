@@ -7,8 +7,6 @@ Feature: consulting the bookings for a day
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
-
-
  Scenario: Schedule for a day
    Given the following bookings
      |name  |date      |period|
