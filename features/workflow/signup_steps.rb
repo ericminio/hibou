@@ -18,4 +18,4 @@ Then /^I see a warning telling me the page is inaccessible$/ do
   page.should have_content('The page you were looking for doesn\'t exist.')
 end
 
-user = User.new( :email => 'xto@pyxis-tech.com',:password => 'password',:password_confirmation => 'password').save!
+#user = User.new( :email => 'xto@pyxis-tech.com',:password => 'password',:password_confirmation => 'password').save!

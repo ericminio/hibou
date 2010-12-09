@@ -6,6 +6,12 @@ class BookingsController < ApplicationController
   def show
   end
 
+  def list
+    @am_bookings = Booking.find_am_bookings Date.parse(params[:id])
+    @pm_bookings = Booking.find_pm_bookings Date.parse(params[:id])
+    render 'for_today'
+  end
+
   def for_today
     today = Time.now
     date = today.strftime("%Y-%m-%d")   #=> "Printed on 04/09/2003"
