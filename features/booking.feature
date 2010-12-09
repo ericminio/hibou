@@ -17,10 +17,10 @@ Feature: consulting the bookings for a day
 
    When I consult the bookings for 2010-12-01
 
-   Then the am's schedule contains
+   Then the am schedule contains
      |name|
      |George Orwell|
      |Bill Davis|
-   And the pm's schedule contains
+   And the pm schedule contains
      |name|
      |George Orwell|

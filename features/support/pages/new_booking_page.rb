@@ -1,21 +1,20 @@
 When /^(?:|I) book ([^"]*) for ([^"]*) ([^"]*)/ do |child, date, period|
-  booking_date = Date.parse(date)
   select child, :from => 'booking_child_id'
-  select booking_date.year().to_s, :from => 'booking_date_1i'
-  select I18n.l(booking_date, :format => "%B"), :from => 'booking_date_2i'
-  select booking_date.day().to_s, :from => 'booking_date_3i'
+  select_date(Date.parse(date))
   choose period == 'am' ? 'booking_period_am' : 'booking_period_pm'
   click_button I18n.t(:save)
 end
 
-Then /^the am's schedule contains$/ do |table|
-  table.rows.each do |child|
-    Then %{I should see "#{child}" within "#am_schedule"}
-  end
+def select_date(date)
+  select date.year().to_s, :from => 'booking_date_1i'
+  select I18n.l(date, :format => "%B"), :from => 'booking_date_2i'
+  select date.day().to_s, :from => 'booking_date_3i'
 end
 
-Then /^the pm's schedule contains$/ do |table|
-  table.rows.each do |child|
-    Then %{I should see "#{child}" within "#pm_schedule"}
+Then /^the ([^"]*) schedule contains$/ do |period, table|
+  table.hashes.each do |child|
+    with_scope("##{period}_schedule") do
+      page.should have_content(child[:name])
+    end
   end
 end
