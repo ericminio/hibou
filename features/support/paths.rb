@@ -18,6 +18,8 @@ module NavigationHelpers
         new_booking_path
       when /bookings/
         bookings_path
+      when /^(.*) schedule page$/
+        schedule_path($1)
       when /todays schedule/
         todays_schedule_path
       when /the registration page/

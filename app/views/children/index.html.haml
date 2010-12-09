@@ -11,10 +11,8 @@
     %th
 
   - @children.each do |child|
-    %tr
-      %td= child.first_name
-      %td= child.last_name
-      %td= link_to t(:show), child
+    %tr{:id=>dom_id(child)}
+      %td= link_to "#{child.first_name} #{child.last_name}", child
       %td= link_to t(:edit), edit_child_path(child)
       %td= link_to t(:delete), child, :confirm => t(:are_you_sure), :method => :delete
 

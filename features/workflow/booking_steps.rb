@@ -1,6 +1,7 @@
 Given /^these children are registered$/ do |table|
-  table.rows.each do |first_name, last_name|
-    Child.create :first_name => first_name, :last_name => last_name, :birth_date => Time.now
+  table.hashes.each do |child_information|
+    child_information['birth date'] ||= Date.today.to_s
+    Given %{a child registered with:}, table([child_information]).transpose
   end
 end
 
@@ -13,5 +14,5 @@ Given /^the following bookings$/ do |table|
 end
 
 When /^(?:|I) consult the bookings for ([^"]*)$/ do |date|
-  visit ("/schedules/#{date}")
+  When "I go to the #{date} schedule page"
 end
