@@ -34,8 +34,11 @@ gem 'devise'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :test do
+group :development, :test do
   gem "rspec-rails", ">= 2.2.0"
+end
+
+group :test do
   gem 'timecop'
   gem 'chronic'
   gem "webrat"

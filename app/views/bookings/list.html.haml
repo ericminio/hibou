@@ -1,5 +1,5 @@
 %h1
-  = "#{t :schedule_for} #{I18n.l Date.today, :format => :medium}"
+  = "#{t :schedule_for} #{I18n.l @schedule_date, :format => :medium}"
 
 %div{:id=>"am_schedule"}
   %h2
