@@ -62,6 +62,7 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    faker (0.3.1)
     ffi (0.6.3)
       rake (>= 0.8.7)
     formtastic (1.2.1)
@@ -86,6 +87,7 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
+    machinist (2.0.0.beta2)
     mail (2.2.10)
       activesupport (>= 2.3.6)
       i18n (~> 0.4.1)
@@ -159,11 +161,13 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
+  faker
   formtastic
   haml
   haml-rails
   jquery-rails
   launchy
+  machinist (>= 2.0.0.beta2)
   rails (= 3.0.3)
   rspec-rails (>= 2.2.0)
   selenium-webdriver
