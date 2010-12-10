@@ -3,7 +3,7 @@ Hibou::Application.routes.draw do
   devise_for :users
 
   resources :bookings
-  match "/schedules/today" => redirect { "/schedules/#{Date.today.to_s}" }, :as => :todays_schedule
+  match "/schedules/today" => redirect { "/schedules/#{Date.today.to_s(:db)}" }, :as => :todays_schedule
   resources :schedules, :controller => 'bookings', :only => 'list' do
     get 'show', :action => 'list', :on => :member
   end

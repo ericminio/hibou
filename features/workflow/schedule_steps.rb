@@ -1,6 +1,6 @@
 Given /^these children are registered$/ do |table|
   table.hashes.each do |child_information|
-    child_information['birth date'] ||= Date.today.to_s
+    child_information['birth date'] ||= Date.today.to_s(:db)
     Given %{a child registered with:}, table([child_information]).transpose
   end
 end
