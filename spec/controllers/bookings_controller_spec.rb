@@ -17,7 +17,6 @@ describe BookingsController do
     Booking.should_receive(:find_am_bookings).with(@date).and_return(@am_bookings)
     Booking.should_receive(:find_pm_bookings).with(@date).and_return(@pm_bookings)
     get :list, :id => "2010-09-21"
-    response.should render_template("for_today")
     assigns(:am_bookings).should == @am_bookings
     assigns(:pm_bookings).should == @pm_bookings
   end

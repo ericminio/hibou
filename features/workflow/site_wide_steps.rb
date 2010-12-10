@@ -11,5 +11,9 @@ Then /^I see the home page$/ do
 end
 
 When /^I decide to create a new booking$/ do
- click_link "new_booking"
+ click_link 'new_booking'
+end
+
+When /^I open today's schedule$/ do
+  click_link 'schedule_of_the_day'
 end

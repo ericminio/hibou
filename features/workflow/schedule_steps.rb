@@ -13,6 +13,10 @@ Given /^the following bookings$/ do |table|
   end
 end
 
+When /^(?:|I) consult today's schedule/ do
+  When "I open today's schedule"
+end
+
 When /^(?:|I) consult the bookings for ([^"]*)$/ do |date|
   When "I go to the #{date} schedule page"
 end

@@ -9,14 +9,6 @@ class BookingsController < ApplicationController
   def list
     @am_bookings = Booking.find_am_bookings Date.parse(params[:id])
     @pm_bookings = Booking.find_pm_bookings Date.parse(params[:id])
-    render 'for_today'
-  end
-
-  def for_today
-    today = Time.now
-    date = today.strftime("%Y-%m-%d")   #=> "Printed on 04/09/2003"
-    @am_bookings = Booking.find_am_bookings date
-    @pm_bookings = Booking.find_pm_bookings date
   end
 
   def new
