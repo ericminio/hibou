@@ -1,5 +1,6 @@
-%h1
-  = "#{t :schedule_for} #{I18n.l Date.today, :format => :medium}"
+= link_to '<-', schedule_path(@schedule_date.yesterday.to_s(:db))
+= I18n.l @schedule_date, :format => :full
+= link_to '->', schedule_path(@schedule_date.tomorrow.to_s(:db))
 
 %div{:id=>"am_schedule"}
   %h2

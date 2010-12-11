@@ -3,10 +3,7 @@ require 'spec_helper'
 describe "children/new.html.haml" do
 
     before(:each) do
-      assign(:child, stub_model(Child,
-                                :first_name => "George",
-                                :last_name  => "Orwell"
-      ).as_new_record)
+      assign(:child, stub_model(Child, :first_name => "George", :last_name  => "Orwell").as_new_record)
     end
 
     it "renders a form to create a child account" do

@@ -2,37 +2,29 @@ require 'spec_helper'
 
 describe Child do
 
-  before(:each) do
-    @valid_attributes = {:first_name => 'Calvin', :last_name => 'Hobbes', :birth_date => Date.today}
+  it "is considered allergic when she has an allergy" do
+    Child.make(:allergies => 'peanuts').should be_allergic
   end
 
-  def child_with(attributes={})
-    Child.new(@valid_attributes.merge!(attributes))
+  it "is not considered allergic when she has no allergy" do
+    Child.make(:allergies => '').should_not be_allergic
   end
 
-  specify "is considered allergic when she has an allergy" do
-    child_with(:allergies => 'peanuts').should be_allergic
+  it "is considered invalid without a first name" do
+    Child.make(:first_name => '').should_not be_valid
   end
 
-  specify "is not considered allergic when she has no allergy" do
-    child_with(:allergies => '').should_not be_allergic
+  it "is considered invalid without a last name" do
+    Child.make(:last_name => '').should_not be_valid
   end
 
-  specify "is considered invalid without a first name" do
-    child_with(:first_name => '').should_not be_valid
+  it "is considered invalid without a birth date" do
+    Child.make(:birth_date => '').should_not be_valid
   end
 
-  specify "is considered invalid without a last name" do
-    child_with(:last_name => '').should_not be_valid
-  end
-
-  specify "is considered invalid without a birth date" do
-    child_with(:birth_date => '').should_not be_valid
-  end
-
-  specify "can be round tripped when valid" do
+  it "can be round tripped when valid" do
     lambda {
-      Child.create!(@valid_attributes)
+      Child.make!
     }.should change(Child, :count).by(1)
   end
 

@@ -24,11 +24,11 @@
       .menu
         %ul
           %li.button
-            = link_to t(:menu_todays_schedule), todays_schedule_path
+            = link_to t(:menu_todays_schedule), todays_schedule_path, :id => 'schedule_of_the_day'
           %li.button
             = link_to t(:menu_bookings), bookings_path
           %li.button
-            = link_to t(:menu_add_booking), new_booking_path
+            = link_to t(:menu_add_booking), new_booking_path, :id => 'new_booking'
           %li.button
             = link_to t(:menu_children), children_path
           %li.button

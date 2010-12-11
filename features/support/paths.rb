@@ -18,8 +18,8 @@ module NavigationHelpers
         new_booking_path
       when /bookings/
         bookings_path
-      when /todays schedule/
-        todays_schedule_path
+      when /today's schedule page/
+        schedule_path(Date.today.to_s(:db))
       when /the registration page/
         new_user_registration_path
       when /the login page/

@@ -1,1 +1,0 @@
-Date::DATE_FORMATS[:medium] = '%d %B %Y'

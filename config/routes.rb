@@ -5,8 +5,11 @@ Hibou::Application.routes.draw do
   devise_for :users
 
   resources :bookings
+  match "/schedules/today" => redirect { "/schedules/#{Date.today.to_s(:db)}" }, :as => :todays_schedule
+  resources :schedules, :controller => 'bookings', :only => 'list' do
+    get 'show', :action => 'list', :on => :member
+  end
   resources :children
-  match "/todays_schedule/" => 'bookings#for_today', :as => :todays_schedule
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
