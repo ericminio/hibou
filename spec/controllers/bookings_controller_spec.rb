@@ -14,8 +14,8 @@ describe BookingsController do
   end
 
   it "list bookings for a given date" do
-    Booking.should_receive(:find_am_bookings).with(@date).and_return(@am_bookings)
-    Booking.should_receive(:find_pm_bookings).with(@date).and_return(@pm_bookings)
+    Booking.should_receive(:find_bookings_on).with(@date, :am).and_return(@am_bookings)
+    Booking.should_receive(:find_bookings_on).with(@date, :pm).and_return(@pm_bookings)
     get :list, :id => "2010-09-21"
     assigns(:schedule_date).should == @date
     assigns(:am_bookings).should == @am_bookings
