@@ -45,6 +45,8 @@ GEM
     childprocess (0.1.4)
       ffi (~> 0.6.3)
     chronic (0.3.0)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     configuration (1.2.0)
     cucumber (0.9.4)
       builder (~> 2.1.2)
@@ -158,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   chronic
+  compass (>= 0.10.6)
   cucumber-rails
   database_cleaner
   devise
