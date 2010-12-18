@@ -1,4 +1,4 @@
-Feature: Consulting the schedule for a given day
+Feature: Cancelling a schedule
 
  Background: Children are registered
    Given these children are registered
@@ -7,7 +7,7 @@ Feature: Consulting the schedule for a given day
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
- Scenario: Opening today's schedule
+ Scenario: Cancelling a schedule for today
    Given the following bookings
      |name  |date      |period|
      |George|2010-12-01|am    |
@@ -16,12 +16,12 @@ Feature: Consulting the schedule for a given day
      |Roger |2010-12-02|am    |
    And today is 2010-12-01
 
-   When I consult today's schedule
+   When I cancel the booking of Bill Davis for 2010-12-01 am
+   And I consult today's schedule
 
    Then the am schedules are
      |name         |
      |George Orwell|
-     |Bill Davis   |
    And the pm schedules are
      |name         |
      |George Orwell|

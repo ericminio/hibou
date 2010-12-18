@@ -20,3 +20,8 @@ end
 When /^(?:|I) consult the bookings for ([^"]*)$/ do |date|
   When "I go to the #{date} schedule page"
 end
+
+When /^(?:|I) cancel the booking of ([^"]*) ([^"]*) for ([^"]*) ([^"]*)$/ do |first_name, last_name, date, period|
+
+end
+
