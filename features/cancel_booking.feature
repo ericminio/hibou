@@ -1,4 +1,4 @@
-Feature: Cancelling a schedule
+Feature: Cancelling a booking
 
  Background: Children are registered
    Given these children are registered
@@ -7,7 +7,7 @@ Feature: Cancelling a schedule
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
- Scenario: Cancelling a schedule for today
+ Scenario: Cancelling a booking for today
    Given the following bookings
      |name  |date      |period|
      |George|2010-12-01|am    |
