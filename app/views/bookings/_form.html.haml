@@ -1,10 +1,14 @@
 = semantic_form_for @booking do |form|
 
   =form.inputs do
-    =form.input :child,  :as => :select,:collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => t(:select_a_child)
+    =form.input :child,  :as => :select, :collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => t(:select_a_child)
     =form.input :date
     =form.input :period, :as => :radio, :collection => ['AM','PM']
-    =form.input :payment_method, :as => :select,:collection => @payment_methods
+    =form.input :payment_method, :as => :select, :collection => ["Cash", 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
+  end
 
   =form.buttons do
     =form.commit_button t(:save)
+  end
+
+end

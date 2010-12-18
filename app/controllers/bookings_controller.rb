@@ -14,7 +14,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @payment_methods = ["Cash", 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
   end
 
   def create
