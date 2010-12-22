@@ -9,33 +9,40 @@
     -#= stylesheet_link_tag 'print', :media => :print
     = javascript_include_tag :defaults
     = csrf_meta_tag
-  %body.bp
+  %body.wat
     #header
-      %a#home-link{:href => root_path} Home
-      #header_text
-        %h1{:id => ""}
-          =t :CPN_St_Eustache
-        %h3{:id => ""}
-          =t :kindergarten_management_system
-      #account_links
-        - if user_signed_in?
-          %br/
-          = link_to t(:edit_account), edit_user_registration_path
-          \ | 
-          \#{link_to t(:logout), destroy_user_session_path}
-    #content
-      .menu
+      %h1= link_to t('hibou.daycare.name'), root_path
+      %h3= t('hibou.title')
+      #user-navigation
         %ul
-          %li.button
+          - if user_signed_in?
+            %li
+              = link_to t('hibou.account.profile'), edit_user_registration_path
+            %li
+              %a{:href => "#"}= t("web-app-theme.settings", :default => "Settings")
+            %li
+              = link_to t('hibou.account.logout'), destroy_user_session_path, :class => 'logout'
+      #main-navigation
+        %ul
+          %li
             = link_to t(:menu_todays_schedule), todays_schedule_path, :id => 'schedule_of_the_day'
-          %li.button
+          %li
             = link_to t(:menu_bookings), bookings_path
-          %li.button
+          %li
             = link_to t(:menu_add_booking), new_booking_path, :id => 'new_booking'
-          %li.button
+          %li
             = link_to t(:menu_children), children_path
-          %li.button
+          %li
             = link_to t(:menu_add_a_child), new_child_path
+
+    -##header
+    -#  #header_text
+    -#    %h1{:id => ""}
+    -#      =t :CPN_St_Eustache
+    -#    %h3{:id => ""}
+    -#      =t :kindergarten_management_system
+
+    #content
       #page_content
         = yield
       #footer
