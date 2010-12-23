@@ -1,0 +1,12 @@
+# use glob syntax.
+syntax: glob
+
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+.redcar/*
+.idea
+db/schema.rb
+public/stylesheets/.sass-cache/
+
