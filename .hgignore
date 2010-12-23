@@ -7,6 +7,9 @@ log/*.log
 tmp/**/*
 .redcar/*
 .idea
+*.iws
+*.ipr
+*.iml
 db/schema.rb
 public/stylesheets/.sass-cache/
 
