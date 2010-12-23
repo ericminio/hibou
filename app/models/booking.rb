@@ -3,11 +3,7 @@ class Booking < ActiveRecord::Base
   validates_inclusion_of :period, :in => %w( AM PM )
   validates_presence_of :date, :child, :payment_method
 
-  def Booking::find_am_bookings date
-    Booking.where("date = ? AND period = 'AM'", date)
-  end
-
-  def Booking::find_pm_bookings date
-    Booking.where("date = ? AND period = 'PM'", date)
+  def Booking::find_bookings_on(date, period)
+    Booking.where("date = ? AND period = ?", date, period.to_s.upcase)
   end
 end

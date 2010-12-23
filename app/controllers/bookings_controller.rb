@@ -8,8 +8,8 @@ class BookingsController < ApplicationController
 
   def list
     @schedule_date = Date.parse(params[:id])
-    @am_bookings = Booking.find_am_bookings @schedule_date
-    @pm_bookings = Booking.find_pm_bookings @schedule_date
+    @am_bookings = Booking.find_bookings_on(@schedule_date, :am)
+    @pm_bookings = Booking.find_bookings_on(@schedule_date, :pm)
   end
 
   def new
