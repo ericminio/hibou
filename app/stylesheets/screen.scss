@@ -24,10 +24,10 @@
 
 @import "partials/sticky-footer";
 
-@include sticky-footer(20px);
+@include sticky-footer(20px, "#container", "#wrapper", "#footer");
 
-body.wat {
-    @include web-app-theme;
+body.hibou {
+    @include hibou;
     @include drastic-dark;
 }
 

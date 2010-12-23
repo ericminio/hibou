@@ -1,6 +1,6 @@
 @import "compass/utilities/general/clearfix";
 
-@mixin web-app-theme {
+@mixin hibou {
   font-size: 12px;
   font-family: sans-serif;
   margin: 0;
@@ -16,7 +16,6 @@
   hr {height: 1px; border: 0; }
   p { margin: 15px 0;}
   a img { border: none; }
-
 
   #container {
     min-width: 960px;
