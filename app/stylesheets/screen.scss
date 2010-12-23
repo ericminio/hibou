@@ -22,6 +22,10 @@
 // when stylesheets are concatenated together.
 //@include blueprint-scaffolding("body.bp");
 
+@import "partials/sticky-footer";
+
+@include sticky-footer(20px);
+
 body.wat {
     @include web-app-theme;
     @include drastic-dark;

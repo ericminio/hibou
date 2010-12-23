@@ -87,7 +87,31 @@ a img {
     by Juan Maria Martinez Arce
        juan[at]insignia4u.com
 */
-/* line 25, ../../../app/stylesheets/screen.scss */
+/* line 2, ../../../app/stylesheets/partials/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 6, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#wrap {
+  min-height: 100%;
+}
+
+/* line 10, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#main {
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+/* line 15, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#footer {
+  position: relative;
+  margin-top: -20px;
+  height: 20px;
+  clear: both;
+}
+
+/* line 29, ../../../app/stylesheets/screen.scss */
 body.wat {
   font-size: 12px;
   font-family: sans-serif;
@@ -318,7 +342,7 @@ body.wat .secondary-navigation ul li a {
 }
 /* line 186, ../../../app/stylesheets/partials/_hibou.scss */
 body.wat #footer {
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
 /* line 193, ../../../app/stylesheets/partials/_hibou.scss */
 body.wat .pagination a, body.wat .pagination span, body.wat .pagination em {
