@@ -1,11 +1,14 @@
-# French translations for Ruby on Rails
-# by Christian Lescuyer (christian@flyingcoders.com)
-# contributors:
-#  - Sebastien Grosjean - ZenCocoon.com
-#  - Bruno Michel - http://github.com/nono
-#  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
-
 fr:
+
+  hibou:
+    title: Système de gestion de Halte-garderie communautaire
+
+    daycare:
+      name: CPN St-Eustache
+
+    account:
+      logout: Déconnexion
+      profile: Éditer votre compte
 
 #######  #Application text
   back: Retour
@@ -17,10 +20,10 @@ fr:
   back_to_list: Retour à la liste
 
   ###Header
-  CPN_St_Eustache: CPN St-Eustache
-  kindergarten_management_system: Système de gestion de Halte-garderie communautaire
-  edit_account: Éditer votre compte
-  logout: Déconnexion
+#  CPN_St_Eustache: CPN St-Eustache
+#  kindergarten_management_system: Système de gestion de Halte-garderie communautaire
+#  edit_account: Éditer votre compte
+#  logout: Déconnexion
 
 
   ####Menu
