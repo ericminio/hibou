@@ -1,5 +1,14 @@
 require 'spec_helper'
 
 describe "bookings/index.html.haml" do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should allow cancellation" do
+    assign(:bookings, [Booking.make])
+    render
+    rendered.should have_selector("a") do |link|
+      link.should contain( t(:delete) )
+    end
+  end
+
+
 end

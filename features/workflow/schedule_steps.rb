@@ -22,6 +22,7 @@ When /^(?:|I) consult the bookings for ([^"]*)$/ do |date|
 end
 
 When /^(?:|I) cancel the booking of ([^"]*) ([^"]*) for ([^"]*) ([^"]*)$/ do |first_name, last_name, date, period|
-
+  When "I go to the bookings page"
+  When "I cancel the child #{first_name} #{last_name} for #{date} #{period}"
 end
 

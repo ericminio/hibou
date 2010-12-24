@@ -7,16 +7,16 @@ Feature: Cancelling a booking
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
- Scenario: Cancelling a booking for today
+ Scenario: Cancelling a child for today
    Given the following bookings
      |name  |date      |period|
      |George|2010-12-01|am    |
      |George|2010-12-01|pm    |
      |Bill  |2010-12-01|am    |
-     |Roger |2010-12-02|am    |
+     |Roger |2010-12-04|am    |
    And today is 2010-12-01
 
-   When I cancel the booking of Bill Davis for 2010-12-01 am
+   When I cancel the booking of Bill Davis for 2010-12-01 AM
    And I consult today's schedule
 
    Then the am schedules are
@@ -25,3 +25,23 @@ Feature: Cancelling a booking
    And the pm schedules are
      |name         |
      |George Orwell|
+
+  Scenario: Cancelling a child for today pm
+   Given the following bookings
+     |name  |date      |period|
+     |George|2010-12-01|am    |
+     |George|2010-12-01|pm    |
+     |Bill  |2010-12-01|am    |
+     |Bill  |2010-12-01|pm    |
+   And today is 2010-12-01
+
+   When I cancel the booking of George Orwell for 2010-12-01 PM
+   And I consult today's schedule
+
+   Then the am schedules are
+     |name         |
+     |George Orwell|
+     |Bill Davis   |
+   And the pm schedules are
+     |name         |
+     |Bill Davis   |
