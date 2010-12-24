@@ -1,0 +1,913 @@
+/* line 4, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/*
+
+    Drastic Dark
+    by Juan Maria Martinez Arce
+       juan[at]insignia4u.com
+*/
+/* line 4, ../../../app/stylesheets/partials/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 8, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#container {
+  min-height: 100%;
+}
+
+/* line 12, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#wrapper {
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+/* line 17, ../../../app/stylesheets/partials/_sticky-footer.scss */
+#footer {
+  position: relative;
+  margin-top: -20px;
+  height: 20px;
+  clear: both;
+}
+
+/* line 29, ../../../app/stylesheets/screen.scss */
+body.hibou {
+  font-size: 12px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  /* pagination */
+  /* tables */
+  /* forms */
+  /* lists */
+  /* box */
+  /*  Inspired by http://particletree.com/features/rediscovering-the-button-element */
+  color: #222;
+  background: #cfcfcf;
+  font-family: helvetica, arial, sans-serif;
+  /* pagination */
+  /* tables */
+  /* forms */
+  /* flash-messages */
+  /* lists */
+  /* box */
+  /* rounded borders */
+}
+/* line 9, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou * {
+  margin: 0;
+  padding: 0;
+}
+/* line 10, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .clear {
+  clear: both;
+  height: 0;
+}
+/* line 12, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou h1 {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: normal;
+}
+/* line 13, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou h2 {
+  font-size: 22px;
+  margin: 15px 0;
+  font-weight: normal;
+}
+/* line 14, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+/* line 15, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou h4 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+/* line 16, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou hr {
+  height: 1px;
+  border: 0;
+}
+/* line 17, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou p {
+  margin: 15px 0;
+}
+/* line 18, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou a img {
+  border: none;
+}
+/* line 20, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #container {
+  min-width: 960px;
+}
+/* line 24, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #header, body.hibou #wrapper {
+  padding: 0 20px;
+}
+/* line 28, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #header {
+  position: relative;
+  padding-top: 1px;
+}
+/* line 32, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #header h1 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 26px;
+  float: left;
+}
+/* line 38, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #header h1 a:link, body.hibou #header h1 a:active, body.hibou #header h1 a:hover, body.hibou #header h1 a:visited {
+  text-decoration: none;
+}
+/* line 43, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #header h3 {
+  float: left;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 0 0 26px;
+  padding: 18px 0px 14px;
+}
+/* line 52, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main {
+  width: 70%;
+  float: left;
+}
+/* line 56, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main .block {
+  margin-bottom: 20px;
+  padding-top: 1px;
+}
+/* line 61, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main .block .content .inner {
+  padding: 0 15px 15px;
+}
+/* line 65, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main .main p:first-child {
+  margin-top: 0;
+}
+/* line 70, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .actions-bar {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px 1px;
+}
+/* line 75, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .actions-bar .actions {
+  float: left;
+}
+/* line 79, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .actions-bar .pagination {
+  float: right;
+  padding: 1px 0;
+}
+/* line 86, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar {
+  width: 25%;
+  float: right;
+}
+/* line 90, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar h3 {
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 13px;
+}
+/* line 96, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar .block {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+/* line 101, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar .block .content {
+  padding: 0 15px;
+}
+/* line 105, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar ul.navigation li a:link, body.hibou #sidebar ul.navigation li a:visited {
+  display: block;
+  padding: 10px 15px;
+}
+/* line 110, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #sidebar .block .sidebar-block, body.hibou #sidebar .notice {
+  padding: 10px;
+}
+/* line 116, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #wrapper {
+  padding-top: 20px;
+}
+/* line 120, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #user-navigation {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+/* line 125, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #user-navigation ul {
+  list-style-type: none;
+}
+/* line 128, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #user-navigation ul li {
+  padding: 5px 10px;
+}
+/* line 134, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main-navigation {
+  overflow: hidden;
+  *zoom: 1;
+  width: 100%;
+}
+/* line 140, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main-navigation ul {
+  list-style-type: none;
+}
+/* line 143, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main-navigation ul li {
+  margin-right: 5px;
+}
+/* line 146, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main-navigation ul li a {
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  padding: 8px 15px;
+}
+/* line 157, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #user-navigation ul li, body.hibou #main-navigation ul li, body.hibou .secondary-navigation ul li {
+  float: left;
+}
+/* line 164, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #main-navigation ul li a:link, body.hibou #main-navigation ul li a:visited, body.hibou #main-navigation ul li a:hover, body.hibou #main-navigation ul li a:active,
+body.hibou .secondary-navigation ul li a:link, body.hibou .secondary-navigation ul li a:visited, body.hibou .secondary-navigation ul li a:hover, body.hibou .secondary-navigation ul li a:active,
+body.hibou #user-navigation ul li a:link, body.hibou #user-navigation ul li a:visited, body.hibou #user-navigation ul li a:hover, body.hibou #user-navigation ul li a:active {
+  text-decoration: none;
+}
+/* line 169, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .secondary-navigation {
+  font-size: 13px;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+}
+/* line 174, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .secondary-navigation ul {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 177, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .secondary-navigation ul li a {
+  display: block;
+  padding: 10px 15px;
+}
+/* line 185, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #footer {
+  /*padding-bottom: 20px;*/
+}
+/* line 192, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .pagination a, body.hibou .pagination span, body.hibou .pagination em {
+  padding: 2px 5px;
+  margin-right: 5px;
+  display: block;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+}
+/* line 201, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .pagination em {
+  font-weight: bold;
+}
+/* line 205, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .pagination a {
+  text-decoration: none;
+}
+/* line 211, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+/* line 216, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table th {
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+/* line 222, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table th:first-child {
+  width: 30px;
+}
+/* line 226, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table th:last-child {
+  width: 200px;
+}
+/* line 230, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table .checkbox {
+  margin-left: 10px;
+}
+/* line 234, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table td {
+  padding: 10px;
+}
+/* line 238, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou table td:last-child {
+  text-align: right;
+}
+/* line 245, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou input[type=checkbox] {
+  margin: 0;
+  padding: 0;
+}
+/* line 252, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form > div {
+  margin-bottom: 15px;
+}
+/* line 256, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form div.left {
+  width: 20%;
+  float: left;
+}
+/* line 261, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form div.right {
+  width: 75%;
+  float: right;
+}
+/* line 267, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form .columns .column {
+  width: 48%;
+}
+/* line 271, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form .columns .left {
+  float: left;
+}
+/* line 275, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form .columns .right {
+  float: right;
+}
+/* line 280, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form label, body.hibou form input[type=text], body.hibou form input[type=password], body.hibou form input[type=number], body.hibou form input[type=email], body.hibou form textarea {
+  font-size: 1.2em;
+  padding: 1px 0;
+  margin: 0;
+}
+/* line 286, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form label.right {
+  text-align: right;
+}
+/* line 290, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form input[type=checkbox], body.hibou form input[type=radio] {
+  margin-right: 5px;
+}
+/* line 294, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form label.checkbox, body.hibou form label.radio {
+  line-height: 1.5em;
+}
+/* line 298, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form label {
+  display: block;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+/* line 304, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form div.fieldWithErrors label {
+  display: inline;
+}
+/* line 308, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form .fieldWithErrors .error {
+  color: red;
+}
+/* line 312, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form input[type=text], body.hibou form input[type=password], body.hibou form input[type=number], body.hibou form input[type=email], body.hibou form textarea {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 321, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 326, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list li {
+  clear: left;
+  padding-bottom: 5px;
+}
+/* line 330, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list li .left {
+  float: left;
+}
+/* line 333, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list li .left .avatar {
+  width: 50px;
+  height: 50px;
+}
+/* line 339, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list li .item {
+  margin-left: 80px;
+}
+/* line 342, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou ul.list li .item .avatar {
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 30px;
+  height: 30px;
+}
+/* line 355, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box {
+  width: 500px;
+  margin: 50px auto;
+}
+/* line 359, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box .block {
+  margin-bottom: 20px;
+}
+/* line 362, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box .block h2 {
+  padding: 10px 15px;
+  margin: 0;
+}
+/* line 367, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box .block .content {
+  padding: 10px 20px;
+}
+/* line 376, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou a.button:link, body.hibou a.button:visited, body.hibou a.button:hover, body.hibou a.button:active, body.hibou button.button {
+  color: #222;
+  display: block;
+  float: left;
+  margin: 0 7px 0 0;
+  background-color: #eee;
+  border: 1px solid #bfbfbf;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px 6px 7px;
+  text-decoration: none;
+}
+/* line 391, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou button.button {
+  width: auto;
+  overflow: visible;
+  padding: 4px 10px 3px 7px;
+  /* IE6 */
+}
+/* line 397, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou button.button[type] {
+  padding: 5px 10px 5px 7px;
+  /* Firefox */
+  line-height: 17px;
+  /* Safari */
+}
+/* line 402, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou *:first-child + html button.button[type] {
+  padding: 4px 10px 3px 7px;
+  /* IE7 */
+}
+/* line 406, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou button.button img, body.hibou a.button img {
+  margin: 0 3px -3px 0 !important;
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+/* line 414, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou button.button:hover, body.hibou a.button:hover {
+  background-color: #dedede;
+}
+/* line 418, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou button.button:active, body.hibou a.button:active {
+  background-color: #e5e5e5;
+}
+/* line 422, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou .navbuttons {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 13, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .small {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.4em;
+}
+/* line 22, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .gray {
+  color: #999999;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.6em;
+}
+/* line 33, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .highlight {
+  background-color: #ffff88;
+  font-weight: bold;
+  color: #36393d;
+}
+/* line 39, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou a:link, body.hibou a:visited, body.hibou a:hover, body.hibou a:active, body.hibou h1, body.hibou h2, body.hibou h3 {
+  color: #36393d;
+}
+/* line 40, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou a {
+  -moz-outline: none;
+}
+/* line 42, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou hr {
+  background: #f0f0ee;
+  color: #f0f0ee;
+}
+/* line 47, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #header {
+  background: #36393d;
+}
+/* line 50, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #header h1 {
+  padding: 15px 0;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+}
+/* line 59, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #header h1 a:link, body.hibou #header h1 a:active, body.hibou #header h1 a:hover, body.hibou #header h1 a:visited {
+  color: #FFF;
+}
+/* line 64, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #header h3 {
+  color: white;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin: 0 0 0 28px;
+  padding: 23px 0px 19px;
+}
+/* line 73, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #user-navigation {
+  top: auto;
+  bottom: 3px;
+  right: 25px;
+}
+/* line 78, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #user-navigation a.logout {
+  background: #cc0000;
+  padding: 1px 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 3px;
+}
+/* line 87, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main .block .content {
+  background: #FFF;
+  padding-top: 1px;
+}
+/* line 91, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main .block .content h2 {
+  margin-left: 15px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+}
+/* line 101, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main .block .content p {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.45em;
+}
+/* line 112, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar .block {
+  background: #FFF;
+}
+/* line 115, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar .block h4 {
+  font-weight: bold;
+}
+/* line 120, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar .notice {
+  background: #E6EEFC;
+}
+/* line 123, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar .notice h4 {
+  color: #0B43A8;
+}
+/* line 128, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar h3 {
+  background: #36393d;
+  color: #FFF;
+  border-bottom: 5px solid #1a1a1a;
+}
+/* line 136, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li {
+  padding-left: 15px;
+}
+/* line 139, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li a {
+  padding: 8px 0;
+}
+/* line 144, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li.active {
+  padding: 0;
+  margin-left: 15px;
+}
+/* line 148, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li.active a {
+  padding: 8px 15px;
+}
+/* line 154, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar ul li a:link, body.hibou #sidebar ul li a:visited {
+  background: #FFF;
+  border-bottom: 1px solid #F0F0EE;
+  text-decoration: none;
+}
+/* line 160, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar ul li a:hover, body.hibou #sidebar ul li a:active {
+  background: #666666;
+  color: #ffffff;
+}
+/* line 165, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation {
+  background: #1a1a1a;
+}
+/* line 168, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li {
+  background: #1a1a1a;
+  margin-right: 0;
+}
+/* line 173, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li.active {
+  background: #f0f0ee;
+}
+/* line 176, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li.active a:link, body.hibou #main-navigation ul li.active a:visited, body.hibou #main-navigation ul li.active a:hover, body.hibou #main-navigation ul li.active a:active {
+  color: #1a1a1a;
+}
+/* line 185, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main-navigation ul li a:link, body.hibou #main-navigation ul li a:visited, body.hibou #main-navigation ul li a:hover, body.hibou #main-navigation ul li a:active,
+body.hibou .secondary-navigation ul li a:link, body.hibou .secondary-navigation ul li a:visited, body.hibou .secondary-navigation ul li a:hover, body.hibou .secondary-navigation ul li a:active,
+body.hibou #user-navigation ul li a:link, body.hibou #user-navigation ul li a:visited, body.hibou #user-navigation ul li a:hover, body.hibou #user-navigation ul li a:active {
+  text-decoration: none;
+  color: #FFF;
+}
+/* line 190, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .secondary-navigation {
+  background: #36393d;
+  border-bottom-color: #1a1a1a;
+  border-bottom-width: 5px;
+}
+/* line 195, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .secondary-navigation li a:hover {
+  background: #666666;
+}
+/* line 199, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .secondary-navigation li.active, body.hibou .secondary-navigation li.active a:hover {
+  background-color: #1a1a1a;
+}
+/* line 205, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #footer .block {
+  color: #FFF;
+  background: #1a1a1a;
+}
+/* line 209, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #footer .block p {
+  margin: 0;
+  padding: 10px;
+}
+/* line 219, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .pagination a, body.hibou .pagination span {
+  background: #cfcfcf;
+  -moz-border-radius: 3px;
+  border: 1px solid #c1c1c1;
+}
+/* line 225, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .pagination em {
+  background: #36393d;
+  color: #FFF;
+  border: 1px solid #36393d;
+}
+/* line 231, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .pagination a {
+  color: #1a1a1a;
+}
+/* line 235, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .pagination a:hover {
+  border: 1px solid #666;
+}
+/* line 243, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou table th {
+  background: #36393d;
+  color: #FFF;
+}
+/* line 248, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou table td {
+  border-bottom: 1px solid #F0F0EE;
+}
+/* line 252, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou table tr:nth-child(odd) {
+  background: #ebebeb;
+}
+/* line 256, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou table th:last-child {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+/* line 265, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou form label {
+  color: #666666;
+}
+/* line 269, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou form input[type=text], body.hibou form textarea {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+}
+/* line 274, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou form input.button {
+  background: #cfcfcf;
+  -moz-border-radius: 5px;
+  border: 1px solid #c1c1c1;
+  padding: 2px 5px;
+  cursor: pointer;
+  color: #36393d;
+  font-weight: bold;
+  font-size: 11px;
+}
+/* line 285, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou form input.button:hover {
+  border: 1px solid #666;
+}
+/* line 289, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou form .description {
+  font-style: italic;
+  color: #8C8C8C;
+  font-size: .9em;
+}
+/* line 298, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .flash .message {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+/* line 304, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .flash .message p {
+  margin: 8px;
+}
+/* line 309, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .flash .error {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+/* line 314, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .flash .warning {
+  border: 1px solid #fffaaa;
+  background-color: #ffffcc;
+}
+/* line 319, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .flash .notice {
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+/* line 327, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou ul.list li {
+  border-bottom-color: #F0F0EE;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+/* line 332, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou ul.list li .item .avatar {
+  border-color: #F0F0EE;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+}
+/* line 342, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #box .block {
+  background: #FFF;
+}
+/* line 345, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #box .block h2 {
+  background: #36393d;
+  color: #FFF;
+}
+/* line 351, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .navbuttons a {
+  color: #cc0000;
+}
+/* line 358, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #main, body.hibou #main-navigation, body.hibou #main-navigation li, body.hibou .secondary-navigation, body.hibou #main .block, body.hibou #sidebar .block, body.hibou #sidebar h3, body.hibou ul.list li,
+body.hibou #footer .block, body.hibou .form input.button, body.hibou #box .block, body.hibou #box .block h2 {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+/* line 365, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .secondary-navigation li:first-child a, body.hibou .secondary-navigation ul li:first-child, body.hibou table th:first-child, body.hibou table th:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+}
+/* line 370, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou .secondary-navigation ul li:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+}
+/* line 375, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
+body.hibou #sidebar, body.hibou #sidebar .block, body.hibou #main .block, body.hibou #sidebar ul.navigation, body.hibou ul.list li, body.hibou #footer .block, body.hibou form input.button, body.hibou #box .block {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}

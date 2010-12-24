@@ -27,6 +27,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
+gem 'compass', '>= 0.10.6'
 gem 'formtastic'
 gem 'validation_reflection'
 gem 'devise'

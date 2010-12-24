@@ -1,0 +1,23 @@
+// CSS sticky footer technique from: http://www.cssstickyfooter.com/using-sticky-footer-code.html
+
+@mixin sticky-footer($footer-height, $wrap-selector: unquote("#wrap"), $main-selector: unquote("#main"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%;
+  }
+
+  #{$wrap-selector} {
+    min-height: 100%;
+  }
+
+  #{$main-selector} {
+    overflow:auto;
+    padding-bottom: $footer-height;
+  }
+
+  #{$footer-selector} {
+    position: relative;
+    margin-top: 0 - $footer-height;
+    height: $footer-height;
+    clear: both;
+  }
+}
