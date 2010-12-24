@@ -58,12 +58,20 @@ fr:
   #booking#new
   select_a_child: Choisissez un enfant
 
+####Family
+  #families#new
+  add_family: Ajouter une famille
+
+####Address
+
+
 ####Children
   add_child: Ajouter un enfant
 
   #children#edit
   edit_child: Editer un enfant
 
+################ General
   date:
     formats:
       default: "%d/%m/%Y"
@@ -231,8 +239,18 @@ fr:
 
   activerecord:
     models:
-      booking: Réservation
+      family: Famille
+      address: Adresse
     attributes:
+      family:
+        name: Nom
+        sin: Numéro d'assurance sociale
+        address: Adresse
+      address:
+        civic_number: Numéro civique
+        apartment: Apartement
+        street: Rue
+        city: Ville
       booking:
         child: Enfant
         period: Période

@@ -51,4 +51,6 @@ group :test do
   gem 'spork'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'rcov'
+  gem 'rspec-rails-matchers'
 end
