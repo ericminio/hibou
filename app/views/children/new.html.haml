@@ -1,5 +1,10 @@
-%h1 Ajouter un enfant
-
-= render 'form'
-
-= link_to t(:back), children_path
+.block
+  .secondary-navigation
+    %ul
+      %li= link_to t('list'), children_path
+      %li.active= link_to t('new'), new_child_path
+  .content
+    %h2
+      = t('child.new')
+    .inner
+      = render 'form'

@@ -1,16 +1,18 @@
-= semantic_form_for @child, :html => {:class =>'bp'} do |form|
+= semantic_form_for @child do |form|
   = form.semantic_errors
 
   = form.inputs do
     = form.input :first_name
     = form.input :last_name
     = form.input :birth_date
-    = form.input :snack, :as => 'boolean'
-    = form.input :bottle, :as => 'boolean'
-    = form.input :nap, :as => 'boolean'
-    = form.input :allergies
-    = form.input :public_notes, :as => :text
-    = form.input :private_notes, :as => :text
+  = form.inputs :options do
+    =form.input :snack
+    =form.input :bottle
+    =form.input :nap
+  = form.inputs do
+    = form.input :allergies, :input_html => {:rows => 2}
+    = form.input :public_notes, :input_html => {:rows => 10}
+    = form.input :private_notes, :input_html => {:rows => 15}
 
   = form.buttons do
-    = form.commit_button t(:save)
+    = form.commit_button

@@ -1,7 +1,7 @@
-= semantic_form_for @booking, :html => {:class => 'bp'} do |form|
+= semantic_form_for @booking do |form|
 
   =form.inputs do
-    =form.input :child,  :as => :select,:collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => t(:select_a_child)
+    =form.input :child, :as => :select, :collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => t(:select_a_child)
     =form.input :date
     =form.input :period, :as => :radio, :collection => ['AM','PM']
     =form.input :payment_method, :as => :select,:collection => @payment_methods

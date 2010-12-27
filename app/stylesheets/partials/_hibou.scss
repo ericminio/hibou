@@ -174,6 +174,8 @@
     ul {
       @include clearfix;
 
+      list-style-type: none;
+
       li a {
         display: block;
         padding: 10px 15px;
@@ -242,15 +244,41 @@
 
   /* forms */
 
-  input[type=checkbox] {
-    margin: 0;
-    padding: 0;
-  }
+//  input[type=checkbox] {
+//    margin: 0;
+//    padding: 0;
+//  }
 
 
   form {
-    &> div {
+
+    ol, ul {
+      list-style:none;
+    }
+
+    &> fieldset {
       margin-bottom: 15px;
+    }
+
+    fieldset > ol > li {
+      margin-bottom: 15px;
+
+      // Date and time
+      &.date fieldset ol li, &.time fieldset ol li, &.datetime fieldset ol li {
+        float:left;
+        width:auto;
+        margin:0 .3em 0 0;
+
+        label {
+          display: none;
+
+          input {
+            display: inline;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
     }
 
     div.left {
@@ -277,10 +305,16 @@
       }
     }
 
-    label, input[type=text], input[type=password], input[type=number], input[type=email], textarea {
+    fieldset > legend > span, label, input[type=text], input[type=password], input[type=number], input[type=email], textarea {
       font-size: 1.2em;
       padding: 1px 0;
       margin: 0;
+    }
+
+    label, fieldset > legend > span {
+      display: block;
+      padding-bottom: 2px;
+      font-weight: bold;
     }
 
     label.right {
@@ -291,14 +325,16 @@
       margin-right: 5px;
     }
 
-    label.checkbox, label.radio {
-      line-height: 1.5em;
-    }
+    li.boolean {
 
-    label {
-      display: block;
-      padding-bottom: 2px;
-      font-weight: bold;
+      margin-bottom: 0;
+
+      label {
+        padding: 0;
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 1.5em;
+      }
     }
 
     div.fieldWithErrors label {
@@ -313,6 +349,37 @@
       width: 100%;
       border-width: 1px;
       border-style: solid;
+    }
+
+    fieldset.buttons li.commit input[type=submit] {
+      color: #222;
+      display:block;
+      float:left;
+      margin:0 7px 0 0;
+      border:1px solid #bfbfbf;
+      font-size: 1em;
+      line-height:17px;
+      font-weight:bold;
+      cursor:pointer;
+      text-decoration: none;
+      width:auto;
+      overflow:visible;
+      padding:5px 10px 5px 27px;
+      background-color: #eee;
+
+      &.create {
+        background-image: url("../../images/tick.png");
+        background-repeat: no-repeat;
+        background-position: 5px 45%;
+      }
+
+      &:over {
+        background-color:#dedede;
+      }
+
+      &:active {
+        background-color:#e5e5e5;
+      }
     }
   }
 

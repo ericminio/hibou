@@ -1,14 +1,49 @@
 fr:
 
-  hibou:
-    title: Système de gestion de Halte-garderie communautaire
+  title: Système de gestion de Halte-garderie communautaire
 
-    daycare:
-      name: CPN St-Eustache
+  new: Ajouter
+  edit: Modifier
+  show: Visualiser
+  delete: Supprimer
+  back: Retour
+  list: Lister
 
-    account:
-      logout: Déconnexion
-      profile: Éditer votre compte
+  daycare:
+    name: CPN St-Eustache
+
+  menu:
+    children: Enfants
+    bookings: Réservations
+
+  account:
+    logout: Déconnexion
+    profile: Éditer votre compte
+
+  child:
+    list: Liste des enfants
+    new: Enregistrer un enfant
+
+  formtastic:
+    titles:
+      options: Détails
+    labels:
+      child:
+        first_name: Prénom
+        last_name: Nom de famille
+        edit:
+          first_name: Changer le prénom
+      booking:
+        child: Enfant
+    hints:
+      child:
+        birth_date: Jour, mois et année de naissance
+        nap: L'enfant fait-il une sieste dans la journée ?
+        bottle: L'enfant prend-t'il encore le biberon ?
+        snack: L'enfant prend-t'il une collation dans la journée ?
+    actions:
+      child:
+        create: Enregistrer
 
 #######  #Application text
   back: Retour
@@ -31,7 +66,6 @@ fr:
   menu_bookings: Réservations
   menu_add_booking: Ajout Réservation
   menu_children: Enfants
-  menu_add_a_child: Ajouter un enfant
 
   ####Footer
   brought_to_you_by: Gracieuseté de
@@ -246,7 +280,7 @@ fr:
         bottle: Boire
         snack: Collation
         nap: Sieste
-        private_notes: Notes Privées
+        private_notes: Notes privées
       user:
         login: "Handle"
     errors:
