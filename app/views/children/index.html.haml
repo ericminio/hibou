@@ -9,16 +9,18 @@
     .inner
       %table
         %tr
-          %th
-            =Child.human_attribute_name(:first_name)
-          %th
-            =Child.human_attribute_name(:last_name)
-          %th
-          %th
+          %th.first ID
+          %th= t('activerecord.attributes.child.first_name')
+          %th= t('activerecord.attributes.child.last_name')
           %th
 
         - @children.each do |child|
-          %tr{:id=>dom_id(child)}
-            %td= link_to "#{child.first_name} #{child.last_name}", child
-            %td= link_to t(:edit), edit_child_path(child)
-            %td= link_to t(:delete), child, :confirm => t(:are_you_sure), :method => :delete
+          %tr{:id=>dom_id(child), :class => cycle('odd', 'even')}
+            %td= child.id
+            %td= link_to "#{child.first_name}", child
+            %td= link_to "#{child.last_name}", child
+            %td
+              %ul
+                %li= link_to t(:show), child
+                %li= link_to t(:edit), edit_child_path(child)
+                %li= link_to t(:delete), child, :confirm => t(:are_you_sure), :method => :delete

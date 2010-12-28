@@ -13,7 +13,7 @@ Feature: Produce a single child file
     |private notes|Father can't approach|
 
   Scenario: Produce a basic child file
-    When I consult "George Orwell"'s file
+    When I consult "George" "Orwell"'s file
     Then I see that his name is "George Orwell"
     And I see that his birth date is "23 March 2007"
     And I see that he does not expect a snack

@@ -50,7 +50,7 @@
   }
 
   #main {
-    width: 100%;
+    width: 70%;
     float: left;
 
     .block {
@@ -238,7 +238,22 @@
     }
 
     td:last-child {
-      text-align: right;
+      ul {
+        list-style-type: none;
+        float: right;
+
+        li {
+          padding: 0 .25em;
+          float: left;
+
+          &:before {
+            content: "| "
+          }
+          &:first-child:before {
+            content: ""
+          }
+        }
+      }
     }
   }
 

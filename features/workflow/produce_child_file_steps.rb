@@ -3,7 +3,7 @@ Given /^a child registered with:$/ do |information|
   When %{I register a child with:}, information
 end
 
-When /^I consult "([^"]*)"'s file$/ do |child_name|
+When /^I consult "([^"]*)" "([^"]*)"'s file$/ do |first_name, last_name|
   When %{I go to the children page}
-  When %{I open #{child_name}'s file}
+  When %{I open #{first_name} #{last_name}'s file}
 end
