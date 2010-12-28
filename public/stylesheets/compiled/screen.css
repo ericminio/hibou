@@ -117,6 +117,7 @@ body.hibou {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  /*p { margin: 15px 0;}*/
   /* pagination */
   /* tables */
   /* forms */
@@ -172,10 +173,6 @@ body.hibou hr {
   height: 1px;
   border: 0;
 }
-/* line 17, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou p {
-  margin: 15px 0;
-}
 /* line 18, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou a img {
   border: none;
@@ -214,8 +211,11 @@ body.hibou #header h3 {
 }
 /* line 52, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #main {
-  width: 70%;
+  width: 100%;
   float: left;
+  /*.main p:first-child {*/
+  /*margin-top: 0;*/
+  /*}*/
 }
 /* line 56, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #main .block {
@@ -225,10 +225,6 @@ body.hibou #main .block {
 /* line 61, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #main .block .content .inner {
   padding: 0 15px 15px;
-}
-/* line 65, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou #main .main p:first-child {
-  margin-top: 0;
 }
 /* line 70, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .actions-bar {
@@ -393,6 +389,12 @@ body.hibou table td {
 body.hibou table td:last-child {
   text-align: right;
 }
+/* line 253, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou form {
+  /*div.fieldWithErrors label {*/
+  /*display: inline;*/
+  /*}*/
+}
 /* line 255, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form ol, body.hibou form ul {
   list-style: none;
@@ -474,12 +476,8 @@ body.hibou form li.boolean label {
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 340, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou form div.fieldWithErrors label {
-  display: inline;
-}
 /* line 344, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou form .fieldWithErrors .error {
+body.hibou form .error .inline-errors {
   color: red;
 }
 /* line 348, ../../../app/stylesheets/partials/_hibou.scss */

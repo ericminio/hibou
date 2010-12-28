@@ -25,6 +25,8 @@ fr:
     new: Enregistrer un enfant
 
   formtastic:
+    required: obligatoire
+
     titles:
       options: Détails
     labels:

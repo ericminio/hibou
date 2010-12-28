@@ -14,7 +14,7 @@
   h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
   h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
   hr {height: 1px; border: 0; }
-  p { margin: 15px 0;}
+  /*p { margin: 15px 0;}*/
   a img { border: none; }
 
   #container {
@@ -50,7 +50,7 @@
   }
 
   #main {
-    width: 70%;
+    width: 100%;
     float: left;
 
     .block {
@@ -62,9 +62,9 @@
       padding: 0 15px 15px;
     }
 
-    .main p:first-child {
-      margin-top: 0;
-    }
+    /*.main p:first-child {*/
+      /*margin-top: 0;*/
+    /*}*/
   }
 
   .actions-bar {
@@ -337,11 +337,11 @@
       }
     }
 
-    div.fieldWithErrors label {
-      display: inline;
-    }
+    /*div.fieldWithErrors label {*/
+      /*display: inline;*/
+    /*}*/
 
-    .fieldWithErrors .error {
+    .error .inline-errors {
       color: red;
     }
 
