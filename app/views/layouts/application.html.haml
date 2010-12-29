@@ -25,18 +25,18 @@
           %ul
             %li
               = link_to t(:menu_todays_schedule), todays_schedule_path, :id => 'schedule_of_the_day'
-            %li{:class => showing?(:bookings)}
+            %li{active?(:bookings)}
               = link_to t('menu.bookings'), bookings_path
-            %li{:class => showing?(:children)}
+            %li{active?(:children)}
               = link_to t('menu.children'), children_path
 
       #wrapper
         #main
           = yield
     #footer
-      =t :brought_to_you_by
-      %a{:href => "http://wwww.pyxis-tech.com"} Pyxis Technologies
-      |
-      =t :produced_by
-      %a{:href => "http://www.codapalooza.com/teams/pyxis-sosoft/"}
-      =t :team_sosoft
+      .block
+        %p
+          Copyright &copy; 2010
+          %a{:href => "http://www.codapalooza.com/teams/pyxis-sosoft/"} Team Sosoft
+          \. _grown by
+          %a{:href => "http://wwww.pyxis-tech.com"} Pyxis.

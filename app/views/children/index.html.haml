@@ -15,7 +15,7 @@
           %th
 
         - @children.each do |child|
-          %tr{:id=>dom_id(child), :class => cycle('odd', 'even')}
+          %tr[child]{ :class => cycle('odd', 'even') }
             %td= child.id
             %td= link_to "#{child.first_name}", child
             %td= link_to "#{child.last_name}", child
