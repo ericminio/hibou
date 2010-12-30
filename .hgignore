@@ -12,4 +12,4 @@ tmp/**/*
 *.iml
 db/schema.rb
 public/stylesheets/.sass-cache/
-
+public/stylesheets/compiled

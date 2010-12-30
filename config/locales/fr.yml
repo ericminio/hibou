@@ -9,6 +9,12 @@ fr:
   back: Retour
   list: Lister
 
+  "yes": Oui
+  "no": Non
+  none: Aucune
+  or: ou
+  cancel: Annuler
+
   daycare:
     name: CPN St-Eustache
 
@@ -30,13 +36,13 @@ fr:
     titles:
       options: Détails
     labels:
-      child:
-        first_name: Prénom
-        last_name: Nom de famille
-        edit:
-          first_name: Changer le prénom
-      booking:
-        child: Enfant
+#      child:
+#        first_name: Prénom
+#        last_name: Nom de famille
+#        edit:
+#          first_name: Changer le prénom
+#      booking:
+#        child: Enfant
     hints:
       child:
         birth_date: Jour, mois et année de naissance
