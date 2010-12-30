@@ -14,7 +14,7 @@
   h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
   h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
   hr {height: 1px; border: 0; }
-  /*p { margin: 15px 0;}*/
+  p { margin: 15px 0;}
   a img { border: none; }
 
   #container {
@@ -366,34 +366,41 @@
       border-style: solid;
     }
 
-    fieldset.buttons li.commit input[type=submit] {
-      color: #222;
-      display:block;
-      float:left;
-      margin:0 7px 0 0;
-      border:1px solid #bfbfbf;
-      font-size: 1em;
-      line-height:17px;
-      font-weight:bold;
-      cursor:pointer;
-      text-decoration: none;
-      width:auto;
-      overflow:visible;
-      padding:5px 10px 5px 27px;
-      background-color: #eee;
+    fieldset.buttons {
 
-      &.create {
-        background-image: url("../../images/tick.png");
-        background-repeat: no-repeat;
-        background-position: 5px 45%;
+      li.commit input[type=submit] {
+        color: #222;
+        display:block;
+        float:left;
+        margin:0 7px 0 0;
+        border:1px solid #bfbfbf;
+        font-size: 1em;
+        line-height:17px;
+        font-weight:bold;
+        cursor:pointer;
+        text-decoration: none;
+        width:auto;
+        overflow:visible;
+        padding:5px 10px 5px 27px;
+        background-color: #eee;
+
+        &.create {
+          background-image: url("../../images/tick.png");
+          background-repeat: no-repeat;
+          background-position: 5px 45%;
+        }
+
+        &:over {
+          background-color:#dedede;
+        }
+
+        &:active {
+          background-color:#e5e5e5;
+        }
       }
 
-      &:over {
-        background-color:#dedede;
-      }
-
-      &:active {
-        background-color:#e5e5e5;
+      li.cancel {
+        padding: 8px 0 0 0;
       }
     }
   }

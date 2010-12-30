@@ -16,3 +16,6 @@
 
   = form.buttons do
     = form.commit_button
+    %li.cancel
+      = t(:or)
+      = link_to t(:cancel), children_path
