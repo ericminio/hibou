@@ -4,7 +4,7 @@ fr:
 
   new: Ajouter
   edit: Modifier
-  show: Visualiser
+  show: Voir
   delete: Supprimer
   back: Retour
   list: Lister
@@ -29,6 +29,7 @@ fr:
   child:
     list: Liste des enfants
     new: Enregistrer un enfant
+    view: Voir le dossier d'un enfant
     edit: Modifier le dossier d'un enfant
 
   formtastic:

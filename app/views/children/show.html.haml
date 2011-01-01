@@ -29,6 +29,8 @@
       %li= link_to t('new'), new_child_path
       %li.active= link_to t('show'), @child
   .content
+    %h2
+      = t('child.view')
     .inner
       %ul[@child]
         %li#first_name

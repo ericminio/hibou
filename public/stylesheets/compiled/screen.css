@@ -742,7 +742,7 @@ body.hibou #main .block .content ul.child {
 /* line 103, ../../../app/stylesheets/partials/themes/_drastic-dark.scss */
 body.hibou #main .block .content ul.child li {
   margin: 15px 0;
-  font-size: 13px;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: normal;
   text-transform: normal;
