@@ -29,6 +29,7 @@ fr:
   child:
     list: Liste des enfants
     new: Enregistrer un enfant
+    edit: Modifier le dossier d'un enfant
 
   formtastic:
     required: obligatoire
@@ -52,14 +53,12 @@ fr:
     actions:
       child:
         create: Enregistrer
+        update: Modifier
 
 #######  #Application text
   back: Retour
   save: Sauvegarder
-  show: Visualiser
-  delete: Supprimer
   are_you_sure: Êtes-vous certain?
-  edit: Éditer
   back_to_list: Retour à la liste
 
   ###Header
@@ -72,13 +71,13 @@ fr:
   ####Menu
   menu_todays_schedule: Horaire du jour
   menu_bookings: Réservations
-  menu_add_booking: Ajout Réservation
-  menu_children: Enfants
+#  menu_add_booking: Ajout Réservation
+#  menu_children: Enfants
 
   ####Footer
-  brought_to_you_by: Gracieuseté de
-  produced_by: Produit par
-  team_sosoft: Équipe Sosoft
+#  brought_to_you_by: Gracieuseté de
+#  produced_by: Produit par
+#  team_sosoft: Équipe Sosoft
 #### Bookings
   add_booking: Ajouter une réservation
 
@@ -101,10 +100,10 @@ fr:
   select_a_child: Choisissez un enfant
 
 ####Children
-  add_child: Ajouter un enfant
+#  add_child: Ajouter un enfant
 
   #children#edit
-  edit_child: Editer un enfant
+#  edit_child: Editer un enfant
 
   date:
     formats:

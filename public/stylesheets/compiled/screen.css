@@ -521,7 +521,7 @@ body.hibou form fieldset.buttons li.commit input[type=submit] {
   background-color: #eee;
 }
 /* line 387, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou form fieldset.buttons li.commit input[type=submit].create {
+body.hibou form fieldset.buttons li.commit input[type=submit].create, body.hibou form fieldset.buttons li.commit input[type=submit].update {
   background-image: url("../../images/tick.png");
   background-repeat: no-repeat;
   background-position: 5px 45%;

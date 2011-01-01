@@ -384,7 +384,7 @@
         padding:5px 10px 5px 27px;
         background-color: #eee;
 
-        &.create {
+        &.create, &.update {
           background-image: url("../../images/tick.png");
           background-repeat: no-repeat;
           background-position: 5px 45%;
