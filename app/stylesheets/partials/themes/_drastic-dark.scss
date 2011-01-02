@@ -79,7 +79,7 @@
       background: #cc0000;
       padding: 1px 4px;
       -moz-border-radius: 4px;
-            -webkit-border-radius: 3px;
+      -webkit-border-radius: 3px;
     }
   }
 
@@ -98,14 +98,15 @@
       line-height: 1.2em;
     }
 
-    p {
-      font-size: 13px;
-      font-style: normal;
-      font-weight: normal;
-      text-transform: normal;
-      letter-spacing: normal;
-      line-height: 1.45em;
-    }
+// todo: Disable since it is more specific than .inline-hints and override its style. See if we need it at all once integration is complete
+//    p {
+//      font-size: 13px;
+//      font-style: normal;
+//      font-weight: normal;
+//      text-transform: normal;
+//      letter-spacing: normal;
+//      line-height: 1.45em;
+//    }
   }
 
   #sidebar {
@@ -210,6 +211,10 @@
       margin: 0;
       padding: 10px;
     }
+
+    a {
+      color: white;
+    }
   }
 
 
@@ -246,7 +251,7 @@
     }
 
     td {
-      border-bottom:1px solid #F0F0EE;
+      border-bottom: 1px solid #F0F0EE;
     }
 
     tr:nth-child(odd) {
@@ -259,10 +264,8 @@
     }
   }
 
-  /* forms */
-
   form {
-    label {
+    label, fieldset > legend > span {
       color: #666666;
     }
 
@@ -271,22 +274,8 @@
       border: 1px solid #cfcfcf;
     }
 
-    input.button {
-      background: #cfcfcf;
-      -moz-border-radius: 5px;
-      border: 1px solid #c1c1c1;
-      padding: 2px 5px;
-      cursor: pointer;
-      color: #36393d;
-      font-weight: bold;
-      font-size: 11px;
-    }
-
-    input.button:hover {
-      border: 1px solid #666;
-    }
-
-    .description {
+    .inline-hints {
+      margin: 0;
       font-style: italic;
       color: #8C8C8C;
       font-size: .9em;
