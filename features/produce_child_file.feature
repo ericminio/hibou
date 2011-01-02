@@ -14,7 +14,8 @@ Feature: Produce a single child file
 
   Scenario: Produce a basic child file
     When I consult "George" "Orwell"'s file
-    Then I see that his name is "George Orwell"
+    Then I see that his first name is "George"
+    And I see that his last name is "Orwell"
     And I see that his birth date is "23 March 2007"
     And I see that he does not expect a snack
     And I see that he expects a bottle

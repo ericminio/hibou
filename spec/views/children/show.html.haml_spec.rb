@@ -17,37 +17,16 @@ describe "children/show.html.haml" do
 
   it "renders child file details" do
     render
-    rendered.should contain("George Orwell")
 
+    rendered.should contain("George")
+    rendered.should contain("Orwell")
     rendered.should contain(I18n.l @child.birth_date, :format => :medium)
     rendered.should contain(distance_of_time_in_words(@child.birth_date, Date.today))
-
-    rendered.should have_selector('#child-snack-no') do |scope|
-      scope.should contain('X')
-    end
-    rendered.should have_selector('#child-snack-yes') do |scope|
-      scope.should_not contain('X')
-    end
-    rendered.should have_selector('#child-bottle-yes') do |scope|
-      scope.should contain('X')
-    end
-    rendered.should have_selector('#child-bottle-no') do |scope|
-      scope.should_not contain('X')
-    end
-    rendered.should have_selector('#child-nap-yes') do |scope|
-      scope.should contain('X')
-    end
-    rendered.should have_selector('#child-nap-no') do |scope|
-      scope.should_not contain('X')
-    end
-    rendered.should have_selector('#child-allergies-yes') do |scope|
-      scope.should contain('X')
-    end
-    rendered.should have_selector('#child-allergies-no') do |scope|
-      scope.should_not contain('X')
-    end
-    rendered.should contain("eggs")
-    rendered.should contain("Hides behind fridges")
-    rendered.should contain("Father cannot approach")
+    rendered.should have_selector('#snack') { |scope| scope.should contain(t(:no)) }
+    rendered.should have_selector('#bottle') { |scope| scope.should contain(t(:yes)) }
+    rendered.should have_selector('#nap') { |scope| scope.should contain(t(:yes)) }
+    rendered.should have_selector('#allergies') { |scope| scope.should contain("egg") }
+    rendered.should have_selector('#public_notes') { |scope| scope.should contain("Hides behind fridges") }
+    rendered.should have_selector('#private_notes') { |scope| scope.should contain("Father cannot approach") }
   end
 end

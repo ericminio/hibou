@@ -4,10 +4,16 @@ fr:
 
   new: Ajouter
   edit: Modifier
-  show: Visualiser
+  show: Voir
   delete: Supprimer
   back: Retour
   list: Lister
+
+  "yes": Oui
+  "no": Non
+  none: Aucune
+  or: ou
+  cancel: Annuler
 
   daycare:
     name: CPN St-Eustache
@@ -23,6 +29,8 @@ fr:
   child:
     list: Liste des enfants
     new: Enregistrer un enfant
+    view: Voir le dossier d'un enfant
+    edit: Modifier le dossier d'un enfant
 
   formtastic:
     required: obligatoire
@@ -30,13 +38,13 @@ fr:
     titles:
       options: Détails
     labels:
-      child:
-        first_name: Prénom
-        last_name: Nom de famille
-        edit:
-          first_name: Changer le prénom
-      booking:
-        child: Enfant
+#      child:
+#        first_name: Prénom
+#        last_name: Nom de famille
+#        edit:
+#          first_name: Changer le prénom
+#      booking:
+#        child: Enfant
     hints:
       child:
         birth_date: Jour, mois et année de naissance
@@ -46,14 +54,12 @@ fr:
     actions:
       child:
         create: Enregistrer
+        update: Modifier
 
 #######  #Application text
   back: Retour
   save: Sauvegarder
-  show: Visualiser
-  delete: Supprimer
   are_you_sure: Êtes-vous certain?
-  edit: Éditer
   back_to_list: Retour à la liste
 
   ###Header
@@ -66,13 +72,13 @@ fr:
   ####Menu
   menu_todays_schedule: Horaire du jour
   menu_bookings: Réservations
-  menu_add_booking: Ajout Réservation
-  menu_children: Enfants
+#  menu_add_booking: Ajout Réservation
+#  menu_children: Enfants
 
   ####Footer
-  brought_to_you_by: Gracieuseté de
-  produced_by: Produit par
-  team_sosoft: Équipe Sosoft
+#  brought_to_you_by: Gracieuseté de
+#  produced_by: Produit par
+#  team_sosoft: Équipe Sosoft
 #### Bookings
   add_booking: Ajouter une réservation
 
@@ -102,10 +108,10 @@ fr:
 
 
 ####Children
-  add_child: Ajouter un enfant
+#  add_child: Ajouter un enfant
 
   #children#edit
-  edit_child: Editer un enfant
+#  edit_child: Editer un enfant
 
 ################ General
   date:
