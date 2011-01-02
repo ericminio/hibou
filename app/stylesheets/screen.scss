@@ -24,7 +24,7 @@
 
 @import "partials/sticky-footer";
 
-@include sticky-footer(20px, "#container", "#wrapper", "#footer");
+@include sticky-footer(34px, "#container", "#wrapper", "#footer");
 
 body.hibou {
     @include hibou;

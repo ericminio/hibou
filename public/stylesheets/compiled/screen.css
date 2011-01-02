@@ -100,14 +100,14 @@ html, body {
 /* line 12, ../../../app/stylesheets/partials/_sticky-footer.scss */
 #wrapper {
   overflow: auto;
-  padding-bottom: 20px;
+  padding-bottom: 34px;
 }
 
 /* line 17, ../../../app/stylesheets/partials/_sticky-footer.scss */
 #footer {
   position: relative;
-  margin-top: -20px;
-  height: 20px;
+  margin-top: -34px;
+  height: 34px;
   clear: both;
 }
 
