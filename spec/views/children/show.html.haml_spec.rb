@@ -18,10 +18,12 @@ describe "children/show.html.haml" do
   it "renders child file details" do
     render
 
-    rendered.should contain("George")
-    rendered.should contain("Orwell")
-    rendered.should contain(I18n.l @child.birth_date, :format => :medium)
-    rendered.should contain(distance_of_time_in_words(@child.birth_date, Date.today))
+    rendered.should have_selector('#first_name') { |scope| scope.should contain("George") }
+    rendered.should have_selector('#last_name') { |scope| scope.should contain("Orwell") }
+    rendered.should have_selector('#birth_date') do |scope|
+      scope.should contain(I18n.l @child.birth_date, :format => :medium)
+      scope.should contain(distance_of_time_in_words(@child.birth_date, Date.today))
+    end
     rendered.should have_selector('#snack') { |scope| scope.should contain(t(:no)) }
     rendered.should have_selector('#bottle') { |scope| scope.should contain(t(:yes)) }
     rendered.should have_selector('#nap') { |scope| scope.should contain(t(:yes)) }
