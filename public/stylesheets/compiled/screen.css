@@ -573,7 +573,7 @@ body.hibou ul.list li .item .avatar {
 /* line 443, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box {
   width: 500px;
-  margin: 50px auto;
+  margin: 200px auto;
 }
 /* line 447, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block {
@@ -582,13 +582,51 @@ body.hibou #box .block {
 /* line 450, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block h2 {
   padding: 10px 15px;
-  margin: 0;
+  margin-bottom: 15px;
 }
 /* line 455, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block .content {
   padding: 10px 20px;
 }
-/* line 464, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 463, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset > ol > li {
+  display: block;
+  *zoom: 1;
+}
+/* line 22, ../../../../../../.rvm/gems/ruby-1.8.7-p174/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+body.hibou #box form.formtastic fieldset > ol > li:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 467, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset > ol > li label {
+  float: left;
+  width: 25%;
+  text-align: right;
+}
+/* line 473, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset > ol > li input {
+  float: right;
+  width: 65%;
+  margin-right: 5%;
+}
+/* line 480, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset.buttons li {
+  float: right;
+  width: 65%;
+  margin: 0 5% 0 0;
+}
+/* line 485, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset.buttons li input {
+  float: left;
+  width: auto;
+  margin: 0;
+}
+/* line 498, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou a.button:link, body.hibou a.button:visited, body.hibou a.button:hover, body.hibou a.button:active, body.hibou button.button {
   color: #222;
   display: block;
@@ -603,26 +641,26 @@ body.hibou a.button:link, body.hibou a.button:visited, body.hibou a.button:hover
   padding: 5px 10px 6px 7px;
   text-decoration: none;
 }
-/* line 479, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 513, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou button.button {
   width: auto;
   overflow: visible;
   padding: 4px 10px 3px 7px;
   /* IE6 */
 }
-/* line 485, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 519, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou button.button[type] {
   padding: 5px 10px 5px 7px;
   /* Firefox */
   line-height: 17px;
   /* Safari */
 }
-/* line 490, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 524, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou *:first-child + html button.button[type] {
   padding: 4px 10px 3px 7px;
   /* IE7 */
 }
-/* line 494, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 528, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou button.button img, body.hibou a.button img {
   margin: 0 3px -3px 0 !important;
   padding: 0;
@@ -630,15 +668,15 @@ body.hibou button.button img, body.hibou a.button img {
   width: 16px;
   height: 16px;
 }
-/* line 502, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 536, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou button.button:hover, body.hibou a.button:hover {
   background-color: #dedede;
 }
-/* line 506, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 540, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou button.button:active, body.hibou a.button:active {
   background-color: #e5e5e5;
 }
-/* line 510, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 544, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .navbuttons {
   overflow: hidden;
   *zoom: 1;

@@ -442,18 +442,52 @@
 
   #box {
     width: 500px;
-    margin: 50px auto;
+    margin: 200px auto;
 
     .block {
       margin-bottom: 20px;
 
       h2 {
         padding: 10px 15px;
-        margin: 0;
+        margin-bottom: 15px;
       }
 
       .content {
         padding: 10px 20px;
+      }
+    }
+
+    form.formtastic {
+      fieldset {
+
+        > ol > li {
+          display: block;
+          @include pie-clearfix;
+
+          label {
+            float: left;
+            width: 25%;
+            text-align: right;
+          }
+
+          input {
+            float: right;
+            width: 65%;
+            margin-right: 5%;
+          }
+        }
+
+        &.buttons li {
+          float: right;
+          width: 65%;
+          margin: 0 5% 0 0;
+
+          input {
+            float: left;
+            width: auto;
+            margin: 0;
+          }
+        }
       }
     }
   }
