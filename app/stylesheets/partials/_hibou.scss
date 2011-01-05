@@ -136,8 +136,7 @@
 
     width: 100%;
 
-    ul
-      {
+    ul {
       list-style-type: none;
 
       li {
@@ -149,22 +148,19 @@
           display: block;
           padding: 8px 15px;
         }
+      }
     }
-}
   }
-
 
   #user-navigation ul li, #main-navigation ul li, .secondary-navigation ul li {
     float: left;
   }
-
 
   #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
   .secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
   #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
     text-decoration: none;
   }
-
 
   .secondary-navigation {
     font-size: 13px;
@@ -206,6 +202,12 @@
 
     a {
       text-decoration: none;
+    }
+  }
+
+  #login {
+    li.commit input[type=submit].create {
+      background: #eee url("../../images/key_go.png") no-repeat 5px 45%;
     }
   }
 
@@ -382,12 +384,9 @@
         width:auto;
         overflow:visible;
         padding:5px 10px 5px 27px;
-        background-color: #eee;
 
         &.create, &.update {
-          background-image: url("../../images/tick.png");
-          background-repeat: no-repeat;
-          background-position: 5px 45%;
+          background: #eee url("../../images/tick.png") no-repeat 5px 45%;
         }
 
         &:over {

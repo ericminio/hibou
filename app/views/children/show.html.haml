@@ -21,60 +21,60 @@
 -#  = link_to t(:edit), edit_child_path(@child)
 -#  \|
 -#  = link_to t(:back_to_list), children_path
-
-.block
-  .secondary-navigation
-    %ul
-      %li= link_to t('list'), children_path
-      %li= link_to t('new'), new_child_path
-      %li.active= link_to t('show'), @child
-  .content
-    %h2
-      = t('child.view')
-    .inner
-      %ul[@child]
-        %li#first_name
-          %b
-            = Child.human_attribute_name(:first_name)
-            \:
-          = @child.first_name
-        %li#last_name
-          %b
-            = Child.human_attribute_name(:last_name)
-            \:
-          = @child.last_name
-        %li#birth_date
-          %b
-            = Child.human_attribute_name(:birth_date)
-            \:
-          = "#{I18n.l @child.birth_date, :format => :medium} (#{distance_of_time_in_words(@child.birth_date, Date.today)})"
-        %li#bottle
-          %b
-            = Child.human_attribute_name(:bottle)
-            \:
-          = @child.bottle ? t(:yes) : t(:no)
-        %li#snack
-          %b
-            = Child.human_attribute_name(:snack)
-            \:
-          = @child.snack ? t(:yes) : t(:no)
-        %li#nap
-          %b
-            = Child.human_attribute_name(:nap)
-            \:
-          = @child.nap ? t(:yes) : t(:no)
-        %li#allergies
-          %b
-            = Child.human_attribute_name(:allergies)
-            \:
-          = @child.allergic? ? @child.allergies : t(:none)
-        %li#public_notes
-          %b
-            = Child.human_attribute_name(:public_notes)
-            \:
-          = @child.public_notes
-        %li#private_notes
-          %b
-            = Child.human_attribute_name(:private_notes)
-            \:
-          = @child.private_notes
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li= link_to t('list'), children_path
+        %li= link_to t('new'), new_child_path
+        %li.active= link_to t('show'), @child
+    .content
+      %h2
+        = t('child.view')
+      .inner
+        %ul[@child]
+          %li#first_name
+            %b
+              = Child.human_attribute_name(:first_name)
+              \:
+            = @child.first_name
+          %li#last_name
+            %b
+              = Child.human_attribute_name(:last_name)
+              \:
+            = @child.last_name
+          %li#birth_date
+            %b
+              = Child.human_attribute_name(:birth_date)
+              \:
+            = "#{I18n.l @child.birth_date, :format => :medium} (#{distance_of_time_in_words(@child.birth_date, Date.today)})"
+          %li#bottle
+            %b
+              = Child.human_attribute_name(:bottle)
+              \:
+            = @child.bottle ? t(:yes) : t(:no)
+          %li#snack
+            %b
+              = Child.human_attribute_name(:snack)
+              \:
+            = @child.snack ? t(:yes) : t(:no)
+          %li#nap
+            %b
+              = Child.human_attribute_name(:nap)
+              \:
+            = @child.nap ? t(:yes) : t(:no)
+          %li#allergies
+            %b
+              = Child.human_attribute_name(:allergies)
+              \:
+            = @child.allergic? ? @child.allergies : t(:none)
+          %li#public_notes
+            %b
+              = Child.human_attribute_name(:public_notes)
+              \:
+            = @child.public_notes
+          %li#private_notes
+            %b
+              = Child.human_attribute_name(:private_notes)
+              \:
+            = @child.private_notes

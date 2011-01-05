@@ -32,19 +32,18 @@ fr:
     view: Voir le dossier d'un enfant
     edit: Modifier le dossier d'un enfant
 
+  sign_in:
+    title: Connexion
+
   formtastic:
     required: obligatoire
 
     titles:
       options: Détails
     labels:
-#      child:
-#        first_name: Prénom
-#        last_name: Nom de famille
-#        edit:
-#          first_name: Changer le prénom
-#      booking:
-#        child: Enfant
+      user:
+        email: Courriel
+        password: Mot de passe
     hints:
       child:
         birth_date: Jour, mois et année de naissance
@@ -55,6 +54,8 @@ fr:
       child:
         create: Enregistrer
         update: Modifier
+      user:
+        create: Se connecter
 
 #######  #Application text
   back: Retour

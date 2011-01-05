@@ -3,7 +3,7 @@ Before do
            :password => "hunhun",
            :password_confirmation => "hunhun").save!
   visit new_user_session_path
-  fill_in 'Email', :with => "elvis@memphis.te"
-  fill_in 'Password', :with => 'hunhun'
-  click_button 'Sign in'
+  fill_in 'user_email', :with => "elvis@memphis.te"
+  fill_in 'user_password', :with => 'hunhun'
+  click_button 'user_submit'
 end

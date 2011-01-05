@@ -76,10 +76,10 @@
     right: 25px;
 
     a.logout {
-      background: #cc0000;
-      padding: 1px 4px;
+      background: url("../../images/key_delete.png") no-repeat 5px 45%;
       -moz-border-radius: 4px;
       -webkit-border-radius: 3px;
+      padding:5px 10px 5px 27px;
     }
   }
 
@@ -272,7 +272,7 @@
       color: #666666;
     }
 
-    input[type=text], textarea {
+    input[type=text], input[type=password], input[type=number], input[type=email], textarea {
       width: 100%;
       border: 1px solid #cfcfcf;
     }

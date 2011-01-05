@@ -1,8 +1,8 @@
 When /^I login as "([^"]*)" using password "([^"]*)"$/ do |email, password|
-  within 'form#user_new' do
-    fill_in 'Email', :with => email
-    fill_in 'Password', :with => password
-    click_button 'Sign in'
+  within 'form#new_user' do
+    fill_in 'user_email', :with => email
+    fill_in 'user_password', :with => password
+    click_button 'user_submit'
   end
 end
 

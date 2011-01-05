@@ -22,6 +22,12 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'ruby-debug19'
 
 # Bundle the extra gems:
+# So that devise can generate views
+group :development do
+  gem 'ruby_parser'
+  gem 'hpricot'
+end
+
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'

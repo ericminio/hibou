@@ -1,11 +1,12 @@
-.block
-  .secondary-navigation
-    %ul
-      %li= link_to t('list'), children_path
-      %li= link_to t('new'), new_child_path
-      %li.active= link_to t('edit'), @child
-  .content
-    %h2
-      = t('child.edit')
-    .inner
-      = render 'form'
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li= link_to t('list'), children_path
+        %li= link_to t('new'), new_child_path
+        %li.active= link_to t('edit'), @child
+    .content
+      %h2
+        = t('child.edit')
+      .inner
+        = render 'form'
