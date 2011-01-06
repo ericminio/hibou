@@ -21,10 +21,8 @@
                 = link_to t('account.logout'), destroy_user_session_path, :class => 'logout'
         #main-navigation
           %ul
-            %li
-              = link_to t(:menu_todays_schedule), todays_schedule_path, :id => 'schedule_of_the_day'
             %li{active?(:bookings)}
-              = link_to t('menu.bookings'), bookings_path
+              = link_to t('menu.bookings'), todays_schedule_path, :id => 'schedule_of_the_day'
             %li{active?(:children)}
               = link_to t('menu.children'), children_path
 

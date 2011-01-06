@@ -1,31 +1,13 @@
-%table{:border => '1px'}
+%table
   %tr
     %th
-      =t :nb
-    %th
-      =t :age
-    %th
-      =t :name
-    %th
-      =t :rate
-    %th
-      =t :mode_of_payment
-    %th
-      =t :amount_received
-    %th
-      =t :lunch
+    %th= t('booking.name')
+    %th= t('booking.age')
+    %th= t('booking.payment_method')
   -bookings.each_with_index do |booking, index|
     %tr
-      %td
-        ="#{index + 1}"
-      %td
-        ="#{distance_of_time_in_words(booking.child.birth_date, Date.today)}"
-      %td
-        ="#{booking.child.first_name} #{booking.child.last_name}"
-      %td
-
-      %td
-        = booking.payment_method
-      %td
-
-      %td
+      %td= "#{index + 1}"
+      -# todo: use Child.full_name
+      %td= "#{booking.child.first_name} #{booking.child.last_name}"
+      %td= "#{distance_of_time_in_words(booking.child.birth_date, Date.today)}"
+      %td= booking.payment_method

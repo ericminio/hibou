@@ -211,6 +211,26 @@
     }
   }
 
+  .history {
+    .previous, .current, .next {
+      display: inline-block;
+      width: 33%;
+    }
+
+    .previous {
+      float: left;
+    }
+
+    .current {
+      text-align: center;
+    }
+
+    .next {
+      float: right;
+      text-align: right;
+    }
+  }
+
   /* tables */
   table {
     width: 100%;

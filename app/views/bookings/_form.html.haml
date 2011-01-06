@@ -1,6 +1,7 @@
 = semantic_form_for @booking do |form|
 
   =form.inputs do
+    -# todo use Child.full_name
     =form.input :child, :as => :select, :collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}
     =form.input :date
     =form.input :period, :as => :radio, :collection => ['AM','PM']

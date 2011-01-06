@@ -2,6 +2,7 @@
   .block
     .secondary-navigation
       %ul
+        %li= link_to t('consult'), todays_schedule_path
         %li.active= link_to t('list'), bookings_path
         %li= link_to t('new'), new_booking_path
     .content
@@ -21,6 +22,7 @@
               %td= booking.id
               %td= booking.date
               %td= booking.period
+              -# todo use Child.full_name
               %td= "#{booking.child.first_name} #{booking.child.last_name}"
               %td
                 %ul

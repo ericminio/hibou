@@ -2,6 +2,7 @@
   .block
     .secondary-navigation
       %ul
+        %li= link_to t('consult'), todays_schedule_path
         %li= link_to t('list'), children_path
         %li.active= link_to t('new'), new_child_path
     .content

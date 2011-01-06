@@ -7,7 +7,7 @@ Given /^I am signed out$/ do
 end
 
 Then /^I see the home page$/ do
-  page.should have_content(I18n.t :menu_todays_schedule)
+  page.should have_selector("a.logout")
 end
 
 When /^I decide to create a new booking$/ do

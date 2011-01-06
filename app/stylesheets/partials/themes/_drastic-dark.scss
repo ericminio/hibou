@@ -95,7 +95,18 @@
       text-transform: normal;
       letter-spacing: -1px;
       line-height: 1.2em;
+
+      &.history {
+        margin-right: 15px;
+
+        .previous, .next {
+          font-size: 0.75em;
+          font-weight: normal;
+        }
+      }
     }
+
+
 
     ul.child {
       list-style-type: none;

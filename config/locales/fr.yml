@@ -8,6 +8,7 @@ fr:
   delete: Supprimer
   back: Retour
   list: Lister
+  consult: Consulter
 
   "yes": Oui
   "no": Non
@@ -15,6 +16,9 @@ fr:
   or: ou
   cancel: Annuler
   are_you_sure: Êtes-vous certain?
+
+  previous: précédant
+  next: suivant
 
   daycare:
     name: CPN St-Eustache
@@ -34,8 +38,14 @@ fr:
     edit: Modifier le dossier d'un enfant
 
   booking:
+    schedule: Horaire du %{date}
     list: Liste des réservations
     new: Effectuer une réservation
+    am: Matin
+    pm: Après-midi
+    name: Nom
+    age: Âge
+    payment_method: Mode de paiement
 
   sign_in:
     title: Connexion
@@ -63,21 +73,6 @@ fr:
       update: Modifier
       user:
         create: Se connecter
-
-  ####Menu
-  menu_todays_schedule: Horaire du jour
-
-  #booking#for_today
-  schedule_for: Horaire du
-  am_schedule: Horaire AM
-  pm_schedule: Horaire PM
-  nb: Nb
-  age: Âge
-  name: Nom
-  rate: Tarif
-  mode_of_payment: Mode de paiement
-  amount_received: $ Reçu
-  lunch: Dîner
 
   date:
     formats:
