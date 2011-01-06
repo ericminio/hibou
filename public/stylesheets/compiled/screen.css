@@ -517,7 +517,7 @@ body.hibou .history .previous {
 }
 /* line 224, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .history .current {
-  width: 50%;
+  width: 49%;
   text-align: center;
 }
 /* line 229, ../../../app/stylesheets/partials/_hibou.scss */
