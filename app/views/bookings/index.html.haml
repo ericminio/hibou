@@ -1,13 +1,27 @@
-%h1
-  =t :booking_list
-%div
-  -@bookings.each do |booking|
-    %p
-      %span
-        ="#{booking.child.first_name} #{booking.child.last_name}"
-      %span
-        =booking.date
-      %span
-        =booking.period
-      %span
-        =booking.payment_method
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li.active= link_to t('list'), bookings_path
+        %li= link_to t('new'), new_booking_path
+    .content
+      %h2
+        = t('booking.list')
+      .inner
+        %table
+          %tr
+            %th.first ID
+            %th= Booking.human_attribute_name(:date)
+            %th= Booking.human_attribute_name(:period)
+            %th= Booking.human_attribute_name(:child)
+            %th
+
+          - @bookings.each do |booking|
+            %tr[booking]{ :class => cycle('odd', 'even') }
+              %td= booking.id
+              %td= booking.date
+              %td= booking.period
+              %td= "#{booking.child.first_name} #{booking.child.last_name}"
+              %td
+                %ul
+                  %li= link_to t(:cancel), booking, :class => "delete", :confirm => t(:are_you_sure), :method => :delete

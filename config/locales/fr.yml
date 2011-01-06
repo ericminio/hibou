@@ -14,6 +14,7 @@ fr:
   none: Aucune
   or: ou
   cancel: Annuler
+  are_you_sure: Êtes-vous certain?
 
   daycare:
     name: CPN St-Eustache
@@ -31,6 +32,10 @@ fr:
     new: Enregistrer un enfant
     view: Voir le dossier d'un enfant
     edit: Modifier le dossier d'un enfant
+
+  booking:
+    list: Liste des réservations
+    new: Effectuer une réservation
 
   sign_in:
     title: Connexion
@@ -50,41 +55,17 @@ fr:
         nap: L'enfant fait-il une sieste dans la journée ?
         bottle: L'enfant prend-t'il encore le biberon ?
         snack: L'enfant prend-t'il une collation dans la journée ?
+      booking:
+        date: Jour, mois et année
+        period: Periode de la journée (matin ou après-midi)
     actions:
-      child:
-        create: Enregistrer
-        update: Modifier
+      create: Enregistrer
+      update: Modifier
       user:
         create: Se connecter
 
-#######  #Application text
-  back: Retour
-  save: Sauvegarder
-  are_you_sure: Êtes-vous certain?
-  back_to_list: Retour à la liste
-
-  ###Header
-#  CPN_St_Eustache: CPN St-Eustache
-#  kindergarten_management_system: Système de gestion de Halte-garderie communautaire
-#  edit_account: Éditer votre compte
-#  logout: Déconnexion
-
-
   ####Menu
   menu_todays_schedule: Horaire du jour
-  menu_bookings: Réservations
-#  menu_add_booking: Ajout Réservation
-#  menu_children: Enfants
-
-  ####Footer
-#  brought_to_you_by: Gracieuseté de
-#  produced_by: Produit par
-#  team_sosoft: Équipe Sosoft
-#### Bookings
-  add_booking: Ajouter une réservation
-
-  #booking#index
-  booking_list: Liste des réservations
 
   #booking#for_today
   schedule_for: Horaire du
@@ -97,15 +78,6 @@ fr:
   mode_of_payment: Mode de paiement
   amount_received: $ Reçu
   lunch: Dîner
-
-  #booking#new
-  select_a_child: Choisissez un enfant
-
-####Children
-#  add_child: Ajouter un enfant
-
-  #children#edit
-#  edit_child: Editer un enfant
 
   date:
     formats:

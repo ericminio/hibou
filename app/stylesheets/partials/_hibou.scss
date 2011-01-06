@@ -261,12 +261,12 @@
 
   form {
 
-    ol, ul {
-      list-style:none;
-    }
-
     &> fieldset {
       margin-bottom: 15px;
+    }
+
+    ol, ul {
+      list-style:none;
     }
 
     fieldset > ol > li {
@@ -286,6 +286,31 @@
             margin: 0;
             padding: 0;
           }
+        }
+      }
+
+      // checkboxes
+      &.boolean {
+        margin-bottom: 0;
+
+        label {
+          padding: 0;
+          font-weight: normal;
+          font-size: 1em;
+          line-height: 1.5em;
+        }
+      }
+
+      // radio buttons
+      &.radio fieldset ol li {
+
+        margin-bottom: 0;
+
+        label {
+          padding: 0;
+          font-weight: normal;
+          font-size: 1em;
+          line-height: 1.5em;
         }
       }
     }
@@ -318,18 +343,6 @@
 
     input[type=checkbox], input[type=radio] {
       margin-right: 5px;
-    }
-
-    li.boolean {
-
-      margin-bottom: 0;
-
-      label {
-        padding: 0;
-        font-weight: normal;
-        font-size: 1em;
-        line-height: 1.5em;
-      }
     }
 
     .error .inline-errors {
