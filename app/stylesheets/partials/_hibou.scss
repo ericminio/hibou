@@ -367,8 +367,9 @@
       margin-right: 5px;
     }
 
-    .error .inline-errors {
+    li.error p.inline-errors {
       color: red;
+      margin: 0;
     }
 
     input[type=text], input[type=password], input[type=number], input[type=email], textarea {
@@ -483,6 +484,11 @@
             float: left;
             width: 55%;
             margin-left: 5%;
+          }
+
+          p {
+            float: left;
+            margin-left: 35%;
           }
         }
 

@@ -653,16 +653,17 @@ body.hibou form input[type=checkbox], body.hibou form input[type=radio] {
   margin-right: 5px;
 }
 /* line 370, ../../../app/stylesheets/partials/_hibou.scss */
-body.hibou form .error .inline-errors {
+body.hibou form li.error p.inline-errors {
   color: red;
+  margin: 0;
 }
-/* line 374, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 375, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form input[type=text], body.hibou form input[type=password], body.hibou form input[type=number], body.hibou form input[type=email], body.hibou form textarea {
   width: 100%;
   border-width: 1px;
   border-style: solid;
 }
-/* line 382, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 383, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form fieldset.buttons li.commit input[type=submit] {
   color: #222;
   display: block;
@@ -678,41 +679,41 @@ body.hibou form fieldset.buttons li.commit input[type=submit] {
   overflow: visible;
   padding: 5px 10px 5px 27px;
 }
-/* line 397, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 398, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form fieldset.buttons li.commit input[type=submit].create, body.hibou form fieldset.buttons li.commit input[type=submit].update {
   background: #eeeeee url("../../images/tick.png") no-repeat 5px 45%;
 }
-/* line 401, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 402, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form fieldset.buttons li.commit input[type=submit]:over {
   background-color: #dedede;
 }
-/* line 405, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 406, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form fieldset.buttons li.commit input[type=submit]:active {
   background-color: #e5e5e5;
 }
-/* line 410, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 411, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form fieldset.buttons li.cancel {
   padding: 8px 0 0 0;
 }
-/* line 452, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 453, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box {
   width: 600px;
   margin: 100px auto;
 }
-/* line 456, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 457, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block {
   margin-bottom: 20px;
 }
-/* line 459, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 460, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block h2 {
   padding: 10px 15px;
   margin-bottom: 15px;
 }
-/* line 464, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 465, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block .content {
   padding: 10px 20px;
 }
-/* line 472, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 473, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset > ol > li {
   display: block;
   *zoom: 1;
@@ -726,23 +727,28 @@ body.hibou #box form.formtastic fieldset > ol > li:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 476, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 477, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset > ol > li label {
   float: left;
   width: 30%;
   text-align: right;
 }
-/* line 482, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 483, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset > ol > li input {
   float: left;
   width: 55%;
   margin-left: 5%;
 }
 /* line 489, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #box form.formtastic fieldset > ol > li p {
+  float: left;
+  margin-left: 35%;
+}
+/* line 495, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset.buttons li {
   margin-left: 35%;
 }
-/* line 492, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 498, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset.buttons li input {
   float: left;
   width: auto;
