@@ -696,8 +696,8 @@ body.hibou form fieldset.buttons li.cancel {
 }
 /* line 452, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box {
-  width: 500px;
-  margin: 200px auto;
+  width: 600px;
+  margin: 100px auto;
 }
 /* line 456, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box .block {
@@ -729,22 +729,20 @@ body.hibou #box form.formtastic fieldset > ol > li:after {
 /* line 476, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset > ol > li label {
   float: left;
-  width: 25%;
+  width: 30%;
   text-align: right;
 }
 /* line 482, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset > ol > li input {
-  float: right;
-  width: 65%;
-  margin-right: 5%;
+  float: left;
+  width: 55%;
+  margin-left: 5%;
 }
 /* line 489, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset.buttons li {
-  float: right;
-  width: 65%;
-  margin: 0 5% 0 0;
+  margin-left: 35%;
 }
-/* line 494, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 492, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou #box form.formtastic fieldset.buttons li input {
   float: left;
   width: auto;
