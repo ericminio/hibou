@@ -214,18 +214,20 @@
   .history {
     .previous, .current, .next {
       display: inline-block;
-      width: 33%;
     }
 
     .previous {
+      width: 25%;
       float: left;
     }
 
     .current {
+      width: 50%;
       text-align: center;
     }
 
     .next {
+      width: 25%;
       float: right;
       text-align: right;
     }
