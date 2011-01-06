@@ -47,8 +47,9 @@ fr:
     age: Âge
     payment_method: Mode de paiement
 
-  sign_in:
-    title: Connexion
+  users:
+    sign_in: Connexion
+    edit: Modifier vos paramètres
 
   formtastic:
     required: obligatoire
@@ -59,6 +60,9 @@ fr:
       user:
         email: Courriel
         password: Mot de passe
+        change_password: Nouveau mot de passe
+        password_confirmation: Confirmation
+        current_password: Mot de passe actuel
     hints:
       child:
         birth_date: Jour, mois et année de naissance
@@ -68,11 +72,16 @@ fr:
       booking:
         date: Jour, mois et année
         period: Periode de la journée (matin ou après-midi)
+      user:
+        change_password: Laissez vide si vous ne souhaitez pas le changer
+        password_confirmation: Confirmer votre nouveau mot de passe
+        current_password: Votre mot de passe est requis pour effectuer les changements
     actions:
       create: Enregistrer
       update: Modifier
       user:
         create: Se connecter
+        update: Confirmer
 
   date:
     formats:
