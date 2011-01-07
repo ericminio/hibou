@@ -170,6 +170,16 @@
     }
   }
 
+  #profile {
+    form.formtastic fieldset > ol > li.password input {
+      width: 13em;
+    }
+
+    li.commit input.update {
+      background: #eee url("../../images/key.png") no-repeat 5px 45%;
+    }
+  }
+
   /*#sidebar {*/
     /*width: 25%;*/
     /*float: right;*/

@@ -552,110 +552,118 @@ body.hibou #box form.formtastic fieldset.buttons li input {
 body.hibou #login li.commit input.create {
   background: #eeeeee url("../../images/key_go.png") no-repeat 5px 45%;
 }
-/* line 203, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 174, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #profile form.formtastic fieldset > ol > li.password input {
+  width: 13em;
+}
+/* line 178, ../../../app/stylesheets/partials/_hibou.scss */
+body.hibou #profile li.commit input.update {
+  background: #eeeeee url("../../images/key.png") no-repeat 5px 45%;
+}
+/* line 213, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .secondary-navigation {
   font-size: 13px;
   border-bottom-width: 10px;
   border-bottom-style: solid;
 }
-/* line 208, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 218, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .secondary-navigation ul {
   overflow: hidden;
   *zoom: 1;
   list-style-type: none;
 }
-/* line 213, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 223, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .secondary-navigation ul li {
   float: left;
 }
-/* line 216, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 226, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .secondary-navigation ul li a {
   display: block;
   padding: 10px 15px;
 }
-/* line 221, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 231, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .secondary-navigation ul li a:link, body.hibou .secondary-navigation ul li a:visited, body.hibou .secondary-navigation ul li a:hover, body.hibou .secondary-navigation ul li a:active {
   text-decoration: none;
 }
-/* line 230, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 240, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .history .previous, body.hibou .history .current, body.hibou .history .next {
   display: inline-block;
 }
-/* line 234, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 244, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .history .previous {
   width: 25%;
   float: left;
 }
-/* line 239, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 249, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .history .current {
   width: 49%;
   text-align: center;
 }
-/* line 244, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 254, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou .history .next {
   width: 25%;
   float: right;
   text-align: right;
 }
-/* line 287, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 297, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 15px;
 }
-/* line 292, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 302, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table th {
   padding: 10px;
   font-weight: bold;
   text-align: left;
 }
-/* line 298, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 308, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table th:first-child {
   width: 30px;
 }
-/* line 302, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 312, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table th:last-child {
   width: 200px;
 }
-/* line 306, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 316, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table .checkbox {
   margin-left: 10px;
 }
-/* line 310, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 320, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table td {
   padding: 10px;
 }
-/* line 315, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 325, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table td:last-child ul {
   list-style-type: none;
   float: right;
 }
-/* line 319, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 329, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table td:last-child ul li {
   padding: 0 .25em;
   float: left;
 }
-/* line 323, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 333, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table td:last-child ul li:before {
   content: "| ";
 }
-/* line 326, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 336, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou table td:last-child ul li:first-child:before {
   content: "";
 }
-/* line 336, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 346, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic > fieldset {
   margin-bottom: 15px;
 }
-/* line 340, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 350, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic ol, body.hibou form.formtastic ul {
   list-style: none;
 }
-/* line 346, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 356, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li {
   margin-bottom: 15px;
 }
-/* line 349, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 359, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li label {
   display: block;
   font-weight: bold;
@@ -663,59 +671,59 @@ body.hibou form.formtastic fieldset > ol > li label {
   padding: 1px 0 2px 0;
   margin: 0;
 }
-/* line 357, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 367, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li input, body.hibou form.formtastic fieldset > ol > li textarea {
   border-width: 1px;
   border-style: solid;
 }
-/* line 362, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 372, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.string input, body.hibou form.formtastic fieldset > ol > li.numeric input, body.hibou form.formtastic fieldset > ol > li.password input, body.hibou form.formtastic fieldset > ol > li.email input, body.hibou form.formtastic fieldset > ol > li.text textarea {
   font-size: 1.2em;
   padding: 1px 0;
   margin: 0;
   width: 100%;
 }
-/* line 369, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 379, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.password input {
   width: 13em;
 }
-/* line 374, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 384, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.boolean, body.hibou form.formtastic fieldset > ol > li.radio fieldset ol li {
   margin-bottom: 0;
 }
-/* line 377, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 387, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.boolean label, body.hibou form.formtastic fieldset > ol > li.radio fieldset ol li label {
   padding: 0;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 384, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 394, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.boolean input, body.hibou form.formtastic fieldset > ol > li.radio fieldset ol li input {
   margin-right: 5px;
 }
-/* line 392, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 402, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.date fieldset ol li, body.hibou form.formtastic fieldset > ol > li.time fieldset ol li, body.hibou form.formtastic fieldset > ol > li.datetime fieldset ol li {
   float: left;
   width: auto;
   margin: 0 .3em 0 0;
 }
-/* line 397, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 407, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.date fieldset ol li label, body.hibou form.formtastic fieldset > ol > li.time fieldset ol li label, body.hibou form.formtastic fieldset > ol > li.datetime fieldset ol li label {
   display: none;
 }
-/* line 400, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 410, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.date fieldset ol li label input, body.hibou form.formtastic fieldset > ol > li.time fieldset ol li label input, body.hibou form.formtastic fieldset > ol > li.datetime fieldset ol li label input {
   display: inline;
   margin: 0;
   padding: 0;
 }
-/* line 410, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 420, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > ol > li.error p.inline-errors {
   color: red;
   margin: 0;
 }
-/* line 416, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 426, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset > legend > span {
   font-size: 1.2em;
   padding: 1px 0;
@@ -724,7 +732,7 @@ body.hibou form.formtastic fieldset > legend > span {
   padding-bottom: 2px;
   font-weight: bold;
 }
-/* line 428, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 438, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset.buttons li.commit input {
   color: #222;
   display: block;
@@ -740,19 +748,19 @@ body.hibou form.formtastic fieldset.buttons li.commit input {
   overflow: visible;
   padding: 5px 10px 5px 27px;
 }
-/* line 443, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 453, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset.buttons li.commit input.create, body.hibou form.formtastic fieldset.buttons li.commit input.update {
   background: #eeeeee url("../../images/tick.png") no-repeat 5px 45%;
 }
-/* line 447, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 457, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset.buttons li.commit input:over {
   background-color: #dedede;
 }
-/* line 451, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 461, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset.buttons li.commit input:active {
   background-color: #e5e5e5;
 }
-/* line 456, ../../../app/stylesheets/partials/_hibou.scss */
+/* line 466, ../../../app/stylesheets/partials/_hibou.scss */
 body.hibou form.formtastic fieldset.buttons li.cancel {
   padding: 8px 0 0 0;
 }
