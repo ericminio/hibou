@@ -6,14 +6,11 @@
   margin: 0;
   padding: 0;
 
-  * {margin:0;padding:0}
-  .clear { clear: both; height: 0; }
-
   h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
-  h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
-  h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
-  h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
-  hr {height: 1px; border: 0; }
+  h2 { font-size: 22px; margin: 15px 0; font-weight: normal; }
+  h3 { font-size: 18px; margin: 10px 0; font-weight: normal; }
+  h4 { font-size: 16px; margin: 10px 0; font-weight: normal; }
+  hr { height: 1px; border: 0; }
   p { margin: 15px 0;}
   a img { border: none; }
 
@@ -21,13 +18,9 @@
     min-width: 960px;
   }
 
-  #header, #wrapper {
-    padding: 0 20px;
-  }
-
   #header {
     position: relative;
-    padding-top: 1px;
+    padding: 1px 20px 0 20px;
 
     h1 {
       margin: 0;
@@ -49,74 +42,6 @@
     }
   }
 
-  #main {
-    width: 70%;
-    float: left;
-
-    .block {
-      margin-bottom: 20px;
-      padding-top: 1px;
-    }
-
-    .block .content .inner {
-      padding: 0 15px 15px;
-    }
-
-    /*.main p:first-child {*/
-      /*margin-top: 0;*/
-    /*}*/
-  }
-
-  /*.actions-bar {*/
-    /*@include clearfix;*/
-
-    /*padding: 10px 1px;*/
-
-    /*.actions {*/
-      /*float: left;*/
-    /*}*/
-
-    /*.pagination {*/
-      /*float: right;*/
-      /*padding: 1px 0;*/
-    /*}*/
-  /*}*/
-
-
-  /*#sidebar {*/
-    /*width: 25%;*/
-    /*float: right;*/
-
-    /*h3 {*/
-      /*padding: 10px 15px;*/
-      /*margin: 0;*/
-      /*font-size: 13px;*/
-    /*}*/
-
-    /*.block {*/
-      /*margin-bottom: 20px;*/
-      /*padding-bottom: 10px;*/
-    /*}*/
-
-    /*.block .content {*/
-      /*padding: 0 15px;*/
-    /*}*/
-
-    /*ul.navigation li a:link, ul.navigation li a:visited {*/
-      /*display: block;*/
-      /*padding: 10px 15px;*/
-    /*}*/
-
-    /*.block .sidebar-block, .notice {*/
-      /*padding:10px;*/
-    /*}*/
-  /*}*/
-
-
-  #wrapper {
-    padding-top: 20px;
-  }
-
   #user-navigation {
     position: absolute;
     top: 0px;
@@ -126,7 +51,12 @@
       list-style-type: none;
 
       li {
+         float: left;
          padding: 5px 10px;
+
+         a:link, a:visited, a:hover, a:active {
+           text-decoration: none;
+         }
       }
     }
   }
@@ -140,6 +70,7 @@
       list-style-type: none;
 
       li {
+        float: left;
         margin-right: 5px;
 
         a {
@@ -147,308 +78,36 @@
           line-height: 14px;
           display: block;
           padding: 8px 15px;
+
+          &:link, &:visited, &:hover, &:active {
+            text-decoration: none;
+          }
         }
       }
     }
   }
 
-  #user-navigation ul li, #main-navigation ul li, .secondary-navigation ul li {
-    float: left;
+  #wrapper {
+    padding: 20px 20px 0 20px;
   }
-
-  #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-  .secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
-  #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
-    text-decoration: none;
-  }
-
-  .secondary-navigation {
-    font-size: 13px;
-    border-bottom-width: 10px;
-    border-bottom-style: solid;
-
-    ul {
-      @include clearfix;
-
-      list-style-type: none;
-
-      li a {
-        display: block;
-        padding: 10px 15px;
-      }
-    }
-  }
-
 
   #footer {
     padding: 0 20px;
   }
 
-  /* pagination */
+  #main {
+    width: 70%;
+    float: left;
 
-  /*.pagination {*/
-    /*a, span, em {*/
-      /*padding: 2px 5px;*/
-      /*margin-right: 5px;*/
-      /*display: block;*/
-      /*float: left;*/
-      /*border-style: solid;*/
-      /*border-width: 1px;*/
-    /*}*/
+    .block {
+      margin-bottom: 20px;
+      padding-top: 1px;
+    }
 
-    /*em {*/
-      /*font-weight: bold;*/
-    /*}*/
-
-    /*a {*/
-      /*text-decoration: none;*/
-    /*}*/
-  /*}*/
-
-  #login {
-    li.commit input[type=submit].create {
-      background: #eee url("../../images/key_go.png") no-repeat 5px 45%;
+    .block .content .inner {
+      padding: 0 15px 15px;
     }
   }
-
-  .history {
-    .previous, .current, .next {
-      display: inline-block;
-    }
-
-    .previous {
-      width: 25%;
-      float: left;
-    }
-
-    .current {
-      width: 49%;
-      text-align: center;
-    }
-
-    .next {
-      width: 25%;
-      float: right;
-      text-align: right;
-    }
-  }
-
-  /* tables */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-
-    th {
-      padding: 10px;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    th:first-child {
-      width: 30px;
-    }
-
-    th:last-child {
-      width: 200px;
-    }
-
-    .checkbox {
-      margin-left: 10px;
-    }
-
-    td {
-      padding: 10px;
-    }
-
-    td:last-child {
-      ul {
-        list-style-type: none;
-        float: right;
-
-        li {
-          padding: 0 .25em;
-          float: left;
-
-          &:before {
-            content: "| "
-          }
-          &:first-child:before {
-            content: ""
-          }
-        }
-      }
-    }
-  }
-
-  form {
-
-    &> fieldset {
-      margin-bottom: 15px;
-    }
-
-    ol, ul {
-      list-style:none;
-    }
-
-    fieldset > ol > li {
-      margin-bottom: 15px;
-
-      // Date and time
-      &.date fieldset ol li, &.time fieldset ol li, &.datetime fieldset ol li {
-        float:left;
-        width:auto;
-        margin:0 .3em 0 0;
-
-        label {
-          display: none;
-
-          input {
-            display: inline;
-            margin: 0;
-            padding: 0;
-          }
-        }
-      }
-
-      // checkboxes
-      &.boolean {
-        margin-bottom: 0;
-
-        label {
-          padding: 0;
-          font-weight: normal;
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-      }
-
-      // radio buttons
-      &.radio fieldset ol li {
-
-        margin-bottom: 0;
-
-        label {
-          padding: 0;
-          font-weight: normal;
-          font-size: 1em;
-          line-height: 1.5em;
-        }
-      }
-    }
-
-    /*.columns {*/
-      /*.column {*/
-        /*width: 48%;*/
-      /*}*/
-
-      /*.left {*/
-        /*float: left;*/
-      /*}*/
-
-      /*.right {*/
-        /*float: right;*/
-      /*}*/
-    /*}*/
-
-    fieldset > legend > span, label, input[type=text], input[type=password], input[type=number], input[type=email], textarea {
-      font-size: 1.2em;
-      padding: 1px 0;
-      margin: 0;
-    }
-
-    label, fieldset > legend > span {
-      display: block;
-      padding-bottom: 2px;
-      font-weight: bold;
-    }
-
-    input[type=checkbox], input[type=radio] {
-      margin-right: 5px;
-    }
-
-    li.error p.inline-errors {
-      color: red;
-      margin: 0;
-    }
-
-    input[type=text], input[type=password], input[type=number], input[type=email], textarea {
-      width: 100%;
-      border-width: 1px;
-      border-style: solid;
-    }
-
-    fieldset.buttons {
-
-      li.commit input[type=submit] {
-        color: #222;
-        display:block;
-        float:left;
-        margin:0 7px 0 0;
-        border:1px solid #bfbfbf;
-        font-size: 1em;
-        line-height:17px;
-        font-weight:bold;
-        cursor:pointer;
-        text-decoration: none;
-        width:auto;
-        overflow:visible;
-        padding:5px 10px 5px 27px;
-
-        &.create, &.update {
-          background: #eee url("../../images/tick.png") no-repeat 5px 45%;
-        }
-
-        &:over {
-          background-color:#dedede;
-        }
-
-        &:active {
-          background-color:#e5e5e5;
-        }
-      }
-
-      li.cancel {
-        padding: 8px 0 0 0;
-      }
-    }
-  }
-
-  /* lists */
-
-  /*ul.list {*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*list-style-type: none;*/
-
-    /*li {*/
-      /*clear: left;*/
-      /*padding-bottom: 5px;*/
-
-      /*.left {*/
-        /*float: left;*/
-
-        /*.avatar {*/
-          /*width: 50px;*/
-          /*height: 50px;*/
-        /*}*/
-      /*}*/
-
-      /*.item {*/
-        /*margin-left: 80px;*/
-
-        /*.avatar {*/
-          /*float: left;*/
-          /*margin: 0 5px 5px 0;*/
-          /*width: 30px;*/
-          /*height: 30px;*/
-        /*}*/
-      /*}*/
-    /*}*/
-  /*}*/
-
-
-  /* box */
 
   #box {
     width: 600px;
@@ -504,6 +163,335 @@
       }
     }
   }
+
+  #login {
+    li.commit input.create {
+      background: #eee url("../../images/key_go.png") no-repeat 5px 45%;
+    }
+  }
+
+  /*#sidebar {*/
+    /*width: 25%;*/
+    /*float: right;*/
+
+    /*h3 {*/
+      /*padding: 10px 15px;*/
+      /*margin: 0;*/
+      /*font-size: 13px;*/
+    /*}*/
+
+    /*.block {*/
+      /*margin-bottom: 20px;*/
+      /*padding-bottom: 10px;*/
+    /*}*/
+
+    /*.block .content {*/
+      /*padding: 0 15px;*/
+    /*}*/
+
+    /*ul.navigation li a:link, ul.navigation li a:visited {*/
+      /*display: block;*/
+      /*padding: 10px 15px;*/
+    /*}*/
+
+    /*.block .sidebar-block, .notice {*/
+      /*padding:10px;*/
+    /*}*/
+  /*}*/
+
+
+  .secondary-navigation {
+    font-size: 13px;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+
+    ul {
+      @include clearfix;
+
+      list-style-type: none;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          padding: 10px 15px;
+
+          // todo use a mixin ?
+          &:link, &:visited, &:hover, &:active {
+              text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .history {
+    .previous, .current, .next {
+      display: inline-block;
+    }
+
+    .previous {
+      width: 25%;
+      float: left;
+    }
+
+    .current {
+      width: 49%;
+      text-align: center;
+    }
+
+    .next {
+      width: 25%;
+      float: right;
+      text-align: right;
+    }
+  }
+
+  /*.actions-bar {*/
+    /*@include clearfix;*/
+
+    /*padding: 10px 1px;*/
+
+    /*.actions {*/
+      /*float: left;*/
+    /*}*/
+
+    /*.pagination {*/
+      /*float: right;*/
+      /*padding: 1px 0;*/
+    /*}*/
+  /*}*/
+
+
+  /*.pagination {*/
+    /*a, span, em {*/
+      /*padding: 2px 5px;*/
+      /*margin-right: 5px;*/
+      /*display: block;*/
+      /*float: left;*/
+      /*border-style: solid;*/
+      /*border-width: 1px;*/
+    /*}*/
+
+    /*em {*/
+      /*font-weight: bold;*/
+    /*}*/
+
+    /*a {*/
+      /*text-decoration: none;*/
+    /*}*/
+  /*}*/
+
+  /* tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+
+    th {
+      padding: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    th:first-child {
+      width: 30px;
+    }
+
+    th:last-child {
+      width: 200px;
+    }
+
+    .checkbox {
+      margin-left: 10px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    td:last-child {
+      ul {
+        list-style-type: none;
+        float: right;
+
+        li {
+          padding: 0 .25em;
+          float: left;
+
+          &:before {
+            content: "| "
+          }
+          &:first-child:before {
+            content: ""
+          }
+        }
+      }
+    }
+  }
+
+  form.formtastic {
+
+    &> fieldset {
+      margin-bottom: 15px;
+    }
+
+    ol, ul {
+      list-style: none;
+    }
+
+    fieldset {
+
+      > ol > li {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          font-weight: bold;
+          font-size: 1.2em;
+          padding: 1px 0 2px 0;
+          margin: 0;
+        }
+
+        input, textarea {
+          border-width: 1px;
+          border-style: solid;
+        }
+
+        &.string input, &.numeric input, &.password input, &.email input, &.text textarea {
+          font-size: 1.2em;
+          padding: 1px 0;
+          margin: 0;
+          width: 100%;
+        }
+
+        &.password input {
+          width: 13em;
+        }
+
+        // Checkboxes and radio buttons
+        &.boolean, &.radio fieldset ol li  {
+          margin-bottom: 0;
+
+          label {
+            padding: 0;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 1.5em;
+          }
+
+          input {
+            margin-right: 5px;
+          }
+        }
+
+        // Date and time
+        &.date, &.time, &.datetime {
+
+          fieldset ol li {
+            float:left;
+            width:auto;
+            margin:0 .3em 0 0;
+
+            label {
+              display: none;
+
+              input {
+                display: inline;
+                margin: 0;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        // inline errors
+        &.error p.inline-errors {
+          color: red;
+          margin: 0;
+        }
+      }
+
+      > legend > span {
+        font-size: 1.2em;
+        padding: 1px 0;
+        margin: 0;
+        display: block;
+        padding-bottom: 2px;
+        font-weight: bold;
+      }
+
+      // Button bar
+      &.buttons {
+
+        li.commit input {
+          color: #222;
+          display:block;
+          float:left;
+          margin:0 7px 0 0;
+          border:1px solid #bfbfbf;
+          font-size: 1em;
+          line-height:17px;
+          font-weight:bold;
+          cursor:pointer;
+          text-decoration: none;
+          width:auto;
+          overflow:visible;
+          padding:5px 10px 5px 27px;
+
+          &.create, &.update {
+            background: #eee url("../../images/tick.png") no-repeat 5px 45%;
+          }
+
+          &:over {
+            background-color:#dedede;
+          }
+
+          &:active {
+            background-color:#e5e5e5;
+          }
+        }
+
+        li.cancel {
+          padding: 8px 0 0 0;
+        }
+      }
+    }
+  }
+
+  /* lists */
+
+  /*ul.list {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*list-style-type: none;*/
+
+    /*li {*/
+      /*clear: left;*/
+      /*padding-bottom: 5px;*/
+
+      /*.left {*/
+        /*float: left;*/
+
+        /*.avatar {*/
+          /*width: 50px;*/
+          /*height: 50px;*/
+        /*}*/
+      /*}*/
+
+      /*.item {*/
+        /*margin-left: 80px;*/
+
+        /*.avatar {*/
+          /*float: left;*/
+          /*margin: 0 5px 5px 0;*/
+          /*width: 30px;*/
+          /*height: 30px;*/
+        /*}*/
+      /*}*/
+    /*}*/
+  /*}*/
 
 
   /*  Inspired by http://particletree.com/features/rediscovering-the-button-element */

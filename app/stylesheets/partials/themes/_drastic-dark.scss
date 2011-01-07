@@ -10,32 +10,6 @@
   background: #cfcfcf;
   font-family: helvetica, arial, sans-serif;
 
-  .small {
-    font-size: 11px;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: normal;
-    letter-spacing: normal;
-    line-height: 1.4em;
-  }
-
-  .gray {
-    color:#999999;
-    font-family: Georgia, serif;
-    font-size: 13px;
-    font-style: italic;
-    font-weight: normal;
-    text-transform: normal;
-    letter-spacing: normal;
-    line-height: 1.6em;
-  }
-
-  .highlight {
-    background-color: #ffff88;
-    font-weight: bold;
-    color: #36393d;
-  }
-
   a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #36393d; }
   a { -moz-outline: none; }
 
@@ -70,16 +44,68 @@
     }
   }
 
+  #main-navigation {
+    background: #1a1a1a;
+
+    ul li {
+      background: #1a1a1a;
+      margin-right: 0;
+      padding-left: 15px;
+
+      a {
+        padding: 8px 0;
+
+        &:link, &:visited, &:hover, &:active {
+          color: #FFF;
+        }
+      }
+
+      &.active {
+        background: #f0f0ee;
+        padding: 0;
+        margin-left: 15px;
+
+        a {
+          padding: 8px 15px;
+
+          &:link, &:visited, &:hover, &:active {
+            color: #1a1a1a;
+          }
+        }
+      }
+    }
+  }
+
   #user-navigation {
     top: auto;
     bottom: 3px;
     right: 25px;
 
-    a.logout {
-      background: url("../../images/key_delete.png") no-repeat 5px 45%;
-      -moz-border-radius: 4px;
-      -webkit-border-radius: 3px;
-      padding:5px 10px 5px 27px;
+    ul li {
+      a:link, a:visited, a:hover, a:active {
+        color: #FFF;
+      }
+
+      a.logout {
+        background: url("../../images/key_delete.png") no-repeat 5px 45%;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 3px;
+        padding:5px 10px 5px 27px;
+      }
+    }
+  }
+
+  #footer .block {
+    color: #FFF;
+    background: #1a1a1a;
+
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+
+    a {
+      color: white;
     }
   }
 
@@ -106,8 +132,6 @@
       }
     }
 
-
-
     ul.child {
       list-style-type: none;
 
@@ -120,6 +144,15 @@
         letter-spacing: normal;
         line-height: 1.45em;
       }
+    }
+  }
+
+  #box .block {
+    background: #FFF;
+
+    h2 {
+      background: #36393d;
+      color: #FFF;
     }
   }
 
@@ -158,75 +191,23 @@
     /*color: #ffffff;;*/
   /*}*/
 
-  #main-navigation {
-    background: #1a1a1a;
-
-    ul li {
-      background: #1a1a1a;
-      margin-right: 0;
-    }
-
-    ul li.active {
-      background: #f0f0ee;
-
-      a:link, a:visited, a:hover, a:active {
-        color: #1a1a1a;
-      }
-    }
-  }
-
-  #main-navigation ul {
-    li {
-      padding-left: 15px;
-
-      a {
-        padding: 8px 0;
-      }
-    }
-
-    li.active {
-      padding: 0;
-      margin-left: 15px;
-
-      a {
-        padding: 8px 15px;
-      }
-    }
-  }
-
-  #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-  .secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
-  #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
-    text-decoration: none;
-    color: #FFF;
-  }
-
   .secondary-navigation {
     background: #36393d;
     border-bottom-color: #1a1a1a;
     border-bottom-width: 5px;
 
-    li a:hover {
-      background: #666666;
-    }
+    ul li {
+      a:link, a:visited, a:hover, a:active {
+        color: #FFF;
+      }
 
-    li.active, li.active a:hover {
-      background-color: #1a1a1a;
-    }
-  }
+      a:hover {
+        background: #666666;
+      }
 
-
-  #footer .block {
-    color: #FFF;
-    background: #1a1a1a;
-
-    p {
-      margin: 0;
-      padding: 10px;
-    }
-
-    a {
-      color: white;
+      &.active, &.active a:hover {
+        background-color: #1a1a1a;
+      }
     }
   }
 
@@ -277,23 +258,58 @@
     }
   }
 
-  form {
-    label, fieldset > legend > span {
-      color: #666666;
-    }
+  form.formtastic {
 
-    input[type=text], input[type=password], input[type=number], input[type=email], textarea {
-      width: 100%;
-      border: 1px solid #cfcfcf;
-    }
+    fieldset {
+      > ol > li {
+        label {
+          color: #666666;
+        }
 
-    .inline-hints {
-      margin: 0;
-      font-style: italic;
-      color: #8C8C8C;
-      font-size: .9em;
+        &.string input, &.password input, &.numeric input, &.email input, &.text textarea {
+          border-color: #cfcfcf;
+        }
+
+        p.inline-hints {
+          margin: 0;
+          font-style: italic;
+          color: #8C8C8C;
+          font-size: .9em;
+        }
+      }
+
+      > legend > span {
+        color: #666666;
+      }
     }
   }
+
+  // before using, turn into mixins
+  /*.small {*/
+    /*font-size: 11px;*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+    /*text-transform: normal;*/
+    /*letter-spacing: normal;*/
+    /*line-height: 1.4em;*/
+  /*}*/
+
+  /*.gray {*/
+    /*color:#999999;*/
+    /*font-family: Georgia, serif;*/
+    /*font-size: 13px;*/
+    /*font-style: italic;*/
+    /*font-weight: normal;*/
+    /*text-transform: normal;*/
+    /*letter-spacing: normal;*/
+    /*line-height: 1.6em;*/
+  /*}*/
+
+  /*.highlight {*/
+    /*background-color: #ffff88;*/
+    /*font-weight: bold;*/
+    /*color: #36393d;*/
+  /*}*/
 
   /* flash-messages */
   /*.flash {*/
@@ -340,15 +356,6 @@
   /*}*/
 
   /* box */
-
-  #box .block {
-    background: #FFF;
-
-    h2 {
-      background: #36393d;
-      color: #FFF;
-    }
-  }
 
   /*.navbuttons a {*/
     /*color: #cc0000;*/
