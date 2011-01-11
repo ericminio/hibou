@@ -4,8 +4,9 @@ source "http://gems.github.com"
 gem 'rails', '3.0.3'
 gem 'haml'
 gem 'haml-rails'
-gem 'formtastic'
 gem 'jquery-rails'
+gem 'i18n', '0.4.2'
+gem 'gherkin', '2.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -51,7 +52,7 @@ group :test do
   gem 'timecop'
   gem 'chronic'
   gem "webrat"
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '0.3.2'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'spork'
