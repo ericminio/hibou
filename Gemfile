@@ -7,6 +7,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'i18n', '0.4.2'
 gem 'gherkin', '2.2.9'
+gem 'prawn', '0.8.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
