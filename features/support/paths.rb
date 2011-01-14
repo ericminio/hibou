@@ -1,28 +1,27 @@
 module NavigationHelpers
-  # Maps a name to a path. Used by the
-  #
-  #   When /^I go to (.+)$/ do |page_name|
-  #
-  # step definition in web_steps.rb
-  #
+
+  def go_to(page_name)
+    visit path_to(page_name.to_s.gsub(/_/, ' '))
+  end
+
   def path_to(page_name)
     case page_name
 
-      when /the home\s?page/
+      when /(the )?home\s?page/
         '/'
       when /child registration page/
         new_child_path
       when /children page/
         children_path
-      when /child booking page/
+      when /new booking page/
         new_booking_path
       when /bookings/
         bookings_path
       when /today's schedule page/
         schedule_path(Date.today.to_s(:db))
-      when /the registration page/
+      when /(the )?registration page/
         new_user_registration_path
-      when /the login page/
+      when /(the )?login page/
         new_user_session_path
 
 
