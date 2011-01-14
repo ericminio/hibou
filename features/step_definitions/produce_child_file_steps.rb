@@ -1,10 +1,11 @@
 Given /^a child registered with:$/ do |information|
-  go_to :child_registration_page
+  administer_children
+  open_child_registration
   register_child(information.rows_hash)
 end
 
 When /^I consult "([^"]*)" "([^"]*)"'s file$/ do |first_name, last_name|
-  go_to :children_page
+  administer_children
   open_child_file(first_name, last_name)
 end
 

@@ -2,8 +2,8 @@
   .block
     .secondary-navigation
       %ul
-        %li.active= link_to t('list'), children_path
-        %li= link_to t('new'), new_child_path
+        %li(id='list_children' class='active')= link_to t('list'), children_path
+        %li(id='add_child')= link_to t('new'), new_child_path
     .content
       %h2
         = t('child.list')

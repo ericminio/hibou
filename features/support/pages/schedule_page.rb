@@ -1,4 +1,4 @@
-module ShowSchedulePage
+module SchedulePage
   def schedule_contains(period, children)
     children.each do |child|
       with_scope("##{period}_schedule") do
@@ -8,4 +8,4 @@ module ShowSchedulePage
   end
 end
 
-World(ShowSchedulePage)
+World(SchedulePage)
