@@ -13,7 +13,7 @@ describe BookingsController do
     sign_in @user
   end
 
-  it "list bookings for a given date" do
+  it "lists bookings for a given date" do
     Booking.should_receive(:find_bookings_on).with(@date, :am).and_return(@am_bookings)
     Booking.should_receive(:find_bookings_on).with(@date, :pm).and_return(@pm_bookings)
     get :list, :id => "2010-09-21"

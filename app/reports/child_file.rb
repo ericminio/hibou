@@ -1,6 +1,6 @@
 require 'prawn_child_file'
 
-class PDFChildFile < Prawn::Document
+class ChildFile < Prawn::Document
 
   include ActionView::Helpers::DateHelper
   def initialize
@@ -19,7 +19,7 @@ class PDFChildFile < Prawn::Document
   end
 
   def birth_date_of child
-    I18n.l(child.birth_date,:format => :medium) + " " + distance_of_time_in_words(child.birth_date, Date.today)
+    "#{I18n.l(child.birth_date, :format => :medium)} (#{distance_of_time_in_words(child.birth_date, Date.today)})"
   end
 
   def  allergies_of_this child
@@ -44,5 +44,10 @@ class PDFChildFile < Prawn::Document
 
     render
   end
-    
+
+  def self.render_for(child)
+    child_file = ChildFile.new
+    child_file.generate_for(child)
+  end
+
 end

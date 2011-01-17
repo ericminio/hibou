@@ -1,9 +1,8 @@
 require 'spec_helper'
 
-describe PDFChildFile do
+describe ChildFile do
 
   before(:each) do
-    @pdf = PDFChildFile.new
     @child = Child.new( :first_name => "Tom",
                         :last_name => "Trempe",
                         :birth_date => Date.civil(2007, 03, 23),
@@ -12,11 +11,12 @@ describe PDFChildFile do
                         :nap => true,
                         :allergies => 'peanuts'
                        )
+    @pdf = ChildFile.new
 
     new_time = Time.local(2008, 9, 1, 12, 0, 0)
     Timecop.freeze(new_time)
 
-    text = PDF::Inspector::Text.analyze(@pdf.generate_for @child)
+    text = PDF::Inspector::Text.analyze(@pdf.generate_for(@child))
     @text_fields = text.strings
   end
 
@@ -25,7 +25,7 @@ describe PDFChildFile do
   end
 
   it "should contain the child birth date in its second text field" do
-    @text_fields.second.should == "23 mars 2007 plus d'un an"
+    @text_fields.second.should == "23 mars 2007 (plus d'un an)"
   end
 
   it "should have the right options checked" do
@@ -42,7 +42,7 @@ describe PDFChildFile do
   end
 
   it "should display an alternative message when the child has no allergies" do
-    @pdf = PDFChildFile.new
+    @pdf = ChildFile.new
     @child.allergies = ""
     text = PDF::Inspector::Text.analyze(@pdf.generate_for @child)
     @text_fields = text.strings
