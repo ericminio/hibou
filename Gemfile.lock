@@ -1,7 +1,14 @@
+GIT
+  remote: git://github.com/sandal/pdf-inspector.git
+  revision: f9bf220e7bd0c89141753165337c2320d6a79f68
+  specs:
+    pdf-inspector (0.7.99)
+
 GEM
   remote: http://rubygems.org/
   remote: http://gems.github.com/
   specs:
+    Ascii85 (1.0.0)
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
@@ -98,6 +105,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nokogiri (1.4.4)
+    pdf-reader (0.9.1)
+      Ascii85 (>= 0.9)
     polyglot (0.3.1)
     prawn (0.8.4)
       prawn-core (>= 0.8.4, < 0.9)
@@ -185,6 +194,8 @@ DEPENDENCIES
   jquery-rails
   launchy
   machinist (>= 2.0.0.beta2)
+  pdf-inspector (= 0.7.99)!
+  pdf-reader
   prawn (= 0.8.4)
   rails (= 3.0.3)
   rspec-rails (>= 2.2.0)

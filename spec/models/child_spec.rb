@@ -25,4 +25,5 @@ describe Child do
   it "can be round tripped when valid" do
     lambda { Child.make! }.should change(Child, :count).by(1)
   end
+    
 end

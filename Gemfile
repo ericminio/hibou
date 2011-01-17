@@ -48,6 +48,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'pdf-reader'
   gem 'faker'
   gem 'machinist', '>= 2.0.0.beta2'
   gem 'timecop'
@@ -59,4 +60,5 @@ group :test do
   gem 'spork'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'pdf-inspector', '0.7.99', :git => 'git://github.com/sandal/pdf-inspector.git'
 end

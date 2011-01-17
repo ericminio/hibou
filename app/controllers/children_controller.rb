@@ -18,6 +18,13 @@ class ChildrenController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @child }
+      format.pdf{
+        send_data( PDFChildFile.new.generate_for( @child),
+                   :type=>"application/pdf",
+                   :filename=> @child.first_name + @child.last_name + ".pdf", 
+                   :disposition=>"attachment"
+                  )
+                 }
     end
   end
 

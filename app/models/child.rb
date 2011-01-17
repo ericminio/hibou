@@ -6,4 +6,5 @@ class Child < ActiveRecord::Base
   def allergic?
     not allergies.blank?
   end
+
 end

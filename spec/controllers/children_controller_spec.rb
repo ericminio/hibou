@@ -28,7 +28,28 @@ describe ChildrenController do
       get :show, :id => "37"
       assigns(:child).should be(mock_child)
     end
+
+    it "generates the child file pdf for the right child" do
+      tom = Child.new( :first_name => 'tom',:last_name =>'trempe') 
+
+      mock_pdf_child_file = mock(PDFChildFile)
+
+      Child.stub(:find).with("37") { tom }
+      PDFChildFile.stub(:new){ mock_pdf_child_file }
+
+      mock_pdf_child_file.should_receive(:generate_for).with(tom)
+
+      get :show, :id => "37", :format => "pdf"
+
+      response.content_type.should == "application/pdf"
+      response.headers["Content-Disposition"].should == "attachment; filename=\"tomtrempe.pdf\""
+
+    end
+
+
+
   end
+
 
   describe "GET new" do
     it "assigns a new child as @child" do
