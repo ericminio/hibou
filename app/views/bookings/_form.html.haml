@@ -1,14 +1,14 @@
 = semantic_form_for @booking do |form|
 
-  =form.inputs do
-    =form.input :child, :as => :select, :collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}, :prompt => t(:select_a_child)
-    =form.input :date
-    =form.input :period, :as => :radio, :collection => ['AM','PM']
-    =form.input :payment_method, :as => :select, :collection => ["Cash", 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
-  end
+  = form.inputs do
+    -# todo use Child.full_name
+    = form.input :child, :as => :select, :collection => Child.all.collect {|child| [ "#{child.first_name} #{child.last_name}", child.id ]}
+    = form.input :date
+    = form.input :period, :as => :radio, :collection => ['AM','PM']
+    = form.input :payment_method, :as => :select, :collection => ['Cash', 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
 
-  =form.buttons do
-    =form.commit_button t(:save)
-  end
-
-end
+  = form.buttons do
+    = form.commit_button t(:save)
+    %li.cancel
+      = t(:or)
+      = link_to t(:cancel), bookings_path

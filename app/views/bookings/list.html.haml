@@ -1,12 +1,23 @@
-= link_to '<-', schedule_path(@schedule_date.yesterday.to_s(:db))
-= I18n.l @schedule_date, :format => :full
-= link_to '->', schedule_path(@schedule_date.tomorrow.to_s(:db))
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li.active= link_to t('consult'), todays_schedule_path
+        %li= link_to t('list'), bookings_path
+        %li(id='add_booking')= link_to t('new'), new_booking_path
+    .content
+      %h2.history
+        .previous= link_to "<< #{t('previous')}", schedule_path(@schedule_date.yesterday.to_s(:db))
+        .current= t('booking.schedule', :date => l(@schedule_date, :format => :full))
+        .next= link_to "#{t('next')} >>", schedule_path(@schedule_date.tomorrow.to_s(:db))
 
-%div{:id=>"am_schedule"}
-  %h2
-    =t :am_schedule
-  =render :partial => "schedule_table", :locals => { :bookings => @am_bookings }
-%div{:id=>"pm_schedule"}
-  %h2
-    =t :pm_schedule
-  =render :partial => "schedule_table", :locals => { :bookings => @pm_bookings }
+      .inner
+        #am_schedule
+          %h3= t('booking.am')
+          = render :partial => "schedule_table", :locals => { :bookings => @am_bookings }
+        #pm_schedule
+          %h3= t('booking.pm')
+          = render :partial => "schedule_table", :locals => { :bookings => @pm_bookings }
+
+
+

@@ -1,5 +1,12 @@
-%h1
-  =t :add_booking
-= render 'form'
-
-= link_to t(:back), bookings_path
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li= link_to t('consult'), todays_schedule_path
+        %li= link_to t('list'), bookings_path
+        %li.active= link_to t('new'), new_booking_path
+    .content
+      %h2
+        = t('booking.new')
+      .inner
+        = render 'form'

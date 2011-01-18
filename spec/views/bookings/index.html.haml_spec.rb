@@ -6,7 +6,7 @@ describe "bookings/index.html.haml" do
     assign(:bookings, [Booking.make])
     render
     rendered.should have_selector("a") do |link|
-      link.should contain( t(:delete) )
+      link.should contain( t(:cancel) )
     end
   end
 

@@ -3,9 +3,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def show
-  end
-
   def list
     @schedule_date = Date.parse(params[:id])
     @am_bookings = Booking.find_bookings_on(@schedule_date, :am)

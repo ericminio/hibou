@@ -1,0 +1,8 @@
+#box
+  #login.block
+    %h2= t('users.sign_in')
+    .content.login
+      = semantic_form_for resource, :url => session_path(resource_name) do |f|
+        = f.inputs :email, :password
+        = f.buttons do
+          = f.commit_button

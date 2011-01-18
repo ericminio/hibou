@@ -8,12 +8,17 @@ fr:
   delete: Supprimer
   back: Retour
   list: Lister
+  consult: Consulter
 
   "yes": Oui
   "no": Non
   none: Aucune
   or: ou
   cancel: Annuler
+  are_you_sure: Êtes-vous certain?
+
+  previous: précédant
+  next: suivant
 
   daycare:
     name: CPN St-Eustache
@@ -32,29 +37,52 @@ fr:
     view: Voir le dossier d'un enfant
     edit: Modifier le dossier d'un enfant
 
+  booking:
+    schedule: Horaire du %{date}
+    list: Liste des réservations
+    new: Effectuer une réservation
+    am: Matin
+    pm: Après-midi
+    name: Nom
+    age: Âge
+    payment_method: Mode de paiement
+
+  users:
+    sign_in: Connexion
+    edit: Modifier vos paramètres
+
   formtastic:
     required: obligatoire
 
     titles:
       options: Détails
     labels:
-#      child:
-#        first_name: Prénom
-#        last_name: Nom de famille
-#        edit:
-#          first_name: Changer le prénom
-#      booking:
-#        child: Enfant
+      user:
+        email: Courriel
+        password: Mot de passe
+        change_password: Nouveau mot de passe
+        password_confirmation: Confirmation
+        current_password: Mot de passe actuel
     hints:
       child:
         birth_date: Jour, mois et année de naissance
         nap: L'enfant fait-il une sieste dans la journée ?
         bottle: L'enfant prend-t'il encore le biberon ?
         snack: L'enfant prend-t'il une collation dans la journée ?
+      booking:
+        date: Jour, mois et année
+        period: Periode de la journée (matin ou après-midi)
+      user:
+        change_password: Laissez vide si vous ne souhaitez pas le changer
+        password_confirmation: Confirmer votre nouveau mot de passe
+        current_password: Votre mot de passe est requis pour effectuer les changements
     actions:
       child:
         create: Enregistrer
         update: Modifier
+      user:
+        create: Se connecter
+        update: Confirmer
 
 #######  #Application text
   back: Retour

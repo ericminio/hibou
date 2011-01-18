@@ -19,10 +19,10 @@ Feature: Cancelling a booking
    When I cancel the booking of Bill Davis for 2010-12-01 AM
    And I consult today's schedule
 
-   Then the am schedules are
+   Then the am schedule is
      |name         |
      |George Orwell|
-   And the pm schedules are
+   And the pm schedule is
      |name         |
      |George Orwell|
 
@@ -38,10 +38,10 @@ Feature: Cancelling a booking
    When I cancel the booking of George Orwell for 2010-12-01 PM
    And I consult today's schedule
 
-   Then the am schedules are
+   Then the am schedule is
      |name         |
      |George Orwell|
      |Bill Davis   |
-   And the pm schedules are
+   And the pm schedule is
      |name         |
      |Bill Davis   |
