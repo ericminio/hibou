@@ -36,6 +36,7 @@ end
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem 'compass', '>= 0.10.6'
+gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 gem 'formtastic'
 gem 'validation_reflection'
 gem 'devise'
