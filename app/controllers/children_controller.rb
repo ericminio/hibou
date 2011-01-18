@@ -1,5 +1,4 @@
 class ChildrenController < ApplicationController
-
   respond_to :html
 
   def index
@@ -11,13 +10,7 @@ class ChildrenController < ApplicationController
     @child = Child.find(params[:id])
 
     respond_with(@child) do |format|
-      format.pdf {
-        send_data(ChildFile.render_for(@child),
-                  :type       =>"application/pdf",
-                  :filename   => "#{@child.first_name}_#{@child.last_name}.pdf",
-                  :disposition=>"attachment"
-        )
-      }
+      format.pdf { render :pdf => ChildFile.new(@child), :filename => "#{@child.to_param}.pdf", :disposition => 'inline' }
     end
   end
 
@@ -38,6 +31,7 @@ class ChildrenController < ApplicationController
 
   def update
     @child = Child.find(params[:id])
+    @child.update_attributes(params[:child])
     respond_with @child
   end
 
