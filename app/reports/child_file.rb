@@ -12,23 +12,27 @@ class ChildFile < Prawn::Document
   end
 
   def generate
-    child_file :scale => 0.95 do
+    child_file do
       image scanned_child_form
 
       text_field :child_name, full_name_of(@child)
       text_field :birth_date, birth_date_of(@child)
 
-      yes_no_checkbox :snack, @child.snack ? :with_yes_checked : :with_no_checked
-      yes_no_checkbox :bottle, @child.bottle ? :with_yes_checked : :with_no_checked
-      yes_no_checkbox :nap, @child.nap ? :with_yes_checked : :with_no_checked
-      yes_no_checkbox :allergic, @child.allergic? ? :with_yes_checked : :with_no_checked
-
       text_field :allergies, allergies_of_this(@child)
+
+      check(@child.snack ? :snack : :no_snack)
+      check(@child.bottle ? :bottle : :no_bottle)
+      check(@child.nap ? :nap : :no_nap)
     end
     cutting_line
 
     render
   end
+
+  def is_snack_checked
+    
+  end
+
 
   private
   def scanned_child_form

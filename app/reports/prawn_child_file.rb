@@ -2,51 +2,41 @@ require 'rubygems'
 require 'prawn'
 
 module PrawnChildFile
-  size = 'LETTER'
+  size    = 'LETTER'
 
   WIDGETS = {
-    :child_name => { :position => {:left => 62, :top => 31}, :width => 274, :height => 26, :padding_left => 5},
-    :birth_date => { :position => {:left => 62, :top => 87}, :width => 274, :height => 26, :padding_left => 5},
-    :snack => {:position => {:left => 205, :top => 120}, :width => 80, :height => 18, :padding_left => 5},
-    :bottle=> {:position => {:left => 205, :top => 144}, :width => 80, :height => 18, :padding_left => 5},
-    :nap =>  {:position => {:left => 205, :top => 168}, :width => 80, :height => 18, :padding_left => 5},
-    :allergic =>  {:position => {:left => 205, :top => 205}, :width => 80, :height => 18, :padding_left => 5},
-    :allergies => { :position => {:left => 62, :top => 232}, :width => 274, :height => 26, :padding_left => 5},
-    :yes_checkbox => {:left => 1, :width => 14, :height => 19},
-    :no_checkbox => {:left => 62, :width => 14, :height => 19},
+      :child_name => {:left => 62, :top => 275, :width => 274, :height => 26},
+      :birth_date => {:left => 62, :top => 219, :width => 274, :height => 26},
+      :snack      => {:left => 207, :top => 185, :width => 13, :height => 18},
+      :no_snack   => {:left => 268, :top => 185, :width => 13, :height => 18},
+      :bottle     => {:left => 207, :top => 162, :width => 13, :height => 18},
+      :no_bottle  => {:left => 268, :top => 162, :width => 13, :height => 18},
+      :nap        => {:left => 207, :top => 139, :width => 13, :height => 18},
+      :no_nap     => {:left => 268, :top => 139, :width => 13, :height => 18},
+      :allergic   => {:left => 207, :top => 100, :width => 13, :height => 18},
+      :allergies  => {:left => 62, :top => 73, :width => 258, :height => 17}
   }
 
-  def child_file scale, &block_to_execute
-        bounding_box [bounds.left, bounds.top], :width => 792, :height => 306, &block_to_execute
+  def child_file(at = [0, 306], scale = 1.0, &block)
+    bounding_box at, :width => 792, :height => 306, &block
   end
 
-  def text_field name, text, &block_to_execute
-    widget = WIDGETS[name]
-    bounding_box  [bounds.left + widget[:position][:left], bounds.top - widget[:position][:top]], :height => widget[:height], :width => widget[:width] do
-      text_box text, :at => [bounds.left + widget[:padding_left], bounds.top],
-                     :width => bounds.right - widget[:padding_left],
-                     :valign => :center, :overflow => :truncate,
-                     &block_to_execute
+  def text_field name, text, &block
+    widget(name, :padding_left => 5) do
+      text_box text,
+               :at     => [bounds.left, bounds.top],
+               :width  => bounds.right,
+               :valign => :center, :overflow => :truncate,
+               &block
     end
   end
 
-  def checkbox name, checked
-    widget = WIDGETS[name]
-    bounding_box [bounds.left + widget[:left] ,bounds.top], :width=>widget[:width], :height=>widget[:height] do
-      if checked
-        stroke do
-          line [bounds.left,bounds.top], [bounds.right,bounds.bottom]
-          line [bounds.left,bounds.bottom], [bounds.right,bounds.top]
-        end
+  def check name
+    widget(name) do
+      stroke do
+        line [bounds.left, bounds.top], [bounds.right, bounds.bottom]
+        line [bounds.left, bounds.bottom], [bounds.right, bounds.top]
       end
-    end
-  end
-
-  def yes_no_checkbox name, selection
-    widget = WIDGETS[name]
-    bounding_box  [bounds.left + widget[:position][:left], bounds.top - widget[:position][:top]], :height =>widget[:height], :width =>widget[:width] do
-      checkbox :yes_checkbox, selection == :with_yes_checked
-      checkbox :no_checkbox, selection == :with_no_checked
     end
   end
 
@@ -59,6 +49,20 @@ module PrawnChildFile
     move_down 5
   end
 
+  private
+  def widget(name, options = {}, &block)
+    padding        = options[:padding] || 0
+    padding_left   = options[:padding_left] || padding
+    padding_right  = options[:padding_right] || padding
+    padding_top    = options[:padding_top] || padding
+    padding_bottom = options[:padding_bottom] || padding
+
+    bounding_box([bounds.left + WIDGETS[name][:left] + padding_left,
+                  bounds.bottom + WIDGETS[name][:top] - padding_top],
+                 :width  => WIDGETS[name][:width] - (padding_left + padding_right),
+                 :height => WIDGETS[name][:height] - (padding_bottom + padding_top),
+                 &block)
+  end
 
 end
 
