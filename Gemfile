@@ -4,8 +4,10 @@ source "http://gems.github.com"
 gem 'rails', '3.0.3'
 gem 'haml'
 gem 'haml-rails'
-gem 'formtastic'
 gem 'jquery-rails'
+gem 'i18n', '0.4.2'
+gem 'gherkin'
+gem 'prawn', '0.8.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -34,6 +36,7 @@ end
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem 'compass', '>= 0.10.6'
+gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 gem 'formtastic'
 gem 'validation_reflection'
 gem 'devise'
@@ -46,12 +49,13 @@ group :development, :test do
 end
 
 group :test do
+  gem 'pdf-reader'
   gem 'faker'
   gem 'machinist', '>= 2.0.0.beta2'
   gem 'timecop'
   gem 'chronic'
   gem "webrat"
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '0.3.2'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'spork'
@@ -59,4 +63,5 @@ group :test do
   gem 'launchy'
   gem 'rcov'
   gem 'rspec-rails-matchers'
+  gem 'pdf-inspector', '0.7.99', :git => 'git://github.com/sandal/pdf-inspector.git'
 end

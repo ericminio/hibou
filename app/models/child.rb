@@ -6,4 +6,12 @@ class Child < ActiveRecord::Base
   def allergic?
     not allergies.blank?
   end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def to_param
+    "#{id}-#{full_name.parameterize}"
+  end
 end
