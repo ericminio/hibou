@@ -11,7 +11,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @payment_methods = ["Cash", 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
   end
 
   def create
@@ -22,4 +21,11 @@ class BookingsController < ApplicationController
       render :action => "new"
     end
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
+  end
+
 end

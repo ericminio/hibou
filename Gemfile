@@ -6,7 +6,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'i18n', '0.4.2'
-gem 'gherkin', '2.2.9'
+gem 'gherkin'
 gem 'prawn', '0.8.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -61,5 +61,7 @@ group :test do
   gem 'spork'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'rcov'
+  gem 'rspec-rails-matchers'
   gem 'pdf-inspector', '0.7.99', :git => 'git://github.com/sandal/pdf-inspector.git'
 end

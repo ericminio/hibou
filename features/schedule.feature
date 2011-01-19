@@ -18,10 +18,10 @@ Feature: Consulting the schedule for a given day
 
    When I consult today's schedule
 
-   Then the am schedule contains
+   Then the am schedule is
      |name         |
      |George Orwell|
      |Bill Davis   |
-   And the pm schedule contains
+   And the pm schedule is
      |name         |
      |George Orwell|

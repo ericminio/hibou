@@ -217,3 +217,9 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Then /^the table within scope ([^"]*) has ([^"]*) rows$/ do |scope, row_count|
+  with_scope(scope) do
+    all("table tr").size.should == row_count.to_i
+  end
+end
