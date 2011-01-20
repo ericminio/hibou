@@ -4,10 +4,10 @@ describe ChildFile do
 
   def corners(widget)
     corners = []
-    corners << [widget[:left], widget[:top]]
-    corners << [widget[:left] + widget[:width], widget[:top] ]
-    corners << [widget[:left] + widget[:width], widget[:top] - widget[:height] ]
-    corners << [widget[:left], widget[:top] - widget[:height] ]
+    corners << [widget[:at][0], widget[:at][1]]
+    corners << [widget[:at][0] + widget[:width], widget[:at][1] ]
+    corners << [widget[:at][0] + widget[:width], widget[:at][1] - widget[:height] ]
+    corners << [widget[:at][0], widget[:at][1] - widget[:height] ]
     corners
   end
 
@@ -41,8 +41,8 @@ describe ChildFile do
     end
 
     it "should tick the snack checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:snack]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_snack]))
+      @lines.points.should include(*corners(ChildFile::WIDGET_OPTIONS[:snack]))
+      @lines.points.should_not include(*corners(ChildFile::WIDGET_OPTIONS[:no_snack]))
     end
 
   end
@@ -54,8 +54,8 @@ describe ChildFile do
     end
 
     it "should tick the bottle checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:bottle]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_bottle]))
+      @lines.points.should include(*corners(ChildFile::WIDGET_OPTIONS[:bottle]))
+      @lines.points.should_not include(*corners(ChildFile::WIDGET_OPTIONS[:no_bottle]))
     end
   end
 
@@ -66,8 +66,8 @@ describe ChildFile do
     end
 
     it "should tick the nap checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:nap]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_nap]))
+      @lines.points.should include(*corners(ChildFile::WIDGET_OPTIONS[:nap]))
+      @lines.points.should_not include(*corners(ChildFile::WIDGET_OPTIONS[:no_nap]))
     end
   end
 
