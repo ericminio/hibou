@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'prawn'
 
-module PrawnChildFile
+module PrawnForm
 
   def text_field(options = {}, text, &block)
     widget(options) do
@@ -34,8 +34,8 @@ module PrawnChildFile
     padding_top    = options[:padding_top] || padding
     padding_bottom = options[:padding_bottom] || padding
 
-    bounding_box([bounds.left + at[0] + padding_left,
-                  bounds.bottom + at[1] - padding_top],
+    bounding_box([at[0] + padding_left,
+                  at[1] - padding_top],
                  :width  => width - (padding_left + padding_right),
                  :height => height - (padding_bottom + padding_top),
                  &block)
@@ -43,4 +43,4 @@ module PrawnChildFile
 
 end
 
-Prawn::Document.extensions << PrawnChildFile
+Prawn::Document.extensions << PrawnForm
