@@ -1,7 +1,14 @@
-Given /^a child registered with:$/ do |information|
+Given /^these children are registered$/ do |children|
+  children.hashes.each do |child|
+    child['birth date'] ||= Date.today.to_s(:db)
+    Given %{a child registered with:}, table([child]).transpose
+  end
+end
+
+Given /^a child registered with:$/ do |child|
   administer_children
   open_child_registration
-  register_child(information.rows_hash)
+  register_child(child.rows_hash)
 end
 
 When /^I consult "([^"]*)" "([^"]*)"'s file$/ do |first_name, last_name|

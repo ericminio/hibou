@@ -7,7 +7,7 @@ When /^I login as "([^"]*)" using password "([^"]*)"$/ do |email, password|
   login_as(email, password)
 end
 
-Then /^I can access the site$/ do
+Then /^I am granted access$/ do
   shows_user_is_authenticated
 end
 
@@ -15,6 +15,6 @@ When /^I try to register$/ do
   go_to :registration_page
 end
 
-Then /^I see a warning telling me the page is inaccessible$/ do
+Then /^I am denied access$/ do
   shows_page_does_not_exist
 end

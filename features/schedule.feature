@@ -1,4 +1,4 @@
-Feature: Consulting the schedule for a given day
+Feature: Consulting the schedule
 
  Background: Children are registered
    Given these children are registered
@@ -7,7 +7,7 @@ Feature: Consulting the schedule for a given day
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
- Scenario: Opening today's schedule
+ Scenario: Staff consults the schedule of the next few days and sees the existing bookings
    Given the following bookings
      |name  |date      |period|
      |George|2010-12-01|am    |
@@ -15,13 +15,13 @@ Feature: Consulting the schedule for a given day
      |Bill  |2010-12-01|am    |
      |Roger |2010-12-02|am    |
    And today is 2010-12-01
-
    When I consult today's schedule
-
    Then the am schedule is
      |name         |
      |George Orwell|
      |Bill Davis   |
-   And the pm schedule is
+   And today's pm schedule is
      |name         |
      |George Orwell|
+
+  #todo Scenario: Staff consults the schedule and sees there is no booking
