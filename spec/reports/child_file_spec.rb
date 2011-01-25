@@ -105,4 +105,33 @@ describe ChildFile do
     end
   end
 
+  describe "when a child has public notes" do
+    describe "and that these notes are short" do
+      before(:each) do
+        @child = Child.make(:public_notes => "loves bananas")
+        @child_file = ChildFile.new(@child, :at => [0, 306])
+        @rendered_child_file = @child_file.generate
+        @texts = PDF::Inspector::Text.analyze(@rendered_child_file).strings
+      end
+
+      it "contains these public notes in recto notes area" do
+        @texts.fourth.should == "loves bananas"
+      end
+    end
+
+    describe "and that these notes are too long to fit the text area" do
+      before(:each) do
+        @child = Child.make(:public_notes => "a very very very very very very very very very very very very very very very very very very very very very very long note")
+        @child_file = ChildFile.new(@child, :at => [0, 306])
+        @rendered_child_file = @child_file.generate
+        @texts = PDF::Inspector::Text.analyze(@rendered_child_file).strings
+      end
+
+      it "contains an elipsized version of these notes" do
+        @texts.select {|text| text=~ /^a very/}.should_not be_empty
+        @texts.select {|text| text=~ /very...$/}.should_not be_empty
+      end
+    end
+  end
+
 end

@@ -6,11 +6,16 @@ module PrawnForm
   def text_field(text, options = {}, &block)
     widget(options) do
       text_box text,
-               :at     => [bounds.left, bounds.top],
-               :width  => bounds.right,
-               :valign => :center, :overflow => :truncate,
+               :at       => [bounds.left, bounds.top],
+               :width    => bounds.right,
+               :valign   => options[:valign] || :center,
+               :overflow => options[:overflow] || :truncate,
                &block
     end
+  end
+
+  def text_area(text, options = {}, &block)
+    text_field(text, {:overflow => :ellipses, :valign => :top}.merge(options), &block)
   end
 
   def check(options = {})

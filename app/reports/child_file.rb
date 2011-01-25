@@ -14,7 +14,8 @@ class ChildFile < Prawn::Document
       :no_nap       => {:at => [268, 138], :width => 14, :height => 19},
       :allergic     => {:at => [205, 101], :width => 14, :height => 19},
       :not_allergic => {:at => [267, 101], :width => 14, :height => 19},
-      :allergies    => {:at => [62, 72], :width => 258, :height => 17, :padding_left => 5}
+      :allergies    => {:at => [62, 72], :width => 258, :height => 17, :padding_left => 5},
+      :public_notes => {:at => [104, 44], :width => 190, :height => 44}
   }
 
   def self.widgets
@@ -42,6 +43,8 @@ class ChildFile < Prawn::Document
       check(@child.bottle ? widgets.bottle : widgets.no_bottle)
       check(@child.nap ? widgets.nap : widgets.no_nap)
       check(@child.allergic? ? widgets.allergic : widgets.not_allergic)
+
+      text_area public_notes_of(@child), widgets.public_notes
     end
     cutting_line
 
@@ -51,6 +54,10 @@ class ChildFile < Prawn::Document
   private
   def widgets
     self.class.widgets
+  end
+
+  def public_notes_of(child)
+    child.public_notes || ""
   end
 
   def child_file(&block)
