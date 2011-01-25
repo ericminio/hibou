@@ -1,4 +1,5 @@
 @import "compass/utilities/general/clearfix";
+@import "blueprint/link-icons";
 
 @mixin hibou {
   font-size: 12px;
@@ -180,35 +181,50 @@
     }
   }
 
-  /*#sidebar {*/
-    /*width: 25%;*/
-    /*float: right;*/
+  #sidebar {
+    width: 25%;
+    float: right;
 
-    /*h3 {*/
-      /*padding: 10px 15px;*/
-      /*margin: 0;*/
-      /*font-size: 13px;*/
-    /*}*/
+    h3 {
+      padding: 10px 15px;
+      margin: 0;
+      font-size: 13px;
+    }
 
-    /*.block {*/
-      /*margin-bottom: 20px;*/
-      /*padding-bottom: 10px;*/
-    /*}*/
+    .block {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
 
-    /*.block .content {*/
-      /*padding: 0 15px;*/
-    /*}*/
+      .content {
+        padding: 0 15px;
 
-    /*ul.navigation li a:link, ul.navigation li a:visited {*/
-      /*display: block;*/
-      /*padding: 10px 15px;*/
+        ul {
+          list-style-type: none;
+          margin: 15px 0;
+        }
+      }
+
+      a.pdf {
+        @include link-icon("pdf.png");
+      }
+    }
+
+    /*ul.navigation {*/
+      /*list-style-type: none;*/
+      /*margin: 0px;*/
+      /*padding: 0px;*/
+
+      /*li a:link, ul.navigation li a:visited {*/
+        /*display: block;*/
+        /*padding: 10px 15px;*/
+      /*}*/
+
     /*}*/
 
     /*.block .sidebar-block, .notice {*/
       /*padding:10px;*/
     /*}*/
-  /*}*/
-
+  }
 
   .secondary-navigation {
     font-size: 13px;

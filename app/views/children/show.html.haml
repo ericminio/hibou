@@ -1,26 +1,10 @@
--#%p#notice= notice
--#
--##child-healthcheck
--#  = image_tag 'recto.png', :alt => ""
--#  #child-name= "#{@child.first_name} #{@child.last_name}"
--#
--#  #child-age=h "#{I18n.l @child.birth_date, :format => :medium} / #{distance_of_time_in_words(@child.birth_date, Date.today)}"
--#  #child-bottle-yes= @child.bottle? ? 'X' : ''
--#  #child-bottle-no= @child.bottle? ? '' : 'X'
--#  #child-snack-yes= @child.snack? ? 'X' : ''
--#  #child-snack-no= @child.snack? ? '' : 'X'
--#  #child-nap-yes= @child.nap? ? 'X' : ''
--#  #child-nap-no= @child.nap? ? '' : 'X'
--#  #child-allergies-yes= @child.allergic? ? 'X' : ''
--#  #child-allergies-no= @child.allergic? ? '' : 'X'
--#  #child-allergies-notes= @child.allergies
--#  #child-public-notes= @child.public_notes
--#  #child-private-notes= @child.private_notes
--#
--##navigation
--#  = link_to t(:edit), edit_child_path(@child)
--#  \|
--#  = link_to t(:back_to_list), children_path
+#sidebar
+  .block
+    %h3= t('download')
+    .content
+      %ul
+        %li
+          = link_to @child.full_name, child_path(@child, :format => :pdf), :class => 'pdf'
 #main
   .block
     .secondary-navigation

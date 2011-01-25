@@ -157,14 +157,14 @@
     }
   }
 
-  /*#sidebar {*/
-    /*.block {*/
-      /*background: #FFF;*/
+  #sidebar {
+    .block {
+      background: #FFF;
 
-      /*h4 {*/
-        /*font-weight: bold;*/
-      /*}*/
-    /*}*/
+      h4 {
+        font-weight: bold;
+      }
+    }
 
     /*.notice {*/
       /*background: #E6EEFC;*/
@@ -174,23 +174,23 @@
       /*}*/
     /*}*/
 
-    /*h3 {*/
-      /*background: #36393d;*/
-      /*color: #FFF;*/
-      /*border-bottom: 5px solid #1a1a1a;*/
+    h3 {
+      background: #36393d;
+      color: #FFF;
+      border-bottom: 5px solid #1a1a1a;
+    }
+
+    /*ul li a:link, ul li a:visited {*/
+      /*background: #FFF;*/
+      /*border-bottom: 1px solid #F0F0EE;*/
+      /*text-decoration: none;*/
     /*}*/
-  /*}*/
 
-  /*#sidebar ul li a:link, #sidebar ul li a:visited {*/
-    /*background: #FFF;*/
-    /*border-bottom: 1px solid #F0F0EE;*/
-    /*text-decoration: none;*/
-  /*}*/
-
-  /*#sidebar ul li a:hover, #sidebar ul li a:active {*/
-    /*background: #666666;*/
-    /*color: #ffffff;;*/
-  /*}*/
+    /*ul li a:hover, ul li a:active {*/
+      /*background: #666666;*/
+      /*color: #ffffff;;*/
+    /*}*/
+  }
 
   .secondary-navigation {
     background: #36393d;
