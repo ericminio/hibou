@@ -4,10 +4,10 @@ describe ChildFile do
 
   def corners(widget)
     corners = []
-    corners << [widget[:left], widget[:top]]
-    corners << [widget[:left] + widget[:width], widget[:top] ]
-    corners << [widget[:left] + widget[:width], widget[:top] - widget[:height] ]
-    corners << [widget[:left], widget[:top] - widget[:height] ]
+    corners << [widget[:at][0], widget[:at][1]]
+    corners << [widget[:at][0] + widget[:width], widget[:at][1] ]
+    corners << [widget[:at][0] + widget[:width], widget[:at][1] - widget[:height] ]
+    corners << [widget[:at][0], widget[:at][1] - widget[:height] ]
     corners
   end
 
@@ -25,11 +25,11 @@ describe ChildFile do
       @text_fields = text.strings
     end
 
-    it "should contain the child's name in the first text field" do
+    it "contains the child's name in the first text field" do
       @text_fields.first.should == "Tom Trempe"
     end
 
-    it "should contain the child birth date in its second text field" do
+    it "contains the child birth date in its second text field" do
       @text_fields.second.should == "23 mars 2007 (plus d'un an)"
     end
   end
@@ -37,12 +37,13 @@ describe ChildFile do
   describe "when child expects a snack" do
     before(:each) do
       @child = Child.make(:snack => true)
-      @lines = PDF::Inspector::Graphics::Line.analyze(ChildFile.new(@child).generate)
+      @child_file = ChildFile.new(@child)
+      @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
-    it "should tick the snack checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:snack]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_snack]))
+    it "ticks the snack checkbox" do
+      @lines.points.should include(*corners(ChildFile.widgets.snack))
+      @lines.points.should_not include(*corners(ChildFile.widgets.no_snack))
     end
 
   end
@@ -50,34 +51,44 @@ describe ChildFile do
   describe "when child expects a bottle" do
     before(:each) do
       @child = Child.make(:bottle => true)
-      @lines = PDF::Inspector::Graphics::Line.analyze(ChildFile.new(@child).generate)
+      @child_file = ChildFile.new(@child)
+      @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
-    it "should tick the bottle checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:bottle]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_bottle]))
+    it "ticks the bottle checkbox" do
+      @lines.points.should include(*corners(ChildFile.widgets.bottle))
+      @lines.points.should_not include(*corners(ChildFile.widgets.no_bottle))
     end
   end
 
   describe "when child requires a nap" do
     before(:each) do
       @child = Child.make(:nap => true)
-      @lines = PDF::Inspector::Graphics::Line.analyze(ChildFile.new(@child).generate)
+      @child_file = ChildFile.new(@child)
+      @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
-    it "should tick the nap checkbox" do
-      @lines.points.should include(*corners(PrawnChildFile::WIDGETS[:nap]))
-      @lines.points.should_not include(*corners(PrawnChildFile::WIDGETS[:no_nap]))
+    it "ticks the nap checkbox" do
+      @lines.points.should include(*corners(ChildFile.widgets.nap))
+      @lines.points.should_not include(*corners(ChildFile.widgets.no_nap))
     end
   end
 
   describe "when a child has allergies" do
     before(:each) do
       @child = Child.make(:allergies => "peanuts")
-      @texts = PDF::Inspector::Text.analyze(ChildFile.new(@child).generate).strings
+      @child_file = ChildFile.new(@child)
+      @rendered_child_file = @child_file.generate
+      @texts = PDF::Inspector::Text.analyze(@rendered_child_file).strings
+      @lines = PDF::Inspector::Graphics::Line.analyze(@rendered_child_file)
     end
 
-    it "should contain show the child's allergies in its third text field" do
+    it "ticks the allergies checkbox" do
+      @lines.points.should include(*corners(ChildFile.widgets.allergic))
+      @lines.points.should_not include(*corners(ChildFile.widgets.not_allergic))
+    end
+
+    it "contains the child's allergies in its third text field" do
       @texts.should include("peanuts")
     end
   end
@@ -89,7 +100,7 @@ describe ChildFile do
       @texts = text.strings
     end
 
-    it "should display an alternative message" do
+    it "displays an alternative message" do
       @texts.third.should == I18n.translate(:none)
     end
   end
