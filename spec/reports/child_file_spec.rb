@@ -37,7 +37,7 @@ describe ChildFile do
   describe "when child expects a snack" do
     before(:each) do
       @child = Child.make(:snack => true)
-      @child_file = ChildFile.new(@child)
+      @child_file = ChildFile.new(@child, :at => [0, 306])
       @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
@@ -51,7 +51,7 @@ describe ChildFile do
   describe "when child expects a bottle" do
     before(:each) do
       @child = Child.make(:bottle => true)
-      @child_file = ChildFile.new(@child)
+      @child_file = ChildFile.new(@child, :at => [0, 306])
       @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
@@ -64,7 +64,7 @@ describe ChildFile do
   describe "when child requires a nap" do
     before(:each) do
       @child = Child.make(:nap => true)
-      @child_file = ChildFile.new(@child)
+      @child_file = ChildFile.new(@child, :at => [0, 306])
       @lines = PDF::Inspector::Graphics::Line.analyze(@child_file.generate)
     end
 
@@ -77,7 +77,7 @@ describe ChildFile do
   describe "when a child has allergies" do
     before(:each) do
       @child = Child.make(:allergies => "peanuts")
-      @child_file = ChildFile.new(@child)
+      @child_file = ChildFile.new(@child, :at => [0, 306])
       @rendered_child_file = @child_file.generate
       @texts = PDF::Inspector::Text.analyze(@rendered_child_file).strings
       @lines = PDF::Inspector::Graphics::Line.analyze(@rendered_child_file)

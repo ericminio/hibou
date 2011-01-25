@@ -3,7 +3,7 @@ require 'prawn'
 
 module PrawnForm
 
-  def text_field(options = {}, text, &block)
+  def text_field(text, options = {}, &block)
     widget(options) do
       text_box text,
                :at     => [bounds.left, bounds.top],

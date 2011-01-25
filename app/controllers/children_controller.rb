@@ -10,7 +10,7 @@ class ChildrenController < ApplicationController
     @child = Child.find(params[:id])
 
     respond_with(@child) do |format|
-      format.pdf { render :pdf => ChildFile.new(@child), :filename => "#{@child.to_param}.pdf", :disposition => 'inline' }
+      format.pdf { render :pdf => ChildFile.new(@child, :at => [0, 612]), :filename => "#{@child.to_param}.pdf", :disposition => 'inline' }
     end
   end
 
