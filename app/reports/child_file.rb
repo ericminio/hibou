@@ -4,18 +4,19 @@ class ChildFile < Prawn::Document
   include ActionView::Helpers::DateHelper
 
   WIDGETS = {
-      :child_name   => {:at => [62, 274], :width => 274, :height => 26, :padding_left => 5},
-      :birth_date   => {:at => [62, 218], :width => 274, :height => 26, :padding_left => 5},
-      :snack        => {:at => [206, 186], :width => 14, :height => 19},
-      :no_snack     => {:at => [267, 186], :width => 14, :height => 19},
-      :bottle       => {:at => [206, 163], :width => 14, :height => 19},
-      :no_bottle    => {:at => [268, 162], :width => 14, :height => 19},
-      :nap          => {:at => [206, 138], :width => 14, :height => 19},
-      :no_nap       => {:at => [268, 138], :width => 14, :height => 19},
-      :allergic     => {:at => [205, 101], :width => 14, :height => 19},
+      :child_name => {:at => [62, 274], :width => 274, :height => 26, :padding_left => 5},
+      :birth_date => {:at => [62, 218], :width => 274, :height => 26, :padding_left => 5},
+      :snack => {:at => [206, 186], :width => 14, :height => 19},
+      :no_snack => {:at => [267, 186], :width => 14, :height => 19},
+      :bottle => {:at => [206, 163], :width => 14, :height => 19},
+      :no_bottle => {:at => [268, 162], :width => 14, :height => 19},
+      :nap => {:at => [206, 138], :width => 14, :height => 19},
+      :no_nap => {:at => [268, 138], :width => 14, :height => 19},
+      :allergic => {:at => [205, 101], :width => 14, :height => 19},
       :not_allergic => {:at => [267, 101], :width => 14, :height => 19},
-      :allergies    => {:at => [62, 72], :width => 258, :height => 17, :padding_left => 5},
-      :public_notes => {:at => [104, 44], :width => 190, :height => 44}
+      :allergies => {:at => [62, 72], :width => 258, :height => 17, :padding_left => 5},
+      :public_notes => {:at => [62, 48], :width => 258, :height => 45, :padding_left => 5, :padding_top => 20},
+      :private_notes => {:at => [458, 300], :width => 257, :height => 281, :padding_left => 5, :padding_top => 20}
   }
 
   def self.widgets
@@ -23,10 +24,10 @@ class ChildFile < Prawn::Document
   end
 
   def initialize(child, options = {})
-    super({:margin      => [0, 0, 0, 0],
+    super({:margin => [0, 0, 0, 0],
            :page_layout => :landscape,
-           :page_size   => 'LETTER'})
-    @options = { :at => [0, 612] }.merge(options)
+           :page_size => 'LETTER'})
+    @options = {:at => [0, 612]}.merge(options)
     @child = child
   end
 
@@ -45,6 +46,7 @@ class ChildFile < Prawn::Document
       check(@child.allergic? ? widgets.allergic : widgets.not_allergic)
 
       text_area public_notes_of(@child), widgets.public_notes
+      text_area private_notes_of(@child), widgets.private_notes
     end
     cutting_line
 
@@ -58,6 +60,10 @@ class ChildFile < Prawn::Document
 
   def public_notes_of(child)
     child.public_notes || ""
+  end
+
+  def private_notes_of(child)
+    child.private_notes || ""
   end
 
   def child_file(&block)
