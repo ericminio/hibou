@@ -27,7 +27,7 @@ When /^(?:|I) cancel the booking of ([^"]*) ([^"]*) for ([^"]*) ([^"]*)/ do |fir
   administer_bookings
 end
 
-When /^(?:.*|I) books a child$/ do
-  pending
+When /^(?:.*) books ([^"]*) for ([^"]*) ([^"]*)/ do |child, date, period|
+  open_new_booking
+  book_child(child, date, period)
 end
-

@@ -13,7 +13,7 @@
         %h1= link_to t('daycare.name'), root_path
         %h3= t('title')
         #scoreboard
-          %span= 0
+          %span= Booking.all.size
           points
         #user-navigation
           %ul
