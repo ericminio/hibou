@@ -1,3 +1,7 @@
+Given /^no child was booked yet$/ do
+
+end
+
 Given /^the following bookings$/ do |table|
   administer_bookings
   table.rows.each do |child, date, period|
@@ -22,3 +26,8 @@ When /^(?:|I) cancel the booking of ([^"]*) ([^"]*) for ([^"]*) ([^"]*)/ do |fir
   cancel_booking(first_name, last_name, date, period)
   administer_bookings
 end
+
+When /^(?:.*|I) books a child$/ do
+  pending
+end
+

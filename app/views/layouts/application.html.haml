@@ -12,6 +12,9 @@
       #header
         %h1= link_to t('daycare.name'), root_path
         %h3= t('title')
+        #scoreboard
+          %span= 0
+          points
         #user-navigation
           %ul
             - if user_signed_in?

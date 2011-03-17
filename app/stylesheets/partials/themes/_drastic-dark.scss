@@ -43,7 +43,24 @@
       margin: 0 0 0 28px;
       padding: 23px 0px 19px;
     }
+
+
   }
+
+#scoreboard {
+    color: white;
+    font-size: 18px;
+    line-height: 1.2em;
+    float:right;
+    margin: 23px 0 0 28px;
+
+    span {
+        background: #C00;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 3px;
+        padding: 3px;
+    }
+}
 
   #main-navigation {
     background: #1a1a1a;
@@ -89,8 +106,6 @@
 
       a.logout {
         background: url("../../images/key_delete.png") no-repeat 5px 45%;
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 3px;
         padding:5px 10px 5px 27px;
       }
     }

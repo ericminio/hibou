@@ -6,4 +6,6 @@ tmp/**/*
 .idea
 db/schema.rb
 public/stylesheets/.sass-cache/
+todo.txt
+
 

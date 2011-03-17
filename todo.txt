@@ -1,0 +1,3 @@
+corriger les expressions régulières qui marche pas ?:|I
+remplacer with_scope par within
+éliminer le warning rspec
